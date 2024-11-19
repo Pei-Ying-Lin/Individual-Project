@@ -1,0 +1,353 @@
+@import url('reset.css'); 
+
+body{
+    background-color: #FBF3E8;
+    line-height: 1.5;
+    color: #534533;
+}
+
+.wrapper{
+    font-family: verdana;
+    margin: 0 auto;
+}
+
+/* ==========主視覺 cover photo================== */
+.topMain{
+    background-image: url(../img/Home\ page\ pics/result_Cover.jpg);
+    /* width: 100%; */
+    height: 700px;
+    margin: 0 auto;
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* width: 100%;
+    margin: 0 auto; */
+}
+
+/* ============ 1st section: 烘培課程 ===================== */
+/* ============ 1st section 左手邊 =============== */
+.main{
+   /* border: 1px solid green; */
+   max-width: 1200px;
+   margin: 20px auto;
+   /* display: flex; */
+    /* 把特殊形狀放到右邊 用 display: flex */
+    display: grid;
+    grid-template-columns: 620px 1fr;
+    grid-template-rows: 1fr;
+    /* 用 grid 排成左右兩格 */
+    box-sizing: border-box;
+       
+}
+
+.main .main-left{
+    border: 1px solid blue;
+    padding-top: 30px;
+    /* box-sizing: border-box; */
+}
+
+.main .main-left h2{
+    font-size: 32px;
+    font-weight: bold;
+    /* padding-bottom: 10px; */
+    text-align: center;
+    padding: 20px;
+}
+
+.main .main-left p{
+    font-size:24px;
+    padding: 20px 20px 20px 30px;
+    width: 550px;
+}
+
+.main .main-left a{
+    display:block;
+    width: 190px;
+    height: 48px;
+    background-color: #A26769;
+    color: white;
+    text-align: center;
+    line-height: 48px;
+    font-size: 24px;
+    margin: 20px auto;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.main .main-left a:hover{
+    background-color: #CCA1A0;
+    color: #F4E8E2;
+
+}
+
+
+/* ============ 1st section 右手邊 ===================== */
+.main .main-right{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px; 
+    /* width: 570px; */
+    /* border: 1px solid red; */
+}
+
+.main-right img{
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+}
+
+/* ============ 1st section: 烘培課程 finished ===================== */
+
+/* ============ 2nd section: 精彩回顧 ========================== */
+/* ========= 2nd section 左手邊照片 ========== */
+.middle{
+    /* border: 1px solid red; */
+    max-width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;;
+}
+.recap{
+   
+}
+.recap ul{
+    display:flex;
+   /* width: 880px;  */
+    margin-right: auto;
+    /* border: 1px solid green; */
+
+    transition: 0.3s;
+}
+
+.middle ul li{
+   
+    
+}
+
+.middle img{
+    /* height:95%; */
+    border-radius: 4px;;
+}
+
+.middle .content{
+    /* border: 1px solid red; */
+}
+
+/* .item1{
+    flex-grow: 2;
+}
+
+.item2{
+    flex-grow: 2;
+}
+
+.item3{
+    flex-grow: 2;
+}
+
+.item4{
+    flex-grow: 1;
+}*/
+
+.item1:hover img{
+    transform: scale(1.05);
+}
+
+
+/* ========= 2nd section 右手邊 ========== */
+.content{
+ 
+}
+.content h2{
+    font-size: 32px;
+    font-weight: bold;
+   
+    text-align: center;
+    padding: 20px;
+}
+
+.content p{
+    /* width: 320px; */
+    font-size:24px;
+    justify-content: center; 
+    padding:20px;
+    /* padding: 20px 20px 20px 20px; */
+}
+/* ============ 2nd section:精彩回顧 finished ===================== */
+
+/* ============ 3rd Section: 熱門課程 ========================== */
+.popular{
+    max-width: 1200px;
+    margin: 20px auto;
+
+    position: relative;
+    /* 這是左右箭頭的 position: relative */
+
+}
+
+.popular h2{
+    font-size: 32px;
+    font-weight: bold;
+    /* padding-bottom: 10px; */
+    text-align: center;
+    padding: 28px;
+}
+
+.popular ul{
+    display: flex;
+   
+    overflow: hidden;    
+    /* 要把超出畫面的藏起來  */
+    position: relative;
+ 
+}
+
+.popular li{
+    
+    /* outline: 1px solid green; */
+    margin-right: 5px;
+    box-sizing:border-box;
+    width: 250px;
+    flex-shrink: 0;
+
+    position: relative;
+    /* 這是課程 .lesson1 的 position: relative */
+}
+
+.popular img{
+    width: 98%;
+    display: block;
+    border-radius: 12px;
+}
+
+/* =========== 圖片上的 div, 為了要 hover 後show 文字在圖片上 ========== */
+.lesson1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 98%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    opacity: 0;   
+    /* 先隱藏字 & buttom */
+    background-color: rgba(12, 12, 12, 0.137);
+}
+
+ /* ===== hover 效果 ======== */
+ .popular li:hover .lesson1{
+    opacity: 0.95;
+    transition: 0.3s; 
+}
+
+.popular .lesson1 h4{
+    color: white;
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.popular a{
+    text-decoration: none;
+    font-size:16px;
+    width: 100px;
+    height: 20px;
+    display: block;
+    background-color: #CCA1A0;
+    text-align: center;
+    line-height: 20px;
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 8px;
+    color: #F4E8E2;
+       
+}
+/* =========== 圖片上的 div 結束 ========== */
+
+/* ========= 左右箭頭 icon =========== */
+.popular .fa-solid{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #CCA1A0;
+    color: #F4E8E2;
+    text-align: center;
+    line-height: 30px;
+
+    position: absolute;
+    top: 60%; 
+   /* 把 icon 定位到中間  */
+   
+}
+
+.fa-angle-left{
+    left: -40px;
+}
+
+.fa-angle-right{
+    right: -40px;
+}
+
+/* ============ 3rd Section: 熱門課程 finish ========================== */
+
+/* ============ last Section: 掌握最新課程資訊 ========================== */
+.subscribe{
+    /* border: 1px solid purple; */
+    max-width: 1200px;
+    height: 150px;
+    margin: 20px auto;
+
+}
+
+.subscribe h2{
+    font-size: 32px;
+    font-weight: bold;
+    /* padding-bottom: 10px; */
+    text-align: center;
+    padding: 28px;
+}
+
+.Name{
+    margin-left: 160px;
+    margin-right: 30px;
+}
+
+.subscribe input{
+    height: 30px;
+    width: 300px;
+    padding-left: 20px;
+    box-sizing: border-box;
+ }
+
+ .Email{
+    margin-right: 30px;
+ }
+
+.subscribe a{
+    display:inline-block;
+    width: 190px;
+    height: 32px;
+    background-color: #A26769;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+    margin: 0 auto;
+    text-decoration: none;
+    
+    border-radius: 8px;
+}
+
+.subscribe a:hover{
+background-color: #CCA1A0;
+color: #F4E8E2;
+}

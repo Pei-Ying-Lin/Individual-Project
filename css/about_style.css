@@ -1,0 +1,226 @@
+@import url('reset.css'); 
+body{
+    background-color: #FBF3E8;
+    line-height: 1.5;
+    color: #534533;
+}
+
+.wrapper{
+    font-family: verdana;
+    margin: 0 auto;
+}
+
+ /* ========================== About Us section ========================== */
+
+ 
+.main{
+    /* outline: 1px solid blue; */
+    max-width: 1200px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_left{
+    /* outline: 1px solid green; */
+    width: 60%;
+}
+
+.about_left h1{
+    font-size: 52px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 120px;
+    /* justify-content: end; */
+    font-style: italic;
+    text-shadow:  8px 8px 8px #F3D2B5;
+    
+        
+}
+
+.about_right{
+    /* outline: 1px solid purple; */
+    width: 40%;
+    
+}
+
+/* 調整 logo 位置& 大小 */
+.about_right img{
+    width: 42%;
+    display: block;
+    /* margin-top: 20px; */
+    margin: 20px 20%;
+}
+
+.section{
+    /* outline: 1px solid brown; */
+    display: flex;
+    margin: 10px auto;
+}
+
+.section .left{
+    /* outline: 1px solid red; */
+    padding: 40px 30px ;
+}
+/* 調整中間的照片 */
+.section .left img{
+    display: block;
+    /* width: 95%; */
+    border: 12px solid #F3D2B5;
+    border-radius: 20px;
+    /* box-shadow: 8px 8px 8px 8px #F3D2B5; */
+}
+
+.section .right{    
+    /* outline: 1px solid rgb(9, 255, 0); */
+    padding: 0 30px 20px 20px;
+    width: 60%;
+    margin-top: 20px;
+    /* 調整 p 段落跟上方的間距 */
+}
+
+.section .right p{
+   padding: 30px 30px 30px 30px;
+   font-size: 18px;
+   /* font-weight: bold; */
+} 
+
+.section .right ul{
+    padding-left: 35px;
+    /* font-weight: bold; */
+}
+
+.section .right li{
+    list-style-type: disc;
+    font-size: 18px;
+    padding-bottom: 10px;
+} 
+
+ /* ========================== 2nd section: 服務內容 ========================== */
+
+.service{
+    /* outline: 2px solid orchid; */
+    max-width: 1200px;
+    margin: 0 auto;
+   
+}
+
+.service h2{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.content{
+    /* outline: 2px solid red; */
+    display: flex;
+    box-sizing: border-box;        
+}
+
+.content img{
+    width: 70%;
+    border-radius: 50%;
+    display: block;
+    padding: 36px;
+   
+}
+
+.content p{
+    font-size:20px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 28px;
+    /* text-shadow:  2px 2px 2px #CCA1A0; */
+}
+
+.content1{
+    /* border: 2px solid blue; */
+}
+
+.content2{
+    /* outline: 2px solid blue; */
+}
+
+.content3{
+    /* outline: 2px solid blue; */
+}
+
+.content4{
+    /* outline: 2px solid blue; */
+}
+ /* ========================== 2nd section: 服務內容 finish========================== */
+ 
+ /* ========================== last section: 門市資訊 ========================== */
+.store{
+    
+    max-width: 1200px;
+    margin: 20px auto;;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.map{
+    /* border: 5px solid brown; */
+    /* width: 60%; */
+    background-color: #fff;
+    padding: 20px 20px;
+    margin: 20px 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.map iframe{
+    margin: 0 auto;
+    display: block;
+    /* width: 660px;
+    height: 450px;
+    background-color: white; */
+    
+}
+
+.address{
+    /* border: 5px solid yellow; */
+    /* padding-left: 30px; */
+    box-sizing: border-box;
+    
+}
+
+.address h2{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+}
+
+.address_icon{
+    display: flex;
+    /* outline: 1px solid red; */
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.address_icon i {
+    display: block;
+    font-size: 24px;
+    color: rgb(201, 29, 29);
+  
+    margin-left: 30px;
+    box-sizing: border-box;
+    /* outline: 1px solid blue; */
+}
+
+.address p{
+    font-size:20px;
+    text-align: center;
+    /* font-weight: bold; */
+    padding: 0 0 28px 20px;
+}

@@ -1,0 +1,104 @@
+@import url('reset.css'); 
+
+/* ============ Memu bar ===================== */
+.wrapper{
+    
+}
+header{
+    width: 100%;
+    background-color: #F3D2B5;
+}
+
+.menubar{
+    box-sizing: border-box;
+    background-color: #F3D2B5;
+    /* padding-left: 120px; */
+    font-size: 16px;
+    /* font-weight: bold; */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;   
+    padding: 10px 0;
+    box-sizing: border-box;
+    /* 把主選單移到左上角 */
+    /* border: 1px solid brown; */
+    border: 2px solid purple;
+}
+
+.menubar a{
+    text-decoration: none;
+    color: #534533;
+   
+}
+
+.menubar a img{
+    height: 60px;    
+    /* 控制 nav bar logo 大小 */
+    margin-right: auto;
+    display: block;
+    padding-left: 10px;
+}
+
+.menubar ul{
+    display: flex;
+    /* 把主選單左上角變成橫的 + display: flex */
+    margin-left: auto;
+    text-align: center;
+    align-items: center;
+    padding-right: 64px;
+    position: relative;
+    
+}
+
+.menubar li{
+    /* line-height: 60px; */
+    /* box-sizing: border-box; */
+    /* justify-content:center;
+    align-items: center; */
+    padding: 0 10px;
+    /* border: 2px solid red; */
+    flex-grow: 1;
+    box-sizing: border-box;
+    /* position: relative; */
+}
+
+.search{
+    /* padding: 15px; */
+    min-width: 100px;
+    height: 20px;
+    font-size: 18px;
+    margin-left: auto;
+    /* position: relative; */
+}
+
+/* .search_btn{
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+
+} */
+
+.fa-solid .fa-magnifying-glass{
+    
+    align-items: center;
+    line-height: 20px;
+    /* padding: 2px; */
+    position: absolute;
+    top: 50%;
+    right:10px;
+    transform: translateY(-50%);
+
+}
+
+/* ============ hover 效果 ======== */
+
+.menubar li a:hover{
+    border-bottom: 5px solid #DB6D34;
+}
+
+/* 若把search bar 放在li, 要把hover 效果拿掉 */
+.menubar li:first-child a:hover{
+    border-bottom: 0;
+}
+/* ============ Memu bar finish===================== */

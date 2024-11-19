@@ -1,0 +1,199 @@
+@import url('reset.css'); 
+
+body{
+    background-color: #FBF3E8;
+    line-height: 1.5;
+    color: #534533;
+}
+
+.wrapper{
+    font-family: verdana;
+    margin: 0 auto;
+}
+
+/* ========== 主視覺 cover photo ================== */
+/* .top{
+    width: 100%; 
+} */
+
+.cover{
+   width: 1440px;
+   margin: 0 auto;
+   border-radius: 20px;
+   /* padding: 30px 0; */
+   /* background-color: #FBE9E5; */
+}
+
+
+/* ==================== 1st section: 烘培課程 ====================== */
+.class1{
+    max-width: 1200px;
+    margin: 52px auto;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.left{
+    /* border: 1px solid black; */
+    height: 360px;
+    width: 50%;
+   
+}
+
+.left img{
+    display: block;
+    /* width:40%; */
+    height: 90%;
+    border-radius: 50%;
+    padding: 20px 150px;
+    
+}
+
+.right{
+    width: 50%;
+    /* border: 1px solid red; */
+    
+}
+
+.right h2{
+    text-align: center;
+    
+    font-size: 32px;
+    font-weight: bold;
+    /* padding-bottom: 10px; */
+    padding-top: 72px;
+    padding-bottom: 10px;
+}
+
+.right p{  
+    text-align: left;
+    font-size:24px;
+    padding: 20px 80px 20px 80px;
+}
+
+/* ==================== 2nd section: 烘培產品 ====================== */
+.out{
+    /* border: 1px solid green; */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.out >a{
+    display: block;
+    text-align: center;
+    margin: 16px auto;   
+    /* 這個會影響到 item 裡面的 詳細資訊 */
+    
+
+    width: 160px;
+    height: 48px;
+    background-color: #A26769;
+    color: white;
+    line-height: 48px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.product1{
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    /* margin: 0 auto; */
+    
+}
+
+.product1 ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start
+}
+
+.product1 li{
+    /* padding-right: 20px; */
+    padding: 10px 16px;
+    box-sizing: border-box;
+    /* vertical-align: middle; */
+}
+
+
+.item{
+    /* border: 1px solid blue; */
+    width: 360px;
+    height: 416px;
+    background-color: #FBE9E5;
+    border-radius: 8px;
+       
+}
+.img_out{
+    width: 360px;
+}
+
+.img_out img{
+    width: 100%;
+}
+
+.item img{
+    border-radius: 12px 12px 8px 8px;
+}
+
+.item h3{
+    font-size: 24px;
+    text-align: center;
+    /* padding-top: 20px; */
+    padding: 20px 0 8px 0;
+}
+
+.time{
+    /* border: 1px solid brown; */
+    display: flex;
+    padding: 12px 12px 0;
+    box-sizing: border-box;
+}
+
+.time i{
+    padding-left: 28px;
+}
+
+.time h5{
+    font-size: 16px;
+    padding-left: 12px;
+}
+  
+
+.info{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+}
+
+.info p{
+    font-size: 16px;
+    /* text-align: end; */
+}
+
+.info a{
+    
+    display:block;
+    width: 120px;
+    height: 28px;
+    background-color: #A26769;
+    color: white;
+    text-align: center;
+    line-height: 28px;
+    font-size: 16px;
+    /* margin: 30px auto; */
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* ========== hover 效果 ============== */
+.out a:hover{
+    background-color: #CCA1A0;
+    color: #F4E8E2;
+}
+
+.info a:hover{
+    background-color: #CCA1A0;
+    color: #F4E8E2;
+}

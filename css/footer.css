@@ -1,0 +1,138 @@
+@import url('reset.css'); 
+
+/* ============ footer ===================== */
+
+footer{
+    width: 100%;
+    background-color: #F3D2B5;
+}
+
+.outer{
+    /* outline: 1px solid purple; */
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    
+    background-color: #F3D2B5;
+    color: #534533;
+    align-items: center;
+    /* padding-top: 10px; */
+    box-sizing: border-box;
+    /* padding: 16px; */
+}
+
+.logo{
+    /* padding-right: 12px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    display: block;
+    max-width:80%;
+    /* outline: 1px solid aqua; */
+    
+}
+
+.container{
+    /* outline: 1px solid blue; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:  auto auto;
+    grid-gap: 12px;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+    width: 1000px;
+    color: #534533;
+}
+.container >div{
+    /* border: 1px solid black; */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.media{}
+
+.media h4{
+    font-size: 20px;
+    padding-bottom: 16px;
+}
+.media i.fa-facebook{
+    color: 	#1877F2;
+}
+
+.media i.fa-instagram{
+    color:#c13584;
+}
+
+.media i.fa-line{
+    color:#4cc764;
+}
+
+/* 調整 footer icon */
+.media i{
+    font-size: 24px;
+}
+
+.service{}
+
+.service h4{
+    font-size: 20px;
+    padding-bottom: 12px;
+}
+
+.service a{
+    text-decoration: none;
+    color: #534533;
+    display: block;
+    padding-bottom: 8px;
+
+    border-bottom: 5px solid transparent;
+    
+}
+
+.hours{}
+
+.hours h4{
+    font-size: 20px;
+    padding-bottom: 12px;
+}
+
+.hours p{
+    padding-bottom: 8px;
+}
+
+.contact{}
+
+.contact h4{
+    font-size: 20px;
+    padding-bottom: 12px;
+}
+
+.contact p{
+    padding-bottom: 8px;
+}
+
+.footer_note{
+    /* border: 1px solid green; */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #F3D2B5;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    color: gray;
+    
+}
+
+/* ============ hover 效果 ======== */
+.service a:hover{
+   /* border-bottom: 5px solid #DB6D34;   */
+   color: #DB6D34;
+}
+
+.container:nth-child(1) a:hover{
+    border-bottom: 0;
+}

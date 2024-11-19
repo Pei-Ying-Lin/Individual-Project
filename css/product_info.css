@@ -1,0 +1,209 @@
+@import url('reset.css'); 
+
+body{
+    background-color: #FBF3E8;
+    line-height: 1.5;
+    color: #534533;
+}
+
+.wrapper{
+    font-family: verdana;
+    margin: 0 auto;
+}
+
+/* ========== 1st section: 產品 photo ================== */
+.main{
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    } 
+
+.out{
+    /* border: 1px solid red; */
+    display: flex;
+    padding-top: 28px;
+    position: relative;
+    max-width: 1200px;
+}
+
+.pic{
+    margin-left: 40px;
+}
+
+.pic img{
+    border-radius: 16px;
+    width: 95%;
+}
+
+.name{
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 312px;
+    height: 400px;
+   
+    box-sizing: border-box;
+    background-color: #FBE9E5;
+    margin-top: 40px;
+    /* 調整右邊產品簡介 */
+    
+    position: fixed;
+    top: 100px;
+    right: 197px;
+    
+    /* 固定產品簡介, 跟著滑鼠移動 */
+}
+
+/* ========= hover 效果 ===========*/
+
+.name a:hover{
+    background-color: #CCA1A0;
+    color: #F4E8E2;
+}
+
+.name h3{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 72px 30px 20px 30px;
+}
+
+.name p{
+    font-size: 20px;
+    padding: 20px 30px ;
+}
+
+.name a{
+    display: block;
+    text-align: center;
+    margin: 20px auto;     
+
+    width: 240px;
+    height: 48px;
+    background-color: #A26769;
+    color: white;
+    line-height: 48px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.name h4{
+    text-align: center;
+    margin: 28px auto;
+}
+
+/* ========== 2nd section: 活動資訊 ================== */
+.event{
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 40px;
+}
+
+.even_out{
+    border: 1px solid gray;
+    border-radius: 12px;
+    width: 600px;
+    height: 160px;
+    background-color: #FBE9E5;
+    margin: 20px 20px 20px 0;
+ 
+}
+.even_out h3{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 24px 20px 20px 28px;
+}
+
+.info{
+    display: flex;
+}
+
+.info ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info li{
+    /* padding: 12px; */
+    padding: 12px 12px 12px 28px;
+}
+
+.time{
+    display: flex;
+}
+
+.time i{
+    padding: 0 8px;
+}
+
+.schedule{
+    display: flex;
+}
+
+.schedule i{
+    padding: 0 8px;
+}
+
+.group{
+    display: flex;
+}
+
+.group i{
+    padding: 0 8px;
+}
+
+/* ========== 3nd section: 活動詳情 ================== */
+.activity{
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 28px auto;
+
+       padding-left: 40px;
+     
+}
+
+.content{
+    
+    border: 1px solid gray;
+    border-radius: 12px;
+    width: 600px;
+    height: 1000px;
+    background-color: #FBE9E5;
+       /* padding-left: 40px; */
+}
+
+.content h3{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 32px 20px 20px 72px;
+}
+
+.content img{
+    display: block;
+    margin: 0 auto;
+    /* margin-left: 80px; */
+    border-radius: 16px;
+    /* height: 50%; */
+    width: 80%;
+
+}
+
+.description{}
+
+.description h4{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 28px 80px 0 72px;
+}
+
+.description p{
+    padding: 28px 80px 0 72px;
+}
+
+.description ul{}
+
+.description li{
+    padding: 28px 80px 0 72px;
+}
