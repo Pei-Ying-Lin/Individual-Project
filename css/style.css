@@ -13,7 +13,7 @@ body{
 
 /* ==========主視覺 cover photo================== */
 .topMain{
-    background-image: url(../img/Home\ page\ pics/result_Cover.jpg);
+    background-image: url(/img/Home\ page\ pics/result_Cover.jpg);
     /* width: 100%; */
     height: 700px;
     margin: 0 auto;
@@ -24,133 +24,147 @@ body{
 }
 
 /* ============ 1st section: 烘培課程 ===================== */
-/* ============ 1st section 左手邊 =============== */
 .main{
-   /* border: 1px solid green; */
-   max-width: 1200px;
-   margin: 20px auto;
-   /* display: flex; */
-    /* 把特殊形狀放到右邊 用 display: flex */
-    display: grid;
-    grid-template-columns: 620px 1fr;
-    grid-template-rows: 1fr;
-    /* 用 grid 排成左右兩格 */
-    box-sizing: border-box;
-       
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.main .main-left{
-    border: 1px solid blue;
-    padding-top: 30px;
+
+.grid-container{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;  
+    /*  修改grid */
+    grid-template-rows:  1fr 1fr;
+    grid-gap: 16px;
+    padding: 32px 0 28px 0;  
+    /* 調整整個 block 間距 */
+    height: 600px;
+    
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item1{
+    /* border: 1px solid red; */
+    grid-column: 1/2;
+    grid-row: 1 / span2;
+    box-sizing: border-box;
+}
+
+.item1 h2{
+    font-size: 32px;
+    font-weight: bold;
+    /* padding-top: 10px; */
+    margin-top: 140px;
+    text-align: center;
+    padding: 20px;
+  
+}
+
+.item1 p{
+    font-size:24px;
+    padding: 0 40px 20px 40px;
+    width: 550px;
     /* box-sizing: border-box; */
 }
 
-.main .main-left h2{
-    font-size: 32px;
-    font-weight: bold;
-    /* padding-bottom: 10px; */
-    text-align: center;
-    padding: 20px;
-}
-
-.main .main-left p{
-    font-size:24px;
-    padding: 20px 20px 20px 30px;
-    width: 550px;
-}
-
-.main .main-left a{
+.item1 a{
     display:block;
     width: 190px;
     height: 48px;
     background-color: #A26769;
-    color: white;
     text-align: center;
     line-height: 48px;
     font-size: 24px;
-    margin: 20px auto;
+    margin: 30px auto;
     text-decoration: none;
+    color: white;
     border-radius: 8px;
 }
 
-.main .main-left a:hover{
+/* ============ hover 效果 ======== */
+.grid-container .item1 a:hover{
     background-color: #CCA1A0;
     color: #F4E8E2;
-
 }
 
+.item2{
+    /* border: 1px solid blue; */
+    grid-column:2/3;
+    grid-row: 1/2;
+    /* justify-content: flex-end; */
+    /* align-self: end;   */
+    
+}
 
-/* ============ 1st section 右手邊 ===================== */
-.main .main-right{
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 8px; 
-    /* width: 570px; */
+.item2 img{
+    /* 左上圖片 */
+    border-radius: 0 100px;
+}
+
+.item3{
     /* border: 1px solid red; */
+    grid-column:3/4;
+    grid-row: 1/2;
+    
 }
 
-.main-right img{
-    width: 75%;
-    justify-content: center;
-    align-items: center;
-    padding-left: 50px;
+.item3 img{
+    /* 右上圖片 */
+    border-radius: 100px 0;
 }
 
-/* ============ 1st section: 烘培課程 finished ===================== */
+.item4{
+    /* border: 1px solid brown; */
+    grid-column:2/3;
+    grid-row: 2/3;
+    
+}
+
+.item4 img{
+    /* 左下圖片 */
+    border-radius: 100px 0;
+}
+
+.item5{
+    /* border: 1px solid green; */
+    grid-column:3/4;
+    grid-row: 2/3;
+}
+.item5 img{
+      /* 右下圖片 */
+    border-radius: 0 100px;
+}
 
 /* ============ 2nd section: 精彩回顧 ========================== */
 /* ========= 2nd section 左手邊照片 ========== */
 .middle{
-    /* border: 1px solid red; */
-    max-width: 1200px;
-    margin: 0 auto;
+    /* border: 1px solid blue; */
+  
     display:flex;
     align-items: center;
     box-sizing: border-box;
-    margin-bottom: 20px;;
+    /* margin-bottom: 12px; */
+    margin-top: 12px;
 }
-.recap{
-   
-}
+.recap{}
+
 .recap ul{
     display:flex;
    /* width: 880px;  */
     margin-right: auto;
     /* border: 1px solid green; */
-
     transition: 0.3s;
 }
 
-.middle ul li{
-   
-    
-}
+.middle ul li{}
 
 .middle img{
     /* height:95%; */
     border-radius: 4px;;
 }
-
-.middle .content{
-    /* border: 1px solid red; */
-}
-
-/* .item1{
-    flex-grow: 2;
-}
-
-.item2{
-    flex-grow: 2;
-}
-
-.item3{
-    flex-grow: 2;
-}
-
-.item4{
-    flex-grow: 1;
-}*/
 
 .item1:hover img{
     transform: scale(1.05);
@@ -198,7 +212,6 @@ body{
 
 .popular ul{
     display: flex;
-   
     overflow: hidden;    
     /* 要把超出畫面的藏起來  */
     position: relative;
@@ -206,7 +219,6 @@ body{
 }
 
 .popular li{
-    
     /* outline: 1px solid green; */
     margin-right: 5px;
     box-sizing:border-box;
@@ -319,6 +331,9 @@ body{
 .Name{
     margin-left: 160px;
     margin-right: 30px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    
 }
 
 .subscribe input{
@@ -326,10 +341,18 @@ body{
     width: 300px;
     padding-left: 20px;
     box-sizing: border-box;
- }
+    outline: none;
+}
+
+.subscribe input:focus{
+    outline: none;
+    background-color:#FBE9E5 ;
+}
 
  .Email{
     margin-right: 30px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
  }
 
 .subscribe a{

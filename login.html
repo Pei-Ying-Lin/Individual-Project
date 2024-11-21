@@ -14,23 +14,21 @@
         <header>
         <nav class="menubar"> <!-----------------主選單------------------------->
             <a href="index.html"> <img src="Logo/Logo_horizontal.svg" alt=""></a> 
-            
-            <!--search bar-->
-            <!-- <input class= "search" type="text" placeholder="Search" />                  
-                    <button class="search_btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button> -->
-            
+                       
             <ul>
-                <li> 
-                    <input class= "search" type="text" placeholder="Search" />                  
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <!-- 放大鏡 icon-->
+                <li class="no-hover"> 
+                    <div class="search-container">
+                        <input class= "search" type="text" placeholder="Search" />                  
+                            <button class="search_btn" type="submit">
+                                <!-- 放大鏡 icon-->
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                    </div>
                 </li> 
             
                 <li><a href="about.html">About</a></li>
                 <li><a href="product.html">Products</a></li>
-                <li><a href="#">Class Schedule</a></li>
+                <li><a href="schedule.html">Class Schedule</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
@@ -50,10 +48,13 @@
                 <input class = password type="text" placeholder="請輸入密碼" />
                 <div class="button">
                     <!-- <i class="fa-regular fa-user"></i> -->
-                    <a href=""> LOGIN 登入 </a>
+                    <a href="index.html"> LOGIN 登入 </a>
                 </div>
-                <a>新會員註冊</a>
-                <a>忘記密碼 ?</a>
+                <div class="register">
+                    <a href="">新會員註冊</a></br>
+                    <a href="">忘記密碼 ?</a>
+                </div>
+                
 
             </div>
 
@@ -75,7 +76,7 @@
                     <div class="service">
                         <h4>Services</h4>
                         <a href="product.html">烘培課程</a> 
-                        <a href="product.html">甜點課程</a> 
+                        <a href="schedule.html">Class Schedule</a> 
                         <a href="about.html">關於 Cozy Corner</a>
                     </div>
                     <div class="hours">

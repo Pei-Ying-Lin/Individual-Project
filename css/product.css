@@ -12,9 +12,6 @@ body{
 }
 
 /* ========== 主視覺 cover photo ================== */
-/* .top{
-    width: 100%; 
-} */
 
 .cover{
    width: 1440px;
@@ -24,6 +21,9 @@ body{
    /* background-color: #FBE9E5; */
 }
 
+.cover img{
+    width: 100%; 
+}
 
 /* ==================== 1st section: 烘培課程 ====================== */
 .class1{
@@ -76,6 +76,7 @@ body{
     /* border: 1px solid green; */
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 .out >a{
     display: block;
@@ -105,23 +106,24 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-content: flex-start
+    align-content: flex-start;
 }
 
 .product1 li{
     /* padding-right: 20px; */
-    padding: 10px 16px;
+    padding: 20px 16px;
     box-sizing: border-box;
-    /* vertical-align: middle; */
+   
 }
 
 
 .item{
     /* border: 1px solid blue; */
     width: 360px;
-    height: 416px;
+    height: 372px;
     background-color: #FBE9E5;
     border-radius: 8px;
+    /* margin-bottom: 20px; */
        
 }
 .img_out{
@@ -169,6 +171,7 @@ body{
 
 .info p{
     font-size: 16px;
+    padding: 12px 0;
     /* text-align: end; */
 }
 

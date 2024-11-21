@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <title>Reservation</title>
+</head>
+
+<body>
+
+    <div class="wrapper"> <!----------------包裝最外層----------------------->
+        <div class="out">
+            <header>
+                <nav class="menubar"> <!-----------------主選單------------------------->
+                    <a href="index.html"> <img src="Logo/Logo_horizontal.svg" alt=""></a>
+
+                    <ul>
+                        <li class="no-hover">
+                            <div class="search-container">
+                                <input class="search" type="text" placeholder="Search" />
+                                <button class="search_btn" type="submit">
+                                    <!-- 放大鏡 icon-->
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </li>
+
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="schedule.html">Class Schedule</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!----------------------------主選單結束--------------------------------->
+
+            <!-------------------- 1st section: 其他人也看--------------------->
+            <div class="popular">
+                <h2>其他人也看</h2>
+                <!--往左 icon-->
+                <i class="fa-solid fa-angle-left"></i>
+                <ul>
+                    <li>
+                        <img src="img/Home page pics/popular/class1.jpg" alt="">
+                        <div class="lesson1">
+                            <h4>聖誕手工餅乾 (季節限定)</h4>
+                            <a href="product.html">去瞧瞧</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/Home page pics/popular/class2.jpg" alt="">
+                        <div class="lesson1">
+                            <h4>馬卡龍 </h4>
+                            <a href="product.html">去瞧瞧</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/Home page pics/popular/class3.jpg" alt="">
+                        <div class="lesson1">
+                            <h4>野莓水果塔 </h4>
+                            <a href="product.html">去瞧瞧</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/Home page pics/popular/class4.jpg" alt="">
+                        <div class="lesson1">
+                            <h4>可麗露</h4>
+                            <a href="product.html">去瞧瞧</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/Home page pics/popular/class5.jpg" alt="">
+                        <div class="lesson1">
+                            <h4>提拉米蘇 </h4>
+                            <a href="product.html">去瞧瞧</a>
+                        </div>
+                    </li>
+                </ul>
+                <i class="fa-solid fa-angle-right"></i>
+                <!--往右 icon-->
+            </div>
+            <!--------------------1st section: 其他人也看 finish--------------------->
+
+            <!--------------------2nd section: Class Schedule --------------------->
+            <div class="calendar">
+                <div class="schedule">
+                    <h2> Class Schedule</h2>
+                    <img src="img/Calendar.jpg" alt="">
+                    <!-- 先放 calendar 照片 -->
+                </div>
+                <!-- 點擊日曆要跳出的視窗 - 課程簡介 -->
+                <!-- 日曆等 JS 套件: Datepicker -->
+                <div class="block">
+                    <div class="pic">
+                        <img src="img/Product page/Fruit Tart/fruit_tart3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>野莓水果塔</h3>
+                        <p>Date: Wednesday, November XX - 11:00am - 1:30pm</p>
+                        <p>Address:台北市大安區忠孝東路四段101巷 </p>
+                        <p>費用: NT$ 2,800/人 </p>
+                    </div>
+                    <div class="reservation">
+                        <ul>
+                            <li>
+                                <a href="product_info_1.html">課程內容 </a>
+                            </li>
+                            <li>
+                                <a href="login.html">報名 </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------------Footer--------------------->
+    <footer>
+        <div class="outer">
+            <div class="logo">
+                <img src="Logo/Footer_logo.png" alt="">
+            </div>
+            <div class="container">
+                <div class="media">
+                    <h4>Social Media</h4>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-line"></i>
+                </div>
+                <div class="service">
+                    <h4>Services</h4>
+                    <a href="product.html">烘培課程</a>
+                    <a href="schedule.html">Class Schedule</a>
+                    <a href="about.html">關於 Cozy Corner</a>
+                </div>
+                <div class="hours">
+                    <h4>Business Hours</h4>
+                    <p>週二 ~ 周日</p>
+                    <p>11:00 ~ 21:00 </p>
+                    <p>每周一公休 </p>
+                </div>
+                <div class="contact">
+                    <h4>Contact Us</h4>
+                    <p>台北市大安區</p>
+                    <p>忠孝東路四段101巷 </p>
+                    <p>+886-2 -1234-5678 </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_note">
+            <p>本網站為緯育TibaMe【第94期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
+        </div>
+    </footer>
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>

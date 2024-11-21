@@ -8,31 +8,21 @@ body{
 
 .wrapper{
     font-family: verdana;
-    margin: 0 auto;
+    /* margin: 0 auto;
+    max-width: 1200px; */
 }
 
-/* ========== 1st section: 產品 photo ================== */
-.main{
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    } 
 
-.out{
-    /* border: 1px solid red; */
+/* ========== 先處理右邊 div: 產品簡介 ================== */
+.main-product{
     display: flex;
-    padding-top: 28px;
-    position: relative;
+    margin: 0 auto;
     max-width: 1200px;
 }
 
-.pic{
-    margin-left: 40px;
-}
+.right{
+    margin-bottom: 24px;
 
-.pic img{
-    border-radius: 16px;
-    width: 95%;
 }
 
 .name{
@@ -46,18 +36,11 @@ body{
     margin-top: 40px;
     /* 調整右邊產品簡介 */
     
-    position: fixed;
+    position: sticky;
     top: 100px;
-    right: 197px;
+    /* right: 197px; */
     
     /* 固定產品簡介, 跟著滑鼠移動 */
-}
-
-/* ========= hover 效果 ===========*/
-
-.name a:hover{
-    background-color: #CCA1A0;
-    color: #F4E8E2;
 }
 
 .name h3{
@@ -92,10 +75,43 @@ body{
     margin: 28px auto;
 }
 
+/* ========= hover 效果 ===========*/
+
+.name a:hover{
+    background-color: #CCA1A0;
+    color: #F4E8E2;
+}
+
+/* ========== 1st section: 產品 photo ================== */
+.main{
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    box-sizing: border-box;
+    } 
+
+.out{
+    /* border: 1px solid red; */
+    display: flex;
+    padding-top: 32px;
+    position: relative;
+    /* max-width: 1200px; */
+}
+
+.pic{
+    margin-left: 40px;
+}
+
+.pic img{
+    border-radius: 16px;
+    width: 95%;
+}
+
+
+
 /* ========== 2nd section: 活動資訊 ================== */
 .event{
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
     box-sizing: border-box;
     padding-left: 40px;
 }
@@ -157,7 +173,7 @@ body{
 .activity{
     /* border: 1px solid blue; */
     box-sizing: border-box;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 28px auto;
 
        padding-left: 40px;
@@ -182,7 +198,8 @@ body{
 
 .content img{
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; 
+    /* 控制圖片 */
     /* margin-left: 80px; */
     border-radius: 16px;
     /* height: 50%; */

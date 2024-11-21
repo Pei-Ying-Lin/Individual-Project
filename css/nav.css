@@ -1,9 +1,7 @@
 @import url('reset.css'); 
 
 /* ============ Memu bar ===================== */
-.wrapper{
-    
-}
+
 header{
     width: 100%;
     background-color: #F3D2B5;
@@ -21,14 +19,13 @@ header{
     padding: 10px 0;
     box-sizing: border-box;
     /* 把主選單移到左上角 */
-    /* border: 1px solid brown; */
-    border: 2px solid purple;
+   
+    /* border: 2px solid purple; */
 }
 
 .menubar a{
     text-decoration: none;
     color: #534533;
-   
 }
 
 .menubar a img{
@@ -50,55 +47,71 @@ header{
     
 }
 
-.menubar li{
-    /* line-height: 60px; */
-    /* box-sizing: border-box; */
-    /* justify-content:center;
-    align-items: center; */
+.menubar li{  
     padding: 0 10px;
-    /* border: 2px solid red; */
+    /* border: 1px solid blue; */
     flex-grow: 1;
     box-sizing: border-box;
-    /* position: relative; */
+ 
+    border-bottom: 5px solid transparent;  /* 把 border 預設為透明 */
+}
+
+/* Search bar */
+.search-container{
+    /* outline: 1px solid red; */
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .search{
-    /* padding: 15px; */
-    min-width: 100px;
-    height: 20px;
+   
+    max-width: 180px;
+    /* height: 20px; */
     font-size: 18px;
-    margin-left: auto;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    /* margin-left: auto; */
     /* position: relative; */
 }
 
-/* .search_btn{
-    width: 24px;
-    height: 24px;
-    justify-content: center;
-    align-items: center;
-
-} */
-
-.fa-solid .fa-magnifying-glass{
-    
-    align-items: center;
-    line-height: 20px;
-    /* padding: 2px; */
-    position: absolute;
-    top: 50%;
-    right:10px;
-    transform: translateY(-50%);
-
+.search-container input:focus{
+    outline: none;
+    background-color:#FBE9E5 ;
+    /* border-color: gray; */
 }
+
+
+.search_btn{
+    /* outline: 1px solid orange; */
+    position: absolute;
+    height: 100%;
+    top:0;
+    right: 0;
+    border-radius: 0 8px 8px 0;
+    border: 1px solid lightgray;
+    /* background-color: pink; */
+    /* width: 24px; */
+    /* margin-left: auto; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+} 
 
 /* ============ hover 效果 ======== */
 
-.menubar li a:hover{
+.menubar li:hover{
     border-bottom: 5px solid #DB6D34;
+    transition: 0.2s;
+    
 }
 
 /* 若把search bar 放在li, 要把hover 效果拿掉 */
-.menubar li:first-child a:hover{
-    border-bottom: 0;
+.menubar .no-hover:hover{
+    /* border-bottom: 0; */
+    border-bottom: 5px solid transparent; 
 }
+
+
+
 /* ============ Memu bar finish===================== */

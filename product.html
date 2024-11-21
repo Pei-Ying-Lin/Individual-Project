@@ -15,23 +15,21 @@
         <header>
             <nav class="menubar"> <!-----------------主選單------------------------->
                 <a href="index.html"> <img src="Logo/Logo_horizontal.svg" alt=""></a> 
-            
-            <!--search bar-->
-            <!-- <input class= "search" type="text" placeholder="Search" />                  
-                    <button class="search_btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button> -->
-            
+                        
                 <ul>
-                    <li> 
-                        <input class= "search" type="text" placeholder="Search" />                  
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <!-- 放大鏡 icon-->
+                    <li class="no-hover"> 
+                        <div class="search-container">
+                            <input class= "search" type="text" placeholder="Search" />                  
+                                <button class="search_btn" type="submit">
+                                    <!-- 放大鏡 icon-->
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                        </div>
                     </li> 
             
                     <li><a href="about.html">About</a></li>
                     <li><a href="product.html">Products</a></li>
-                    <li><a href="#">Class Schedule</a></li>
+                    <li><a href="schedule.html">Class Schedule</a></li>
                     <li><a href="login.html">Login</a></li>
                  </ul>
             </nav>
@@ -42,7 +40,7 @@
         <!------------------------- Top Cover ---------------------------------->
         <!-- <div class="top"> -->
             <div class="cover">
-                <img src="img/產品照片/product_cover.jpg" alt="">
+                <img src="img/Product page/product_cover.jpg" alt="">
                                
             </div>
         <!-- </div> -->
@@ -50,12 +48,12 @@
          <!------------------------- 1st section: 烘培課程---------------------->
         <div class="class1">
             <div class="left">
-                <img src="img/產品照片/baking.jpg" alt="">
+                <img src="img/Product page/baking2.jpg" alt="">
             </div>
             <div class="right">
                 <h2>烘培課程</h2>
                 <p>歡迎烘焙新手一起踏入烘焙的美妙世界！</p>
-                <p>從基礎理論紮實入門，循序漸進地學習，從零開始打造您的烘焙基礎。我們採小班教學，每個步驟都不錯過！</p>
+                <p>從基礎理論紮實入門，循序漸進地學習，從零開始打造您的烘焙基礎。我們採小班教學，教你輕鬆做出美味不失敗的經典甜點！</p>
             </div>
         </div>
         
@@ -66,7 +64,23 @@
                 <li>
                     <div class="item" data-item="烘培">
                         <div class="img_out">
-                            <img src="img/產品照片/水果塔/fruit_tart3.jpg" alt="">
+                            <img src="img/Product page/Fruit Tart/fruit_tart3.jpg" alt="">
+                        </div>
+                        <h3>野莓水果塔</h3>
+                        <div class="time">
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>4小時</h5>
+                        </div>
+                        <div class="info">
+                            <p>NT$ 2,400</p>
+                            <a href="product_info_1.html">詳細資訊</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item" data-item="烘培">
+                        <div class="img_out">
+                            <img src="img/Product page/Cookies/web1.jpg" alt="">
                         </div>
                         <h3>聖誕手工餅乾 (限定)</h3>
                         <div class="time">
@@ -82,9 +96,9 @@
                 <li>
                     <div class="item" data-item="烘培">
                         <div class="img_out">
-                            <img src="img/產品照片/水果塔/fruit_tart3.jpg" alt="">
+                            <img src="img/Product page/Macarons/result_Macarons2.jpg" alt="">
                         </div>
-                        <h3>聖誕手工餅乾 (限定)</h3>
+                        <h3>馬卡龍</h3>
                         <div class="time">
                             <i class="fa-regular fa-clock"></i>
                             <h5>4小時</h5>
@@ -98,16 +112,48 @@
                 <li>
                     <div class="item" data-item="烘培">
                         <div class="img_out">
-                            <img src="img/產品照片/水果塔/fruit_tart3.jpg" alt="">
+                            <img src="img/Product page/Creme brulee/pexels-valeriya-18976997.jpg" alt="">
                         </div>
-                        <h3>聖誕手工餅乾 (限定)</h3>
+                        <h3>焦糖布丁</h3>
                         <div class="time">
                             <i class="fa-regular fa-clock"></i>
                             <h5>4小時</h5>
                         </div>
                         <div class="info">
                             <p>NT$ 2,400</p>
-                            <a href="">詳細資訊</a>
+                            <a href="product_info_1.html">詳細資訊</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item" data-item="烘培">
+                        <div class="img_out">
+                            <img src="img/Product page/Tiramisu/Tiramisu2.jpg" alt="">
+                        </div>
+                        <h3>提拉米蘇蛋糕</h3>
+                        <div class="time">
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>4小時</h5>
+                        </div>
+                        <div class="info">
+                            <p>NT$ 2,400</p>
+                            <a href="product_info_1.html">詳細資訊</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item" data-item="烘培">
+                        <div class="img_out">
+                            <img src="img/Product page/Crepe cake/crepe_cake2.jpg" alt="">
+                        </div>
+                        <h3>千層蛋糕</h3>
+                        <div class="time">
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>4小時</h5>
+                        </div>
+                        <div class="info">
+                            <p>NT$ 2,400</p>
+                            <a href="product_info_1.html">詳細資訊</a>
                         </div>
                     </div>
                 </li>
@@ -116,84 +162,7 @@
         </div>
         <a href=""> 看更多 </a>
     </div>   
-        <!--------------------- 3rd section: 甜點課程 ------------------------->
-        <div class="class1">
-            <div class="left">
-                <img src="img/產品照片/dessert.jpg" alt="">
-            </div>
-            <div class="right">
-                <h2>甜點課程</h2>
-                
-                <p>不論是烘培新手, 還是想精進技巧的愛好者們, 歡迎加入Cozy Corner ! </p>
-                <p>讓我們教你輕鬆做出美味不失敗的經典甜點</p>
-            </div>
-        </div>
-
-         <!--------------------- 4th section: 甜點產品 ------------------------->
-    <div class="out">
-         <div class="product1">
-            <ul>
-                <li>
-                    <div class="item" data-item="烘培">
-                        <div class="img_out">
-                            <img src="img/產品照片/水果塔/fruit_tart3.jpg" alt="">
-                        </div>
-                        <h3>聖誕手工餅乾 (限定)</h3>
-                        <div class="time">
-                            <i class="fa-regular fa-clock"></i>
-                            <h5>4小時</h5>
-                        </div>
-                        <div class="info">
-                            <p>NT$ 2,400</p>
-                            <a href="">詳細資訊</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="item" data-item="烘培">
-                        <div class="img_out">
-                            <img src="img/產品照片/水果塔/fruit_tart3.jpg" alt="">
-                        </div>
-                        <h3>聖誕手工餅乾 (限定)</h3>
-                        <div class="time">
-                            <i class="fa-regular fa-clock"></i>
-                            <h5>4小時</h5>
-                        </div>
-                        <div class="info">
-                            <p>NT$ 2,400</p>
-                            <a href="">詳細資訊</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="item" data-item="烘培">
-                        <div class="img_out">
-                            <img src="img/產品照片/水果塔/fruit_tart3.jpg" alt="">
-                        </div>
-                        <h3>聖誕手工餅乾 (限定)</h3>
-                        <div class="time">
-                            <i class="fa-regular fa-clock"></i>
-                            <h5>4小時</h5>
-                        </div>
-                        <div class="info">
-                            <p>NT$ 2,400</p>
-                            <a href="">詳細資訊</a>
-                        </div>
-                    </div>
-                </li>
-                
-            </ul>           
-        </div>
-        <a href=""> 看更多 </a>
-    </div> 
-
-
-
-
-
-
-
-
+        
         <!------------------------------Footer----------------------------------->
         <footer>
             <div class="outer">
@@ -210,7 +179,7 @@
                     <div class="service">
                         <h4>Services</h4>
                         <a href="product.html">烘培課程</a> 
-                        <a href="product.html">甜點課程</a> 
+                        <a href="schedule.html">Class Schedule</a> 
                         <a href="about.html">關於 Cozy Corner</a>
                     </div>
                     <div class="hours">

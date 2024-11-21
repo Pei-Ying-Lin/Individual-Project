@@ -90,6 +90,10 @@ body{
    /* font-weight: bold; */
 } 
 
+.section .right span{
+    font-weight: bold;
+}
+
 .section .right ul{
     padding-left: 35px;
     /* font-weight: bold; */
@@ -204,7 +208,7 @@ body{
 .address_icon{
     display: flex;
     /* outline: 1px solid red; */
-    padding-left: 30px;
+    padding-left: 26px;
     box-sizing: border-box;
 }
 
@@ -219,6 +223,7 @@ body{
 }
 
 .address p{
+    /* outline: 1px solid green; */
     font-size:20px;
     text-align: center;
     /* font-weight: bold; */
