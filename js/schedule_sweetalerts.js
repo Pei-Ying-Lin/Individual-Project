@@ -6,11 +6,8 @@ document.querySelector('.schedule img').addEventListener('click', function(){
        
         html: `
         <div class="content">
-            <img src="./img/Product page/Fruit Tart/fruit_tart3.jpg" class="pic" alt="pic">
-
-
-
-            
+            // <img src="./fruit_tart_popup.jpg" class="pic" alt="pic。
+                    
             <p>Date: Wednesday, November XX - 11:00am - 1:30pm</p>
             <p>Address:台北市大安區忠孝東路四段101巷 </p>
             <p>費用: NT$ 2,800/人 </p>
@@ -31,3 +28,6 @@ document.querySelector('.schedule img').addEventListener('click', function(){
         }
     })
 })
+
+/* <img src="" class="pic" alt="pic"> */
+//這個路徑找不到 img
