@@ -163,9 +163,9 @@ body{
 
 
 .popup1{
-    background-color: #F3D2B5;
+    background-color: #FDF6EF;
     /* box-shadow: 4px 4px 4px; */
-    border: 4px solid orange;
+    border: 4px solid #F3D2B5;
     color:#534533; 
     border-radius: 20px;
     margin: 0 auto;
