@@ -1,6 +1,6 @@
 
 // 綁定事件到圖片
-document.querySelector('.schedule img').addEventListener('click', function(){
+document.querySelector('.schedule img').addEventListener('click',function(){
     Swal.fire({
         title: '<h3>課程名稱</h3>',
        
