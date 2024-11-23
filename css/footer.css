@@ -1,5 +1,37 @@
 @import url('reset.css'); 
 
+/* ===============  右下角 upward icon ============= */
+
+.top{
+    /* border:1px solid red; */
+    /* width: 30px; */
+    /* height: 300px; */
+        
+    position: fixed;
+    right: 120px;     /* 距離右側 20px */
+    bottom: 40px;
+   
+    float: right;
+    /* padding-right: 120px; */
+}
+ 
+.top_inner{
+    right: 0;
+    bottom: 0px;
+    border-radius: 50%;
+}
+
+.top i{
+    font-size: 44px;
+    color: #A26769;
+    background-color: #F4E8E2;
+    border-radius: 50%;
+}
+
+.top i:hover{
+    color: #CCA1A0;
+}
+
 /* ============ footer ===================== */
 
 footer{

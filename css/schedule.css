@@ -148,7 +148,6 @@ body{
     font-weight: bold;
     text-align: center;
     margin: 52px auto;
-    /* justify-content: end; */
     font-style: italic;
     text-shadow:  8px 8px 8px #F3D2B5;
 }
@@ -158,130 +157,122 @@ body{
     display: block;
         
 }
-/* 點圖片後出現課程簡介 */
-.calendar:hover .block{
-    display: block;
-}
+
 
 /* ================== 點擊日曆要跳出的視窗 - 課程簡介  ======================= */
 
-.block{
-    border: 4px solid orange;
-    max-width: 480px;
-    height: 508px;
+
+.popup1{
     background-color: #F3D2B5;
-    box-sizing: border-box;
-    /* align-items: center;
-    justify-content: center; */
-    margin-bottom: 32px;
+    /* box-shadow: 4px 4px 4px; */
+    border: 4px solid orange;
+    color:#534533; 
     border-radius: 20px;
-
-    /* 定位 */
-    position:absolute;
-    left:50%;
-    top: 50%;
-    
-    transform: translate(-50%, -50%);
-
-    display:none;
+    margin: 0 auto;
+    max-width: 480px;
+    line-height: normal;
 }
 
 .pic{
-    /* border: 4px solid purple; */
-   
     width: 400px;
-    margin: 24px auto;
-    /* padding-top: 8px; */
-    
-}
-.pic img{
-    display: block;
-    width: 100%;
+    /* margin: 24px auto; */
+    margin-bottom: 12px;
     border-radius: 20px;
-    /* margin: 30px auto; */
 }
 
 .content{
-    /* border: 4px solid black; */
-    
-    padding: 0 36px 0 36px;
- 
-    
-}
-
-.content h3{
-    /* border: 4px solid brown; */
-    font-size: 24px;
-    text-align: center;
-    font-weight: bold;
-    /* padding-top: 20px; */
-    /* padding: 16px 0 16px 0; */
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    padding: 0 12px;
 }
 
 .content p{
-    /* border: 1px solid black; */
-    font-size: 16px;
-    padding: 8px;
+    /* border: 1px solid red; */
+    padding-bottom: 12px;
+    text-align: left;
 }
 
 .reservation{
-    /* border: 1px solid blue; */
-    max-width: 400px;
-    margin: 0 32px;
-    
-}
-.reservation ul{
-    /* border: 1px solid green; */
     display: flex;
-    justify-content: space-between; /* 讓兩個選項分開 */
-
-    
+    justify-content: space-between; 
+    /* padding: 0 20px;   */
+    /* 調整左右兩側距離 */
 }
 
-.reservation li{
-    /* border: 1px solid red; */
-    /* width: 200px; */
-    
-}
-
-.reservation li:last-child a{
-    text-decoration: none;
-    color: #534533;
-    display: block;
-    /* padding-bottom: 8px; */
-    font-size: 20px;
-    width: 120px;
-    height: 28px;
-    background-color: #A26769;
-    color: white;
-    text-align: center;
-    line-height: 28px;
-    font-size: 16px;
-    border-radius: 8px;
-    /* align-items: flex-end; */
-    /* 往右推紐 */
-
-    /* border-bottom: 5px solid transparent; */
-}
-
-.reservation li:first-child a{
+.reservation .link-1 a{
+    /* border: 1px solid green; */
     text-decoration: none;
     color: #534533;
     font-size: 16px;
     text-align: start;
     height: 24px;
     line-height: 24px;
-    padding-left: 12px;
-    padding-top: 8px;
+    margin-left: 12px;
+
+}
+/* 取消 default a tag outline  */
+.reservation a:focus{
+    outline: none;
+}
+
+.reservation .link-2 a{
+    text-decoration: none;
+    width: 120px;
+    height: 28px;
+    color: #534533;
+    display: block;
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #A26769;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+
 }
 
 /* ===============  Hover 特效 ==================== */
-.reservation li:last-child a:hover{
+
+.reservation .link-1 a:hover{
+    color: #CCA1A0;
+    border-bottom: 2px solid #A26769;
+}
+
+
+.reservation .link-2 a:hover{
     background-color: #CCA1A0;
     color: #F4E8E2;
 }
 
-.reservation li:first-child a:hover{
-    color: #CCA1A0;
-    /* cursor: pointer; */
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
