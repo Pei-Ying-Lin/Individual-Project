@@ -6,7 +6,7 @@ document.querySelector('.schedule img').addEventListener('click', function(){
        
         html: `
         <div class="content">
-            <img src="/Users/USER/Desktop/Individual Project/img/Product page/Fruit Tart/fruit_tart3.jpg" class="pic" alt="pic">
+            <img src="../img/Product page/Fruit Tart/fruit_tart3.jpg" class="pic" alt="pic">
 
 
 
