@@ -8,38 +8,98 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/style_rwd.css">
+
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+
+
 </head>
 <body>
     <div class="wrapper"> <!----------------包裝最外層----------------------->
         <header>
-        <nav class="menubar"> <!-----------------主選單------------------------->
-            <a href="index.html"> <img src="Logo/Logo_horizontal.svg" alt=""></a> 
-                       
-            <ul>
-                <li class="no-hover"> 
-                    <div class="search-container">
-                        <input class= "search" type="text" placeholder="Search" />                  
-                            <button class="search_btn" type="submit">
-                                <!-- 放大鏡 icon-->
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                    </div>
-                </li> 
-            
-                <li><a href="about.html">About</a></li>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="schedule.html">Class Schedule</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
+            <nav class="menubar"> <!-----------------主選單------------------------->
+                <a href="index.html"> <img src="Logo/Logo_horizontal.svg" alt=""></a> 
+                        
+                <ul>
+                    <li class="no-hover"> 
+                        <div class="search-container">
+                            <input class= "search" type="text" placeholder="Search" />                  
+                                <button class="search_btn" type="submit">
+                                    <!-- 放大鏡 icon-->
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                        </div>
+                    </li> 
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="product.html">甜點課程</a></li>
+                    <li><a href="schedule.html">預約課程</a></li>
+                    <li><a href="login.html">登入</a></li>
+                </ul>
+            </nav>
         </header>
          <!--------------------------- Cover picture --------------------------------->
-        <div class="topMain">
-            <img src="img/Home page pics/result_Cover.jpg" alt="">
+       
+         <div class="topMain">
+            <img src="img/Home page pics/Cover1.jpg" alt="">
+            <div class="text">
+                <h1>烘焙的瞬間，</h1>
+                <h1 class="title2">化作永恆的回憶</h1>
+            </div>
         </div>
 
          <!--------------------Home page 1st section--------------------->
+        <!--------------------3rd section: Home page 熱門課程--------------------->
         <div class="main">
+            <div class="popular">
+                <h2>熱門課程</h2>
+                    <!--往左 icon-->
+                <!-- <i class="fa-solid fa-angle-left"></i>     -->
+                <ul>
+                    <li> 
+                        <img src="img/Home page pics/popular/class1.jpg" alt=""> 
+                            <div class="lesson1">
+                            <h4>聖誕手工餅乾 (季節限定)</h4>
+                            <a href="product_info_1.html">去瞧瞧</a>
+                            </div>
+                    </li>
+                    <li> 
+                        <img src="img/Home page pics/popular/class2.jpg" alt=""> 
+                            <div class="lesson1">
+                            <h4>馬卡龍 </h4>
+                            <a href="product_info_1.html">去瞧瞧</a>
+                            </div> 
+                    </li> 
+                    <li>
+                        <img src="img/Home page pics/popular/class3.jpg" alt="">  
+                            <div class="lesson1">
+                            <h4>野莓水果塔 </h4>
+                            <a href="product_info_1.html">去瞧瞧</a>
+                    </div>
+                    </li> 
+                    <li>
+                        <img src="img/Home page pics/popular/class4.jpg" alt="">
+                            <div class="lesson1">
+                            <h4>可麗露</h4>
+                            <a href="product_info_1.html">去瞧瞧</a>
+                        </div>
+                    </li> 
+                    <li> 
+                        <img src="img/Home page pics/popular/class5.jpg" alt="">
+                            <div class="lesson1">
+                            <h4>提拉米蘇 </h4>
+                            <a href="product_info_1.html">去瞧瞧</a>
+                        </div>
+                    </li>                   
+                </ul>                
+                <!-- <i class="fa-solid fa-angle-right"></i> -->
+                <!--往右 icon-->
+            </div>
+        <!--------------------3rd section: Home page 熱門課程 finish--------------------->
+
+        
             <div class="grid-container">
                 <div class="item1">
                     <h2>烘培課程</h2>
@@ -64,73 +124,72 @@
                 </div>
             </div>      
 
-          <!--------------------Home page 2nd section--------------------->
-            <!------------- 2nd section 左手邊 ------------->
-            <div class="middle">
-                <div class="recap">
+          <!-------------------- Class Feedback Section --------------------->
+            <div class="Feedback">
+                <h2>課程回饋</h2>
+
+                <div class="comment-out">
                     <ul>
-                        <li class="item1"><img src="img/Home page pics/recap1.jpg" alt=""></li>
-                        <li class="item1"><img src="img/Home page pics/recap2.jpg" alt=""></li>
-                        <li class="item1"><img src="img/Home page pics/recap3.jpg" alt=""></li>
-                        <li class="item1"><img src="img/Home page pics/recap4.jpg" alt=""></li>
-                    </ul>
-                </div>
-                <!------------- 2nd section 右手邊 ------------->
-                <div class="content">
-                    <h2>精彩回顧</h2>
-                    <p>學員們的熱烈反饋是我們不斷進步的動力! </br>
-                        </br>
-                        透過手把手教學，幫助您逐步建立信心，老師也會針對每位學員的進度和需求，提供個別回饋和建議. 輕鬆上手 so easy!
-                        </br>
-                    </p> 
-                </div>   
-            </div>
-        <!--------------------3rd section: Home page 熱門課程--------------------->
-            <div class="popular">
-                <h2>熱門課程</h2>
-                    <!--往左 icon-->
-                <i class="fa-solid fa-angle-left"></i>    
-                <ul>
-                    <li> 
-                        <img src="img/Home page pics/popular/class1.jpg" alt=""> 
-                            <div class="lesson1">
-                            <h4>聖誕手工餅乾 (季節限定)</h4>
-                            <a href="product.html">去瞧瞧</a>
+                        <li>
+                            <div class="comment">
+                                <p>老師的講解與示範都很細緻認真，也讓大家都可以實作各個重要的步驟。完成的蛋糕又美又好吃，除了很有成就感外，還大受家人好評。</p>
+                                <p class="name"> Amy Liang</p>
                             </div>
-                    </li>
-                    <li> 
-                        <img src="img/Home page pics/popular/class2.jpg" alt=""> 
-                            <div class="lesson1">
-                            <h4>馬卡龍 </h4>
-                            <a href="product.html">去瞧瞧</a>
-                            </div> 
-                    </li> 
-                    <li>
-                        <img src="img/Home page pics/popular/class3.jpg" alt="">  
-                            <div class="lesson1">
-                            <h4>野莓水果塔 </h4>
-                            <a href="product.html">去瞧瞧</a>
+                            
+                        </li>
+                        <li>
+                            <div class="comment">
+                                <p>過程中老師都會親自指導和調整學員拿抹刀的方式，並且觀看每位學員的狀況，個別回饋建議給大家，很適合初學者的基礎體驗課程。</p>
+                                <p class="name"> Eva Hsieh</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="comment">
+                                <p>之前自己做蛋糕時沒注意到的細節透過這次的體驗了解到了非常多！覺得收穫豐富、很滿意！等不及要嘗試做更多甜點!</p>
+                                <p class="name"> Judy Lin</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="comment">
+                                <p>老師非常專業且耐心，每個步驟都講解得十分清楚，還分享了許多實用的小技巧，讓整個體驗非常愉快！即使是初學者也能輕鬆上手。</p>
+                                <p class="name"> 烘培新手小白</p>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- <div class="comment">
+                        <p>老師的講解與示範都很細緻認真，也讓大家都可以實作各個重要的步驟。完成的蛋糕又美又好吃，除了很有成就感外，還大受家人好評。</p>
+                        <div class="name">
+                            <p> Amy Liang</p>
+                        </div>
                     </div>
-                    </li> 
-                    <li>
-                        <img src="img/Home page pics/popular/class4.jpg" alt="">
-                            <div class="lesson1">
-                            <h4>可麗露</h4>
-                            <a href="product.html">去瞧瞧</a>
-                        </div>
-                    </li> 
-                    <li> 
-                        <img src="img/Home page pics/popular/class5.jpg" alt="">
-                            <div class="lesson1">
-                            <h4>提拉米蘇 </h4>
-                            <a href="product.html">去瞧瞧</a>
-                        </div>
-                    </li>                   
-                </ul>                
-                <i class="fa-solid fa-angle-right"></i>
-                <!--往右 icon-->
+                    <div class="comment">
+                        <p>過程中老師都會親自指導和調整學員拿抹刀的方式，並且觀看每位學員的狀況，個別回饋建議給大家，很適合初學者的基礎體驗課程。</p>
+                        <p class="name"> Eva Hsieh</p>
+                    </div> -->
+                    <!-- <div class="comment">
+                        <p>之前自己做蛋糕時沒注意到的細節透過這次的體驗了解到了非常多！覺得收穫豐富、很滿意！等不及要嘗試做更多的甜點了!</p>
+                        
+                        <p class="name"> Judy Lin</p>
+                    </div>
+                    <div class="comment">
+                        <p>老師非常專業且耐心，每個步驟都講解得十分清楚，還分享了許多實用的小技巧，讓整個體驗非常愉快！即使是初學者也能輕鬆上手。</p>
+                        <p class="name"> 烘培新手小白</p>
+                    </div> -->
+                </div>
+
             </div>
-            <!--------------------3rd section: Home page 熱門課程 finish--------------------->
+                    
             <!--------------------- last section: 掌握最新課程資訊 -------------------->
             <div class="subscribe">
                 <h2>掌握最新課程資訊</h2>
@@ -142,8 +201,10 @@
 
             <!-------------------- 右下角 upward icon --------------------->
             <div class="top">
-                <div class="top_inner"></div>
-                    <i class="fa-solid fa-circle-chevron-up"></i>
+                <div class="top_inner">
+                    <a href="#">
+                        <i class="fa-solid fa-circle-chevron-up"></i>
+                    </a>
                 </div>
             </div>
 
@@ -155,25 +216,25 @@
                     </div>
                     <div class="container">
                         <div class="media">
-                            <h4>Social Media</h4>
+                            <h4>社群媒體</h4>
                             <i class="fa-brands fa-facebook"></i>
                             <i class="fa-brands fa-instagram"></i>
                             <i class="fa-brands fa-line"></i>                      
                         </div>
                         <div class="service">
-                            <h4>Services</h4>
+                            <h4>所有服務</h4>
                             <a href="product.html">烘培課程</a> 
-                            <a href="schedule.html">Class Schedule</a> 
+                            <a href="schedule.html">甜點課程</a> 
                             <a href="about.html">關於 Cozy Corner</a>
                         </div>
                         <div class="hours">
-                            <h4>Business Hours</h4>
+                            <h4>營業時間</h4>
                             <p>週二 ~ 周日</p>
                             <p>11:00 ~ 21:00 </p>
                             <p>每周一公休 </p>
                         </div>
                         <div class="contact">
-                            <h4>Contact Us</h4>
+                            <h4>門市資訊</h4>
                             <p>台北市大安區</p>
                             <p>忠孝東路四段101巷 </p>
                             <p>+886-2 -1234-5678 </p>

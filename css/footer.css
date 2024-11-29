@@ -15,7 +15,9 @@
     /* padding-right: 120px; */
 }
  
-.top_inner{
+.top_inner a{
+    border: 1px soli red;
+    display: block;
     right: 0;
     bottom: 0px;
     border-radius: 50%;
