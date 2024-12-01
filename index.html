@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/style_rwd.css">
+    <link rel="stylesheet" href="css/nav_and_footer_rwd.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
 
-    <script src="js/owl.carousel.js"></script>
+
     <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
 
 
 </head>
@@ -57,7 +61,7 @@
                 <h2>熱門課程</h2>
                     <!--往左 icon-->
                 <!-- <i class="fa-solid fa-angle-left"></i>     -->
-                <ul>
+                <ul class="owl-carousel owl-theme">
                     <li> 
                         <img src="img/Home page pics/popular/class1.jpg" alt=""> 
                             <div class="lesson1">
@@ -97,6 +101,41 @@
                 <!-- <i class="fa-solid fa-angle-right"></i> -->
                 <!--往右 icon-->
             </div>
+
+            <script>
+                $(document).ready(function(){
+                    $(".owl-carousel").owlCarousel({
+                            center: true,
+                            loop:true,
+                            margin:10,
+                            responsiveClass:true,
+                            dots: true, // 僅啟用基本的 dots
+                            nav: true,
+                            dotsEach:true,
+                            // dotsData: false, // 不使用自定義數據
+                            // dotsContainer: false, // 不自定義容器
+                            responsive:{
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 2
+                            },
+                            830: {
+                                items: 3
+                            },
+                            1000: {
+                                items: 4
+                            }
+                        },
+                            autoplay:true,
+                            autoplayTimeout:3000,
+                            autoplayHoverPause:true,
+                    });
+                });
+            </script>
+
+
         <!--------------------3rd section: Home page 熱門課程 finish--------------------->
 
         
@@ -105,7 +144,7 @@
                     <h2>烘培課程</h2>
                         <p>歡迎烘焙新手一起踏入烘焙的美妙世界！ 
                         </br>
-                        從基礎理論紮實入門，循序漸進地學習，從零開始打造您的烘焙基礎。我們採小班教學，每個步驟都不錯過！
+                        從基礎理論紮實入門, 循序漸進地學習, 從零開始打造您的烘焙基礎。我們採小班教學, 每個步驟都不錯過！
                        </br>
                         </p>
                         <a href="product.html">了解更多</a>
@@ -132,61 +171,119 @@
                     <ul>
                         <li>
                             <div class="comment">
-                                <p>老師的講解與示範都很細緻認真，也讓大家都可以實作各個重要的步驟。完成的蛋糕又美又好吃，除了很有成就感外，還大受家人好評。</p>
+                                <div class="icon">
+                                    <i class="fa-brands fa-gratipay"></i>
+                                </div>
+                                <p>老師的講解與示範都很細緻, 讓大家可以實作各個重要的步驟。完成的蛋糕美又好吃, 又很有成就感。</p>
                                 <p class="name"> Amy Liang</p>
                             </div>
                             
                         </li>
                         <li>
                             <div class="comment">
-                                <p>過程中老師都會親自指導和調整學員拿抹刀的方式，並且觀看每位學員的狀況，個別回饋建議給大家，很適合初學者的基礎體驗課程。</p>
+                                <div class="icon">
+                                    <i class="fa-brands fa-gratipay"></i>
+                                </div>
+                                <p>過程中老師都會親自指導和調整學員拿抹刀的方式, 個別回饋建議給大家, 很適合初學者的基礎體驗課程。</p>
                                 <p class="name"> Eva Hsieh</p>
                             </div>
                         </li>
                         <li>
                             <div class="comment">
-                                <p>之前自己做蛋糕時沒注意到的細節透過這次的體驗了解到了非常多！覺得收穫豐富、很滿意！等不及要嘗試做更多甜點!</p>
+                                <div class="icon">
+                                    <i class="fa-brands fa-gratipay"></i>
+                                </div>
+                                <p>透過這次的體驗了解到非常多自己做蛋糕時沒注意到的細節！覺得收穫良多! 等不及要嘗試做更多甜點!</p>
                                 <p class="name"> Judy Lin</p>
                             </div>
                         </li>
                         <li>
                             <div class="comment">
-                                <p>老師非常專業且耐心，每個步驟都講解得十分清楚，還分享了許多實用的小技巧，讓整個體驗非常愉快！即使是初學者也能輕鬆上手。</p>
+                                <div class="icon">
+                                    <i class="fa-brands fa-gratipay"></i>
+                                </div>
+                                <p>老師非常專業且耐心, 每個步驟都講解得十分清楚, 還分享了許多實用的小技巧, 讓整個體驗非常愉快！</p>
                                 <p class="name"> 烘培新手小白</p>
                             </div>
                         </li>
                     </ul>
-
-
-
-
-
-
-
-
-
-
-
-                    <!-- <div class="comment">
-                        <p>老師的講解與示範都很細緻認真，也讓大家都可以實作各個重要的步驟。完成的蛋糕又美又好吃，除了很有成就感外，還大受家人好評。</p>
-                        <div class="name">
-                            <p> Amy Liang</p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <p>過程中老師都會親自指導和調整學員拿抹刀的方式，並且觀看每位學員的狀況，個別回饋建議給大家，很適合初學者的基礎體驗課程。</p>
-                        <p class="name"> Eva Hsieh</p>
-                    </div> -->
-                    <!-- <div class="comment">
-                        <p>之前自己做蛋糕時沒注意到的細節透過這次的體驗了解到了非常多！覺得收穫豐富、很滿意！等不及要嘗試做更多的甜點了!</p>
-                        
-                        <p class="name"> Judy Lin</p>
-                    </div>
-                    <div class="comment">
-                        <p>老師非常專業且耐心，每個步驟都講解得十分清楚，還分享了許多實用的小技巧，讓整個體驗非常愉快！即使是初學者也能輕鬆上手。</p>
-                        <p class="name"> 烘培新手小白</p>
-                    </div> -->
                 </div>
+            </div>        
+                      <!--------------- Class Feedback Section (換成用div 寫法)  --------------------->
+                        <div class="feedback_container"> 
+                            <h2>課程回饋</h2> 
+                                <div class="swiper">
+                                    <div class="comment_container swiper-wrapper"> 
+                                        <div class="swiper-slide">
+                                            <div class="icon">
+                                                <i class="fa-brands fa-gratipay"></i>
+                                            </div>
+                                            <p>老師的講解與示範都很細緻認真，也讓大家都可以實作各個重要的步驟。完成的蛋糕又美又好吃，除了很有成就感外，還大受家人好評。</p>
+                                            <div class="name">
+                                                <p> Amy Liang</p>
+                                            </div>
+                                        </div> 
+                                        <div class="swiper-slide">
+                                            <div class="icon">
+                                                <i class="fa-brands fa-gratipay"></i>
+                                            </div>
+                                            <p>過程中老師都會親自指導和調整學員拿抹刀的方式，並且觀看每位學員的狀況，個別回饋建議給大家，很適合初學者的基礎體驗課程。</p>
+                                            <p class="name"> Eva Hsieh</p>
+                                        </div> 
+                                        <div class="swiper-slide">
+                                            <div class="icon">
+                                                <i class="fa-brands fa-gratipay"></i>
+                                            </div>
+                                            <p>之前自己做蛋糕時沒注意到的細節透過這次的體驗了解到了非常多！覺得收穫豐富、很滿意！等不及要嘗試做更多的甜點了!</p>
+                                            
+                                            <p class="name"> Judy Lin</p>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="icon">
+                                                <i class="fa-brands fa-gratipay"></i>
+                                            </div>
+                                            <p>老師非常專業且耐心，每個步驟都講解得十分清楚，還分享了許多實用的小技巧，讓整個體驗非常愉快！即使是初學者也能輕鬆上手。</p>
+                                            <p class="name"> 烘培新手小白</p>
+                                        </div> 
+                                    </div> 
+                                </div>  
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+
+                                <!-- If we need scrollbar -->
+                                <div class="swiper-scrollbar"></div> 
+                        </div>
+                        <script>
+                            const swiper = new Swiper('.swiper', {
+                                // Optional parameters
+                                direction: 'horizontal',
+                                loop: true,
+
+                                // If we need pagination
+                                pagination: {
+                                    el: '.swiper-pagination',
+                                    clickable: true, // 小點可以點擊
+                                },
+
+                                // Navigation arrows
+                                navigation: {
+                                    nextEl: '.swiper-button-next',
+                                    prevEl: '.swiper-button-prev',
+                                },
+
+                                // And if we need scrollbar
+                                scrollbar: {
+                                    el: '.swiper-scrollbar',
+                                },
+                            });
+                        </script>
+
+                         <!--------------- Class Feedback Section (換成用div 寫法) finish  --------------------->
+                 
 
             </div>
                     

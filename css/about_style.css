@@ -211,9 +211,10 @@ body{
 }
 
 .address{
-    /* border: 5px solid yellow; */
+    border: 1px solid yellow;
     /* padding-left: 30px; */
     box-sizing: border-box;
+    text-align: center;
     
 }
 
@@ -225,18 +226,27 @@ body{
 }
 
 .address_icon{
-    display: flex;
-    /* outline: 1px solid red; */
-    padding-left: 26px;
+    display: inline-flex;
+    outline: 1px solid red;
+    /* margin-left: 16%; */
+    /* padding-left: 60x; */
+    text-align: center;
+    /* align-items: center; */
     box-sizing: border-box;
+}
+
+.address_icon p{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .address_icon i {
     display: block;
-    font-size: 24px;
+    font-size: 20px;
     color: rgb(201, 29, 29);
-  
-    /* margin-left: 30px; */
+    
+    /* margin-left: 60px; */
     box-sizing: border-box;
     /* outline: 1px solid blue; */
 }
@@ -244,7 +254,12 @@ body{
 .address p{
     /* outline: 1px solid green; */
     font-size:20px;
-    text-align: center;
+    /* text-align: center; */
+   
+    
     /* font-weight: bold; */
-    padding: 0 0 28px 20px;
+    padding: 0 0 28px 8px;
+}
+.address> p{
+    /* padding-left: 20px; */
 }

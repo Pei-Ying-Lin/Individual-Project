@@ -39,6 +39,7 @@
 footer{
     width: 100%;
     background-color: #F3D2B5;
+    font-family: Playfair Display;
 }
 
 .outer{
@@ -75,6 +76,7 @@ footer{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows:  auto auto;
     grid-gap: 12px;
+    
     /* align-items: center; */
     justify-content: center;
     text-align: center;
@@ -83,7 +85,7 @@ footer{
 }
 .container >div{
     /* border: 1px solid black; */
-    padding: 20px;
+    padding: 20px 4px;
     box-sizing: border-box;
 }
 

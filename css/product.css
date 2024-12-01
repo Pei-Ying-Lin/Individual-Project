@@ -9,97 +9,144 @@ body{
 .wrapper{
     font-family: Playfair Display;
     margin: 0 auto;
+    /* line-height: 1.5; */
+}
+
+/* =============== 主視覺標題 ==================== */
+
+.topic{
+    /* outline: 1px solid red; */
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    /* text-align: center; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.title1{
+    /* outline: 1px solid blue; */
+    /* padding: 8px 16px; */
+    padding:  16px;
+    box-sizing: border-box;
+   
+}
+
+.title1 h2{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: end;
+   
+}
+
+.content1{
+    /* outline: 1px solid brown; */
+    padding: 20px 16px;
+    box-sizing: border-box;
+}
+
+.content1 p{
+    /* font-size: 16px; */
+}
+
+/*=== title 中間的線 ==== */
+
+.divider{
+    /* outline: 1px solid orange; */
+    max-width: 4px;
+    /* height: 90px; */
+    /* padding: 0 4px; */
+}
+
+.divider:before{
+    content: "";
+    display: block;
+    background-color: #534533;
+    width: 2px;
+    height: 90px;
+    float: left;
+    margin-right: 10px;
+    
 }
 
 /* ========== 主視覺 cover photo ================== */
 
 .cover{
-   width: 1440px;
+   width: 100%;
+
    margin: 0 auto;
    border-radius: 20px;
+   box-sizing: border-box;
    /* padding: 30px 0; */
-   /* background-color: #FBE9E5; */
+   
+
 }
 
 .cover img{
     width: 100%; 
 }
 
-/* ==================== 1st section: 烘培課程 ====================== */
-.class1{
+/* main class 包覆整個網頁 1200px */
+.main{
     max-width: 1200px;
-    margin: 52px auto;
-    display: flex;
+    width: 100%;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
-.left{
-    /* border: 1px solid black; */
-    height: 360px;
-    width: 50%;
-   
-}
-
-.left img{
-    display: block;
-    /* width:40%; */
-    height: 90%;
-    border-radius: 50%;
-    padding: 20px 150px;
+/* ==================== 1st section: 烘培課程 ====================== */
+.class1{
+    /* outline: 1px solid red; */
+    width: 100%;
+    line-height: 1.5;
     
-}
-
-.right{
-    width: 50%;
-    /* border: 1px solid red; */
-    
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 32px;
 }
 
 .right h2{
-    text-align: center;
-    
+        
     font-size: 32px;
     font-weight: bold;
-    /* padding-bottom: 10px; */
-    padding-top: 72px;
+    
     padding-bottom: 10px;
 }
 
 .right p{  
-    text-align: left;
-    font-size:24px;
-    padding: 20px 80px 20px 80px;
+    text-align: center;
+    font-size:20px;
+
+}
+.dropdown{
+    /* outline: 1px solid red; */
+    padding: 20px 48px 8px 48px;
+    text-align: start;
+    
+}
+
+#category{
+    max-width: 300px;
+    width: 100%;
+    height: 32px;
+    font-size: 16px;
+    border-radius: 4px;
 }
 
 /* ==================== 2nd section: 烘培產品 ====================== */
 .out{
     /* border: 1px solid green; */
-    max-width: 1200px;
-    margin: 0 auto;
+    box-sizing: border-box;
     padding-bottom: 20px;
+ 
 }
-.out >a{
-    display: block;
-    text-align: center;
-    margin: 16px auto;   
-    /* 這個會影響到 item 裡面的 詳細資訊 */
-    
-
-    width: 160px;
-    height: 48px;
-    background-color: #A26769;
-    color: white;
-    line-height: 48px;
-    font-size: 24px;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
 .product1{
     /* border: 1px solid red; */
     box-sizing: border-box;
     /* margin: 0 auto; */
-    
 }
 
 .product1 ul{
@@ -107,27 +154,30 @@ body{
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
+    box-sizing: border-box;
+    padding-left: 2.5%;
 }
 
 .product1 li{
-    /* padding-right: 20px; */
-    padding: 20px 16px;
+    /* 調整 card 之間的距離 */
+    padding: 16px 16px;
     box-sizing: border-box;
-   
+    align-content: flex-start;
 }
-
 
 .item{
     /* border: 1px solid blue; */
-    width: 360px;
-    height: 372px;
-    background-color: #FBE9E5;
+    max-width: 348px;
+    width: 100%;
+    height: 380px;
+    background-color: #fff;
     border-radius: 8px;
     /* margin-bottom: 20px; */
        
 }
 .img_out{
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
 }
 
 .img_out img{
@@ -135,50 +185,96 @@ body{
 }
 
 .item img{
-    border-radius: 12px 12px 8px 8px;
+    border-radius: 12px 12px 0px 0px;
 }
 
-.item h3{
-    font-size: 24px;
-    text-align: center;
+/* 產品內容 */
+.info{
+    /* outline: 1px solid red; */
+}
+
+.subtitle{
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px 8px 24px;
+}
+
+.subtitle h3{
+    /* outline: 1px solid blue; */
+    font-size: 20px;
+    text-align: start;
     /* padding-top: 20px; */
-    padding: 20px 0 8px 0;
+    /* padding: 20px 0 8px 8px; */
+}
+
+.subtitle i{
+    /* outline: 1px solid brown; */
+    display: block;
+    font-size: 24px;
+    /* color: white; */
+    /* border: 1px solid red; */
+    padding-right: 8px;
+}
+/*  愛心 icon 點擊後有顏色 */
+.heart{
+    font-size: 24px;
+    /* stroke: #f1b9b0 ; */
+    color: white;
+    -webkit-text-stroke: 2px #f1b9b0; 
+    cursor: pointer;
+}
+.heart.active {
+    color: #f1b9b0; 
+}
+
+.heart:hover{
+    /* color: #f1b9b0;  */
+}
+
+.level{
+    display: flex;
+    padding: 8px 24px 0;
+    box-sizing: border-box;
+}
+
+.level i{}
+
+.level p{
+    padding-left: 12px;
 }
 
 .time{
     /* border: 1px solid brown; */
     display: flex;
-    padding: 12px 12px 0;
+    padding: 12px 24px 0;
     box-sizing: border-box;
 }
 
-.time i{
-    padding-left: 28px;
-}
+.time i{}
 
-.time h5{
-    font-size: 16px;
+.time p{
     padding-left: 12px;
 }
   
-
-.info{
+.price{
     /* border: 1px solid blue; */
     display: flex;
-    justify-content: space-around;
-    align-items: center;   
+    justify-content: space-between;
+    /* padding: 12px 12px 8px 12px; */
 }
 
-.info p{
-    font-size: 16px;
-    padding: 12px 0;
-    /* text-align: end; */
+.price p{
+    /* outline: 1px solid red; */
+    padding: 16px 24px 0;
+   
 }
 
-.info a{
-    
+.price a{
+    /* outline: 4px solid green; */
     display:block;
-    width: 120px;
+    min-width: 120px;
     height: 28px;
     background-color: #A26769;
     color: white;
@@ -188,15 +284,43 @@ body{
     /* margin: 30px auto; */
     text-decoration: none;
     border-radius: 8px;
+    margin: 6px 20px; 
 }
 
 /* ========== hover 效果 ============== */
-.out a:hover{
+.price a:hover{
     background-color: #CCA1A0;
     color: #F4E8E2;
 }
 
-.info a:hover{
+.img_out a:first-child:hover{
+    color: white;
+}
+
+.more{
+    /* outline: 1px solid red; */
+    padding-left: 44%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.more a{
+    display:block;
+    max-width: 120px;
+    height: 32px;
+    background-color: #A26769;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+    /* margin: 30px auto; */
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 0px 20px; 
+
+}
+
+.more a:hover{
     background-color: #CCA1A0;
     color: #F4E8E2;
 }

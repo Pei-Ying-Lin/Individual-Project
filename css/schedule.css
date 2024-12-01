@@ -19,9 +19,7 @@ body{
 }
 
 .popular{
-    
     margin: 20px auto 20px auto;
-
     position: relative;
     /* 這是左右箭頭的 position: relative */
 
@@ -37,7 +35,6 @@ body{
 
 .popular ul{
     display: flex;
-   
     overflow: hidden;    
     /* 要把超出畫面的藏起來  */
     position: relative;
@@ -47,10 +44,12 @@ body{
 .popular li{
     
     /* outline: 1px solid green; */
+    margin-left: 5px;
     margin-right: 5px;
     box-sizing:border-box;
-    width: 250px;
-    flex-shrink: 0;
+    width: 290px;
+    width: 100%;
+    /* flex-shrink: 0; */
 
     position: relative;
     /* 這是課程 .lesson1 的 position: relative */
@@ -134,6 +133,16 @@ body{
 
 .fa-angle-right{
     right: -40px;
+}
+
+/* ===== 輪播左右 === */
+
+.owl-carousel .owl-nav button.owl-next{
+    display: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev{
+    display: none;
 }
 
 /* ============ 1st section: 其他人也看 finish ========================== */

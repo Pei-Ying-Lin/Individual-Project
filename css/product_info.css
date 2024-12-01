@@ -15,13 +15,25 @@ body{
 
 
 /* ========== 先處理右邊 div: 產品簡介 ================== */
+
+/* 這個是最外層 */
 .main-product{
+    /* outline: 2px solid red; */
     display: flex;
     margin: 0 auto;
     max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    /* justify-content: center; */
+    line-height: 1.5;
+
 }
 
 .right{
+    /* outline: 4px solid blue; */
+    box-sizing: border-box;
+    width: 40%;
+    padding-left: 6%;
     margin-bottom: 24px;
 
 }
@@ -29,8 +41,10 @@ body{
 .name{
     border: 1px solid gray;
     border-radius: 8px;
-    width: 312px;
-    height: 400px;
+    max-width: 312px;
+    width: 100%;
+    /* height: 372px; */
+    height: 70vh;
    
     box-sizing: border-box;
     background-color: #FBE9E5;
@@ -48,12 +62,13 @@ body{
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    padding: 72px 30px 20px 30px;
+    padding: 48px 30px 0px 30px;
 }
 
 .name p{
+    /* border: 1px solid brown; */
     font-size: 20px;
-    padding: 20px 30px ;
+    padding: 20px 30px 12px;
 }
 
 .name a{
@@ -61,7 +76,8 @@ body{
     text-align: center;
     margin: 20px auto;     
 
-    width: 240px;
+    max-width: 200px;
+    width: 100%;
     height: 48px;
     background-color: #A26769;
     color: white;
@@ -72,8 +88,10 @@ body{
 }
 
 .name h4{
+    /* border: 1px solid brown; */
     text-align: center;
-    margin: 28px auto;
+    margin: 12px auto;
+    font-size: 20px;
 }
 
 /* ========= hover 效果 ===========*/
@@ -84,56 +102,79 @@ body{
 }
 
 /* ========== 1st section: 產品 photo ================== */
+/* 左邊最外層 */
 .main{
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
+    /* outline: 4px solid green; */
+    width: 60%;
     box-sizing: border-box;
-    } 
+} 
 
+/* 照片區 */
 .out{
-    /* border: 1px solid red; */
-    display: flex;
-    padding-top: 32px;
+    /* outline: 1px solid red; */
+    /* display: flex; */
+    padding-top: 24px;
     position: relative;
-    /* max-width: 1200px; */
 }
 
 .pic{
-    margin-left: 40px;
+    /* outline: 1px solid blue; */
+    padding: 10px;
+    text-align: center;
 }
 
-.pic img{
+#big{
     border-radius: 16px;
-    width: 95%;
+    width: 80%;
+}
+.frame{
+    display: flex;
 }
 
+.frame .photo{
+   /* border-radius: 4px; */
+    margin: 8px 4px;
+}
 
+.photo.active{
+    border: 1px solid brown;
+}
+
+.frame .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ========== 1st section 輪播區: 產品 photo ================== */
 
 /* ========== 2nd section: 活動資訊 ================== */
 .event{
     /* max-width: 1200px; */
     /* margin: 0 auto; */
     box-sizing: border-box;
-    padding-left: 40px;
+    padding-left: 32px;
 }
 
 .even_out{
     border: 1px solid gray;
     border-radius: 12px;
-    width: 600px;
+    max-width: 660px;
+    width: 100%;
     height: 160px;
     background-color: #FBE9E5;
-    margin: 20px 20px 20px 0;
+    margin: 12px 20px 20px 0;
  
 }
 .even_out h3{
     font-size: 24px;
     font-weight: bold;
-    padding: 24px 20px 20px 28px;
+    padding: 12px 20px 8px 28px;
 }
 
 .info{
-    display: flex;
+    display: flex-end;
+    justify-content: space-between;
+    
 }
 
 .info ul{
@@ -142,8 +183,17 @@ body{
 }
 
 .info li{
-    /* padding: 12px; */
+    /* outline: 1px solid red; */
     padding: 12px 12px 12px 28px;
+    flex-grow: 1;
+}
+
+.level{
+    display: flex;
+}
+
+.level i{
+    padding: 0 8px;
 }
 
 .time{
@@ -176,17 +226,19 @@ body{
     box-sizing: border-box;
     /* max-width: 1200px; */
     margin: 28px auto;
-
-       padding-left: 40px;
+    line-height: 1.6;
+    padding-left: 32px;
      
 }
 
 .content{
-    
     border: 1px solid gray;
     border-radius: 12px;
-    width: 600px;
-    height: 1000px;
+    max-width: 660px;
+    width: 100%;
+    /* height: 1300px; */
+    height: 250vh;
+    
     background-color: #FBE9E5;
        /* padding-left: 40px; */
 }
@@ -194,7 +246,7 @@ body{
 .content h3{
     font-size: 24px;
     font-weight: bold;
-    padding: 32px 20px 20px 72px;
+    padding: 32px 20px 16px 72px;
 }
 
 .content img{
@@ -213,15 +265,20 @@ body{
 .description h4{
     font-size: 20px;
     font-weight: bold;
-    padding: 28px 80px 0 72px;
+    padding: 20px 80px 4px 72px;
 }
 
 .description p{
-    padding: 28px 80px 0 72px;
+    padding: 0px 56px 0 72px;
 }
 
-.description ul{}
+.description ul{
+    /* border: 1px solid red; */
+    padding: 12px 80px 0 90px;
+}
 
 .description li{
-    padding: 28px 80px 0 72px;
+    /* border: 1px solid orange; */
+    list-style-type: decimal;
+    
 }

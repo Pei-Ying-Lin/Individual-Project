@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
 
+    <script src="js/jquery-3.7.1.js"></script>
+
     <title>Fruit Tart</title>
 </head>
 
@@ -45,10 +47,46 @@
                 <!--------------------1st section: 產品 photo------------------------->
                 <div class="out">
                     <div class="pic">
-                        <img src="img/Product page/Fruit Tart/web6.jpg" alt="">
+                        <img id="big" src="img/Product page/Fruit Tart/web6.jpg" alt="">
+                    </div>
+                    <!-- 產品圖片區 -->
+                    <div class="frame">
+                        <div class="photo active">
+                            <img src="img/Product page/Fruit Tart/web6.jpg" alt="">
+                        </div>
+                        <div class="photo">
+                            <img src="img/Product page/Fruit Tart/web6-2.jpg" alt="">
+                        </div>
+                        <div class="photo">
+                            <img src="img/Product page/Fruit Tart/web6-3.jpg" alt="">
+                        </div>
+                        <div class="photo">
+                            <img src="img/Product page/Fruit Tart/web6-4.jpg" alt="">
+                        </div>
                     </div>
                 </div>
+                
+                <script>
+                    $(function(){
+                        $('.photo').click(function(){
+                            // console.log($(this).find('img').attr('src'));  
+                            //找到這張照片的內容
+                            let picSrc =$(this).find('img').attr('src');
+                            //console.log(picSrc)
+                            // 在放大圖片的 image attribute 寫入 picSrc 的 element
+                           $('#big').attr('src', picSrc);
+                            //被按得那一個圖片會有外框, 就要addClass
+                            $(this).addClass('active');
+                            $('.photo').not(this).removeClass('active');
 
+                        })
+                    });
+                </script>
+                <!--------------------1st section輪播區: 產品 photo ------------------------->
+
+
+
+                
                 <!-----------------2nd section: 活動資訊------------------------------->
                 <div class="event">
                     <div class="even_out">
@@ -56,15 +94,22 @@
                         <div class="info">
                             <ul>
                                 <li>
-                                    <div class="time">
-                                        <i class="fa-regular fa-clock"></i>
-                                        <p>活動時間 3 小時 30 分鐘</p>
+                                    <div class="level">
+                                        <i class="fa-regular fa-star"></i>
+                                        <p>初級</p>
                                     </div>
                                 </li>
                                 <li>
+                                    <div class="time">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <p>3 小時 30 分鐘</p>
+                                    </div>
+                                </li>
+
+                                <li>
                                     <div class="schedule">
                                         <i class="fa-regular fa-calendar"></i>
-                                        <p> 需在活動開始 1 天前完成預訂</p>
+                                        <p> 開始 1 天前完成預訂</p>
                                     </div>
                                 </li>
                                 <li>
@@ -75,7 +120,6 @@
                                 </li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
 
@@ -86,16 +130,22 @@
                         <img src="img/Product page/Fruit Tart/web6-1.jpg" alt="">
                         <div class="description">
                             <h4>野莓水果塔</h4>
-                            <p>多種鮮嫩野莓匯聚塔中，酸甜交織，每一口都是季節的滋味與層次的驚喜，滿足味蕾的完美甜點</p>
+                                <p>想學會打造像這樣完美的水果塔嗎？在我們的烘焙課程中，你將親手製作酥脆的塔殼，搭配低糖海綿蛋糕和濃郁卡士達，學會如何將鬆軟口感與奶香層次完美結合。我們還會教你如何挑選和擺放鮮嫩野莓，讓酸甜滋味交織成令人驚嘆的視覺與味覺享受。從基礎到完成，每一步都有專業指導，輕鬆做出媲美甜點店的高級水果塔！</p>
                             <h4>課程內容</h4>
-                            <ul>
-                                <li>學會塔皮、多種內餡與裝飾</li>
-                            </ul>
+                                <p> 課程中將介紹如何挑選水果並搭配組合、學習製作酥脆的塔皮和多層次的內餡及裝飾和擺盤的小技巧</p>
+                            
                             <h4>課程作品</h4>
-                            <p>野莓水果塔 數量: 4~6 個</p>
+                                <p>野莓水果塔數量: 4~6 個</p>
                             <h4>注意事項</h4>
-                            <p>每堂課依上方提供完成作品(尺寸/數量)，
-                                歡迎自行攜帶相對應的 ：提袋（保冷袋）、盒子</p>
+                                <p>每堂課依上方提供完成作品(尺寸/數量), 歡迎自行攜帶相對應的 ：提袋（保冷袋）、盒子</p>
+                            <h4>課程取消辦法：</h4>
+                            <ul>
+                                <li>出發日前 7 日前 (不含出發日) 通知取消，全額退回款項。</li>
+                                <li>出發日前 6 日至前 4 日內 (不含出發日) 可更改日期, 但更改僅限一次，。</li>
+                                <li>出發日前 3 日至當日內不接受取消，並不予退回款項。</li>
+                                <li>於活動中如因非可究責主辦單位之因素中止參與活動，將不予退回款項。</li>
+                            </ul>
+
                         </div>
                     </div>
                 </div>              
@@ -105,7 +155,7 @@
             <div class="right">
                 <div class="name">
                     <h3> 野莓水果塔 </h3>
-                    <p>多種鮮嫩野莓匯聚塔中，酸甜交織，每一口都是季節的滋味與層次的驚喜，滿足味蕾的完美甜點</p>
+                    <p>多種鮮嫩野莓匯聚塔中, 酸甜交織, 每一口都是季節的滋味與層次的驚喜, 滿足味蕾的完美甜點</p>
                     <h4>NT$ 2,400</h4>
                     <a href="schedule.html">立即預定</a>
                 </div>

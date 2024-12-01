@@ -86,9 +86,9 @@ body{
     /*  修改grid */
     grid-template-rows:  1fr 1fr;
     grid-gap: 16px;
-    padding: 32px 0 28px 0;  
+    padding: 32px 0 0 0;  
     /* 調整整個 block 間距 */
-    height: 600px;
+    /* height: 600px; */
     line-height: 1.5;
     
     box-sizing: border-box;
@@ -108,7 +108,7 @@ body{
     font-size: 32px;
     font-weight: bold;
     /* padding-top: 10px; */
-    margin-top: 140px;
+    margin-top: 15%;
     text-align: center;
     padding: 20px;
   
@@ -124,13 +124,14 @@ body{
 
 .item1 a{
     display:block;
-    width: 190px;
-    height: 48px;
+    max-width: 190px;
+    width: 100%;
+    height: 44px;
     background-color: #A26769;
     text-align: center;
-    line-height: 48px;
-    font-size: 24px;
-    margin: 30px auto;
+    line-height: 44px;
+    font-size: 20px;
+    margin: 20px auto;
     text-decoration: none;
     color: white;
     border-radius: 8px;
@@ -202,7 +203,6 @@ body{
     /* max-width: 1200px; */
     margin: 0 auto 20px auto;
     /* padding-top: 120px; */
-
     position: relative;
     /* 這是左右箭頭的 position: relative */
 
@@ -229,9 +229,9 @@ body{
     margin-left: 5px;
     margin-right: 5px;
     box-sizing:border-box;
-    max-width: 250px;
+    max-width: 300px;
     width: 100%;
-    flex-shrink: 1;
+    /* flex-shrink: 1; */
 
     position: relative;
     /* 這是課程 .lesson1 的 position: relative */
@@ -322,22 +322,32 @@ body{
     right: -40px;
 }
 
+/* ===== 輪播左右 === */
+
+.owl-carousel .owl-nav button.owl-next{
+    display: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev{
+    display: none;
+}
+
 /* ============ 3rd Section: 熱門課程 finish ========================== */
 
 /* ============== Class Feedback Section ================== */
 
-.Feedback{
-    /* border: 1px solid red  ; */
+/* .Feedback{
+    
     width: 100%;
     line-height: 1.5;
     box-sizing: border-box;
     color: #534533;
-    margin: 20px auto;
-    padding-bottom: 20px;
+    margin: 0 auto 28px auto;
+    padding: 20px 0;
     
 }
 .Feedback h2{
-    /* border: 1px solid blue; */
+ 
     text-align: center;
     font-size: 32px;
     font-weight: bold;
@@ -351,19 +361,21 @@ body{
 
 .comment-out ul{
     display: flex;
-    /* padding: 20px; */
+   
+    
 }
 
 .comment-out li{
     border: 1px solid #f2d7b6;
-    /* height: 200px; */
+   
     align-items: center;
     justify-content: center;
     padding: 24px 20px;
     margin: 0 10px;
-    
     border-radius: 8px;
     transition:  transform 0.3s ease;
+    background-color: #ffffff93;
+
 }
 
 .comment-out li:hover{
@@ -373,15 +385,90 @@ body{
 
 }
 
-.comment{
-    /* padding: 4px 0; */
-    
+.comment{}
+
+.icon {
+    text-align: center;
+}
+
+.icon i{
+    font-size: 32px;
+    padding-bottom: 20px;
+    -webkit-text-stroke: 2px #f1b9b0; 
+    color: white;
 }
 
 .name{
-    text-align: end;
+    text-align: center;
     padding-top: 20px;
+} */
+
+.Feedback{
+    display:none;
 }
+
+/* ============== Class Feedback Section (換成用div 寫法) ================== */
+
+.feedback_container{
+    /* border: 1px solid red  ; */
+    width: 100%;
+    line-height: 1.5;
+    box-sizing: border-box;
+    color: #534533;
+    margin: 0 auto 28px auto;
+    padding: 20px 0;
+}
+
+.feedback_container h2{
+    /* border: 1px solid blue; */
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.comment_container{
+    display: flex;
+}
+
+.swiper-slide{
+    border: 1px solid #f2d7b6;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    transition:  transform 0.3s ease;
+    background-color: #ffffff93;
+}
+
+.swiper-slide:hover{
+    background-color: #fff;
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 10px 0px #f2d7b6;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon i{
+    font-size: 32px;
+    padding-bottom: 20px;
+    -webkit-text-stroke: 2px #f1b9b0; 
+    color: white;
+}
+
+.name{
+    text-align: center;
+    padding-top: 20px;
+} 
+
+/* 調整slider */
+/* .swiper {
+    width: 500px;
+    height: 300px;
+} */
 
 
 
