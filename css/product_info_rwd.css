@@ -1,0 +1,19 @@
+
+
+
+
+
+@media screen and (max-width: 970px){
+    .right{
+        padding-right: 5%;
+    }
+}
+
+
+
+@media screen and (max-width: 873px){
+    .time {
+        padding-left: 80px;
+    }
+
+}

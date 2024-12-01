@@ -44,7 +44,7 @@ body{
     max-width: 312px;
     width: 100%;
     /* height: 372px; */
-    height: 70vh;
+    height: 400px;
    
     box-sizing: border-box;
     background-color: #FBE9E5;
@@ -129,6 +129,7 @@ body{
 }
 .frame{
     display: flex;
+    padding-left: 2%;
 }
 
 .frame .photo{
@@ -236,8 +237,8 @@ body{
     border-radius: 12px;
     max-width: 660px;
     width: 100%;
-    /* height: 1300px; */
-    height: 250vh;
+    height: 1350px;
+    /* height: 250vh; */
     
     background-color: #FBE9E5;
        /* padding-left: 40px; */
@@ -281,4 +282,21 @@ body{
     /* border: 1px solid orange; */
     list-style-type: decimal;
     
+}
+
+
+
+@media screen and (max-width: 970px){
+    .right{
+        padding-right: 5%;
+    }
+}
+
+
+
+@media screen and (max-width: 873px){
+    .time {
+        padding-left: 80px;
+    }
+
 }

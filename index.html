@@ -14,16 +14,20 @@
     <link rel="stylesheet" href="css/nav_and_footer_rwd.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 
 
     <script src="js/jquery-3.7.1.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 <body>
     <div class="wrapper"> <!----------------包裝最外層----------------------->
         <header>
+            <!-- hamburger icon -->
+            <i class="fa-solid fa-bars"></i>
             <nav class="menubar"> <!-----------------主選單------------------------->
                 <a href="index.html"> <img src="Logo/Logo_horizontal.svg" alt=""></a> 
                         
@@ -43,11 +47,14 @@
                     <li><a href="login.html">登入</a></li>
                 </ul>
             </nav>
+            <!-- user icon -->
+            <i class="fa-regular fa-circle-user"></i>
         </header>
          <!--------------------------- Cover picture --------------------------------->
        
          <div class="topMain">
-            <img src="img/Home page pics/Cover1.jpg" alt="">
+            <img src="img/Home page pics/Cover1.jpg" class="big">
+            <img src="img/Home page pics/cover_small.jpg" class="small">
             <div class="text">
                 <h1>烘焙的瞬間，</h1>
                 <h1 class="title2">化作永恆的回憶</h1>
@@ -102,38 +109,41 @@
                 <!--往右 icon-->
             </div>
 
-            <script>
-                $(document).ready(function(){
-                    $(".owl-carousel").owlCarousel({
-                            center: true,
-                            loop:true,
-                            margin:10,
-                            responsiveClass:true,
-                            dots: true, // 僅啟用基本的 dots
-                            nav: true,
-                            dotsEach:true,
-                            // dotsData: false, // 不使用自定義數據
-                            // dotsContainer: false, // 不自定義容器
-                            responsive:{
-                            0: {
-                                items: 1
+                <script>
+                    $(document).ready(function(){
+                        $(".owl-carousel").owlCarousel({
+                                center: true,
+                                loop:true,
+                                margin:8,
+                                responsiveClass:true,
+                                dots: true, // 僅啟用基本的 dots
+                                nav: true,
+                                dotsEach:true,
+                                autoWidth:true,
+                                // dotsData: false, // 不使用自定義數據
+                                // dotsContainer: false, // 不自定義容器
+                                responsive:{
+                                0: {
+                                    items: 1
+                                    
+                                },
+                                600: {
+                                    items: 2
+                                },
+                                830: {
+                                    items: 3
+                                },
+                                1000: {
+                                    items: 4
+                                }
                             },
-                            600: {
-                                items: 2
-                            },
-                            830: {
-                                items: 3
-                            },
-                            1000: {
-                                items: 4
-                            }
-                        },
-                            autoplay:true,
-                            autoplayTimeout:3000,
-                            autoplayHoverPause:true,
+                                autoplay:true,
+                                autoplayTimeout:3000,
+                                autoplayHoverPause:true,
+                                
+                        });
                     });
-                });
-            </script>
+                </script>
 
 
         <!--------------------3rd section: Home page 熱門課程 finish--------------------->
@@ -209,7 +219,7 @@
                     </ul>
                 </div>
             </div>        
-                      <!--------------- Class Feedback Section (換成用div 寫法)  --------------------->
+            <!--------------- Class Feedback Section (換成用div 寫法)  --------------------->
                         <div class="feedback_container"> 
                             <h2>課程回饋</h2> 
                                 <div class="swiper">
@@ -218,7 +228,7 @@
                                             <div class="icon">
                                                 <i class="fa-brands fa-gratipay"></i>
                                             </div>
-                                            <p>老師的講解與示範都很細緻認真，也讓大家都可以實作各個重要的步驟。完成的蛋糕又美又好吃，除了很有成就感外，還大受家人好評。</p>
+                                            <p>老師的講解與示範都很細緻認真，讓大家都可以實作各個重要的步驟。完成的蛋糕又美又好吃，除了很有成就感外，還大受家人好評。</p>
                                             <div class="name">
                                                 <p> Amy Liang</p>
                                             </div>
@@ -234,7 +244,7 @@
                                             <div class="icon">
                                                 <i class="fa-brands fa-gratipay"></i>
                                             </div>
-                                            <p>之前自己做蛋糕時沒注意到的細節透過這次的體驗了解到了非常多！覺得收穫豐富、很滿意！等不及要嘗試做更多的甜點了!</p>
+                                            <p>自己做蛋糕時沒注意到的細節透過這次的體驗了解到非常多！覺得收穫豐富、很滿意！等不及要嘗試做更多甜點了!</p>
                                             
                                             <p class="name"> Judy Lin</p>
                                         </div>
@@ -246,41 +256,45 @@
                                             <p class="name"> 烘培新手小白</p>
                                         </div> 
                                     </div> 
-                                </div>  
+                                  
                                 <!-- If we need pagination -->
                                 <div class="swiper-pagination"></div>
 
                                 <!-- If we need navigation buttons -->
                                 <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-
+                                <div class="swiper-button-next"></div>    
+                                
                                 <!-- If we need scrollbar -->
-                                <div class="swiper-scrollbar"></div> 
+                                <!-- <div class="swiper-scrollbar"></div>  -->
+                            </div>
                         </div>
-                        <script>
-                            const swiper = new Swiper('.swiper', {
-                                // Optional parameters
-                                direction: 'horizontal',
-                                loop: true,
+                            <script>
+                                const swiper = new Swiper('.swiper', {
+                                    // Optional parameters
+                                    direction: 'horizontal',
+                                    loop: true,
+                                    autoHeight: false, // 根據內容自適應高度
 
-                                // If we need pagination
-                                pagination: {
-                                    el: '.swiper-pagination',
-                                    clickable: true, // 小點可以點擊
-                                },
+                                    // If we need pagination
+                                    pagination: {
+                                        el: '.swiper-pagination',
+                                        clickable: true, // 小點可以點擊
+                                    },
 
-                                // Navigation arrows
-                                navigation: {
-                                    nextEl: '.swiper-button-next',
-                                    prevEl: '.swiper-button-prev',
-                                },
+                                    // Navigation arrows
+                                    navigation: {
+                                        nextEl: '.swiper-button-next',
+                                        prevEl: '.swiper-button-prev',
+                                    },
 
-                                // And if we need scrollbar
-                                scrollbar: {
-                                    el: '.swiper-scrollbar',
-                                },
-                            });
-                        </script>
+                                    centeredSlides: true,
+                                    centeredSlidesBounds: true,
+                                    effect: 'flip',
+                                    flipEffect: {
+                                        slideShadows: false,
+                                    },
+                                });
+                            </script>
 
                          <!--------------- Class Feedback Section (換成用div 寫法) finish  --------------------->
                  

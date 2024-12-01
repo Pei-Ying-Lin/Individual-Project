@@ -1,4 +1,16 @@
 
+@media screen and (max-width: 1010px){
+    /* 往上的 icon */
+    .top{
+        right: 100px;         
+    }
+}
+
+@media screen and (max-width: 930px){
+    .top{
+        right: 76px;         
+    }
+}
 
 @media screen and (max-width: 830px){
     /* Navigator */
@@ -18,11 +30,54 @@
         padding-top: 8px;
     } 
     /* Footer */
-    .container >div{
-        /* padding: 20px 4px 20px 4px; */
-    }
+   
     .top{
-        right: 40px;
-        bottom: 252px;
+        right: 20px;
     }
+}
+
+@media screen and (max-width: 780px){
+    /* navigator */
+    /* .menubar{
+        flex-direction: column;
+    }
+
+    .menubar ul{
+        flex-direction: column;
+        margin-left: 0;
+        align-items: start;
+    } */
+
+
+    /* footer */
+    .logo{
+        display: none;
+    }
+    .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media screen and (max-width: 430px){
+
+
+    /* footer */
+    .logo{
+        display: none;
+    }
+    .container{
+        /* grid-template-columns: repeat(2,1fr); */
+        grid-template-columns: 1fr;
+        grid-gap: 4px;
+        
+    }
+    .container >div {
+        padding: 8px 4px;
+    }
+    .media h4{
+        padding: 16px;
+    }  
+    
+
 }

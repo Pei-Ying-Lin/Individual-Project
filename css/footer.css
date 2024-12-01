@@ -8,8 +8,10 @@
     /* height: 300px; */
         
     position: fixed;
-    right: 120px;     /* 距離右側 20px */
-    bottom: 40px;
+    right: 120px;     /*距離右側 20px */
+    bottom: 60px; 
+    /* right: 8vw;
+    bottom: 49vh; */
    
     float: right;
     /* padding-right: 120px; */
@@ -21,6 +23,7 @@
     right: 0;
     bottom: 0px;
     border-radius: 50%;
+    z-index: 999;
 }
 
 .top i{
@@ -73,7 +76,7 @@ footer{
 .container{
     /* outline: 1px solid blue; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows:  auto auto;
     grid-gap: 12px;
     

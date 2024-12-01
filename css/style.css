@@ -37,6 +37,10 @@ body{
     /* flex-shrink: 0; */
 }
 
+.small{
+    display: none;
+}
+
 .topMain .text{
     /* max-width: 800px; */
     width: 100%;
@@ -246,6 +250,7 @@ body{
 
 /* =========== 圖片上的 div, 為了要 hover 後show 文字在圖片上 ========== */
 .lesson1{
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -336,7 +341,7 @@ body{
 
 /* ============== Class Feedback Section ================== */
 
-/* .Feedback{
+.Feedback{
     
     width: 100%;
     line-height: 1.5;
@@ -371,7 +376,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 24px 20px;
-    margin: 0 10px;
+    margin: 0 4px;
     border-radius: 8px;
     transition:  transform 0.3s ease;
     background-color: #ffffff93;
@@ -401,9 +406,14 @@ body{
 .name{
     text-align: center;
     padding-top: 20px;
-} */
+}
 
+/* ============= 控制回饋的 block =================== */
 .Feedback{
+    /* display:none; */
+}
+
+.feedback_container{
     display:none;
 }
 
@@ -435,11 +445,13 @@ body{
     border: 1px solid #f2d7b6;
     align-items: center;
     justify-content: center;
-    padding: 24px 20px;
+    padding: 24px 12px;
     margin: 0 10px;
     border-radius: 8px;
     transition:  transform 0.3s ease;
     background-color: #ffffff93;
+    /* flex-grow: 1; */
+    min-width: 144px;
 }
 
 .swiper-slide:hover{
@@ -464,12 +476,37 @@ body{
     padding-top: 20px;
 } 
 
-/* 調整slider */
-/* .swiper {
-    width: 500px;
-    height: 300px;
-} */
+/* ==== 調整slider ===== */
+ .swiper {
+    width: 400px;
+    height: 250px;
+} 
 
+.feedback_container .swiper-button-prev,
+.feedback_container .swiper-button-next {
+   color: #e9bb88; /* 箭頭顏色 */
+   position: absolute;
+    top: 60%; /* 垂直居中 */
+    transform: translateY(-60%);
+}
+/* 左箭頭位置 */
+.feedback_container .swiper-button-prev {
+    left: -15px; /* 調整箭頭與滑塊的距離 */
+}
+
+/* 右箭頭位置 */
+.feedback_container .swiper-button-next {
+    right: -15px; /* 調整箭頭與滑塊的距離 */
+}
+.swiper-slide{
+    margin: 0;
+}
+
+/* swiper scroll bar color =======  (要在調一下) */
+.swiper-pagination-bullet-active{
+    background: #e9bb88;
+    
+}
 
 
 /* ============ last Section: 掌握最新課程資訊 ========================== */
@@ -479,6 +516,9 @@ body{
     
     height: 150px;
     margin: 20px auto;
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
 
 }
 
@@ -491,8 +531,8 @@ body{
 }
 
 .Name{
-    margin-left: 160px;
-    margin-right: 30px;
+    /* margin-left: 18%; */
+    margin-right: 28px;
     border-radius: 8px;
     border: 1px solid lightgray;
     
@@ -500,7 +540,7 @@ body{
 
 .subscribe input{
     height: 30px;
-    width: 300px;
+    width: 25vw;
     padding-left: 20px;
     box-sizing: border-box;
     outline: none;
@@ -519,7 +559,8 @@ body{
 
 .subscribe a{
     display:inline-block;
-    width: 190px;
+    /* min-width: 150px; */
+    width: 10vw;
     height: 32px;
     background-color: #A26769;
     color: white;

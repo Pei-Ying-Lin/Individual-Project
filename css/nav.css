@@ -8,6 +8,16 @@ header{
     font-family: Playfair Display;
 }
 
+/* hamburger icon */
+.fa-bars{
+    display:none;
+}
+
+/* user icon */
+.fa-circle-user{
+    display:none;
+}
+
 .menubar{
     box-sizing: border-box;
     background-color: #F3D2B5;
