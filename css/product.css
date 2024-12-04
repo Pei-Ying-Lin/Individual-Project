@@ -36,10 +36,15 @@ body{
 }
 
 .title1 h2{
-    font-size: 20px;
+    font-size: 1.8rem;
     font-weight: bold;
     text-align: end;
    
+}
+
+.title1 p{
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .content1{
@@ -49,7 +54,8 @@ body{
 }
 
 .content1 p{
-    /* font-size: 16px; */
+    font-size: 20px;
+    margin-top: 8px;
 }
 
 /*=== title 中間的線 ==== */
@@ -66,7 +72,7 @@ body{
     display: block;
     background-color: #534533;
     width: 2px;
-    height: 90px;
+    height: 132px;
     float: left;
     margin-right: 10px;
     
@@ -95,6 +101,7 @@ body{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 
 /* ==================== 1st section: 烘培課程 ====================== */
@@ -141,6 +148,7 @@ body{
     /* border: 1px solid green; */
     box-sizing: border-box;
     padding-bottom: 20px;
+    /* line-height: 1.2; */
  
 }
 .product1{
@@ -163,6 +171,7 @@ body{
     padding: 16px 16px;
     box-sizing: border-box;
     align-content: flex-start;
+    width: 33.333%;
 }
 
 .item{
@@ -205,6 +214,9 @@ body{
     /* outline: 1px solid blue; */
     font-size: 20px;
     text-align: start;
+    height: 1.2em;
+    overflow: hidden;
+    /* : 24px; */
     /* padding-top: 20px; */
     /* padding: 20px 0 8px 8px; */
 }
@@ -267,14 +279,16 @@ body{
 
 .price p{
     /* outline: 1px solid red; */
-    padding: 16px 24px 0;
-   
+    width: 100px;
+    /* text-align: center; */
+    margin: auto;
 }
 
 .price a{
     /* outline: 4px solid green; */
     display:block;
-    min-width: 120px;
+    min-width: calc-100px;
+    /* min-width: 120px; */
     height: 28px;
     background-color: #A26769;
     color: white;
@@ -284,7 +298,8 @@ body{
     /* margin: 30px auto; */
     text-decoration: none;
     border-radius: 8px;
-    margin: 6px 20px; 
+    margin: auto; 
+    padding: 4px 8px;
 }
 
 /* ========== hover 效果 ============== */
@@ -323,4 +338,37 @@ body{
 .more a:hover{
     background-color: #CCA1A0;
     color: #F4E8E2;
+}
+
+
+/* ========== RWD ================== */
+
+@media screen and (max-width: 870px){
+    .title1 h2{
+        font-size: 28px;
+    } 
+
+    .title1 p{
+        font-size: 28px;
+    }
+    .divider:before{
+        height: 112px;
+    } 
+    .content1{
+        padding: 16px 16px;
+    }
+    .content1 p{
+        font-size: 18px;
+    }
+    .product1 ul {
+        justify-content: space-around;
+    }
+
+
+}
+
+@media screen and (max-width: 760px){
+    .topic{
+        flex-direction: column;
+    }
 }

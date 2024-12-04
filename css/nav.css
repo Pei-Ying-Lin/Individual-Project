@@ -1,22 +1,17 @@
 @import url('reset.css'); 
 
 /* ============ Memu bar ===================== */
+/*
+*{
+    outline: 1px solid red;
+}
+*/
 
 header{
     width: 100%;
     background-color: #F3D2B5;
-    font-family: Playfair Display;
-}
-
-/* hamburger icon */
-.fa-bars{
-    display:none;
-}
-
-/* user icon */
-.fa-circle-user{
-    display:none;
-}
+    box-sizing: border-box;
+}    
 
 .menubar{
     box-sizing: border-box;
@@ -39,7 +34,7 @@ header{
     color: #534533;
 }
 
-.menubar a img{
+.menubar .aaaa{
     height: 60px;    
     /* 控制 nav bar logo 大小 */
     margin-right: auto;
@@ -47,7 +42,12 @@ header{
     padding-left: 10px;
 }
 
-.menubar ul{
+.webmenu{
+    display: flex;
+    margin-left: auto;
+}
+
+.webmenu_ul{
     display: flex;
     /* 把主選單左上角變成橫的 + display: flex */
     margin-left: auto;
@@ -58,7 +58,7 @@ header{
     
 }
 
-.menubar li{  
+.webmenu_ul li{  
     padding: 0 10px;
     /* border: 1px solid blue; */
     flex-grow: 1;
@@ -112,18 +112,26 @@ header{
 
 /* ============ hover 效果 ======== */
 
-.menubar li:hover{
+.webmenu_ul li:hover{
     border-bottom: 5px solid #DB6D34;
     transition: 0.2s;
     
 }
 
 /* 若把search bar 放在li, 要把hover 效果拿掉 */
-.menubar .no-hover:hover{
+.webmenu .no-hover:hover{
     /* border-bottom: 0; */
     border-bottom: 5px solid transparent; 
 }
 
-
-
 /* ============ Memu bar finish===================== */
+
+.menu_container{
+    display:none;
+}
+
+
+/* login icon */
+.login_small{
+    display: none;
+}

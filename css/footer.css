@@ -76,7 +76,7 @@ footer{
 .container{
     /* outline: 1px solid blue; */
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows:  auto auto;
     grid-gap: 12px;
     

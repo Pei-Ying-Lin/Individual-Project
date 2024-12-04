@@ -16,9 +16,9 @@ body{
     outline:  1px solid red; 
 }  */
 
-/* * {
+/* {
     box-sizing: border-box;
-} */
+}*/ 
 
 .main{
     /* outline: 1px solid blue; */
@@ -117,14 +117,14 @@ body{
 
  /* ========================== 2nd section: 服務內容 ========================== */
 
-.service{
+.service1{
     /* outline: 2px solid orchid; */
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
    
 }
 
-.service h2{
+.service1 h2{
     font-size: 32px;
     font-weight: bold;
     text-align: center;
@@ -138,10 +138,11 @@ body{
     /* justify-content: center;  
     align-items: center;   */
     /* padding-left: 20px; */
+    margin: 0 auto;
 }
 
 .content img{
-    width: 70%;
+    width: 60%;
     border-radius: 50%;
     display: block;
     padding: 36px;
@@ -161,25 +162,16 @@ body{
     
 }
 
-.content2{
-    /* outline: 2px solid blue; */
-}
-
-.content3{
-    /* outline: 2px solid blue; */
-}
-
-.content4{
-    /* outline: 2px solid blue; */
-}
  /* ========================== 2nd section: 服務內容 finish========================== */
  
+ 
+
  /* ========================== last section: 門市資訊 ========================== */
 .store{
     
-    max-width: 1200px;
+    /* max-width: 1200px; */
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding-top: 20px;
     padding-bottom: 20px;
     display: grid;
@@ -233,6 +225,7 @@ body{
     text-align: center;
     /* align-items: center; */
     box-sizing: border-box;
+   
 }
 
 .address_icon p{
@@ -245,7 +238,7 @@ body{
     display: block;
     font-size: 20px;
     color: rgb(201, 29, 29);
-    
+    /* margin-right: 10px; */
     /* margin-left: 60px; */
     box-sizing: border-box;
     /* outline: 1px solid blue; */

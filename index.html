@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,8 @@
     <link rel="stylesheet" href="css/nav_and_footer_rwd.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="css/swiper-bundle.css">
 
 
     <script src="js/jquery-3.7.1.js"></script>
@@ -23,36 +24,98 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
+
 <body>
     <div class="wrapper"> <!----------------包裝最外層----------------------->
         <header>
-            <!-- hamburger icon -->
-            <i class="fa-solid fa-bars"></i>
-            <nav class="menubar"> <!-----------------主選單------------------------->
-                <a href="index.html"> <img src="Logo/Logo_horizontal.svg" alt=""></a> 
-                        
-                <ul>
-                    <li class="no-hover"> 
-                        <div class="search-container">
-                            <input class= "search" type="text" placeholder="Search" />                  
+
+            <div class="menubar"> <!-------------- Web: 主選單------------------------->
+
+                <a href="index.html"><img class="aaaa" src="Logo/Logo_horizontal.svg" alt=""></a>
+
+                <div class="webmenu">
+                    <ul class="webmenu_ul">
+                        <li class="no-hover">
+                            <div class="search-container">
+                                <input class="search" type="text" placeholder="Search" />
                                 <button class="search_btn" type="submit">
                                     <!-- 放大鏡 icon-->
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
+                            </div>
+                        </li>
+                        <li class="webmenu_li"><a href="about.html" class="about">關於我們</a></li>
+                        <li><a href="product.html" class='product'>甜點課程</a></li>
+                        <li><a href="schedule.html" class="schedule">預約課程</a></li>
+                        <li><a href="login.html">登入</a></li>
+                    </ul>
+                </div>
+
+                <!-- small screen: hamburger menu -->
+                <div class="menu transition">
+                    <div class="bar bar1 transition"></div>
+                    <div class="bar bar2 transition"></div>
+                    <div class="bar bar3 transition"></div>
+                </div>
+                    <div class="menu_container">
+                        <div class="logo_small transition">
+                            <ul class="menu_ul">
+                                <li class="menu_li">
+                                    <a href="index.html">
+                                        <img class="bbbb" src="Logo/Logo_horizontal.svg" >
+                                    </a>
+                                </li>
+                                <li class="menu_li"><a href="about.html" class="transition">關於我們</a></li>
+                                <li class="menu_li"><a href="product.html" class="transition">甜點課程</a></li>
+                                <li class="menu_li"><a href="schedule.html" class="transition">預約課程 </a></li>
+                            </ul>
                         </div>
-                    </li> 
-                    <li><a href="about.html">關於我們</a></li>
-                    <li><a href="product.html">甜點課程</a></li>
-                    <li><a href="schedule.html">預約課程</a></li>
-                    <li><a href="login.html">登入</a></li>
-                </ul>
-            </nav>
+                    </div>
+
+                <script>
+                    // 點擊 hamburger menu
+
+                    $(document).ready(function () {
+                        const hamMenu = $('.menu');
+                        const menuContainer = $('.menu_container');
+
+                        hamMenu.on('click', function (event) {
+                            hamMenu.toggleClass('active');   //切換 menu 顯示狀態
+                            menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
+                            event.stopPropagation();   //防止事件冒泡
+                        });
+
+                        //點擊頁面其他區域關閉 menu
+                        $(document).on('click', function (e) {
+                            if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
+                                hamMenu.removeClass('active');   //關閉 menu
+                                menuContainer.removeClass('active');   //重置漢堡按鈕樣式
+                            }
+                        });
+                    });
+
+                </script>
+
+                <div class="login_small">
+                    <a href="login.html">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </div>
+
+                <!-- small screen: hamburger menu finished -->
+            </div>
+
             <!-- user icon -->
-            <i class="fa-regular fa-circle-user"></i>
+            <!-- <div class="login_small">
+                    <a href="login.html">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </div> -->
+
         </header>
-         <!--------------------------- Cover picture --------------------------------->
-       
-         <div class="topMain">
+        <!--------------------------- Cover picture --------------------------------->
+
+        <div class="topMain">
             <img src="img/Home page pics/Cover1.jpg" class="big">
             <img src="img/Home page pics/cover_small.jpg" class="small">
             <div class="text">
@@ -61,104 +124,104 @@
             </div>
         </div>
 
-         <!--------------------Home page 1st section--------------------->
+        <!--------------------Home page 1st section--------------------->
         <!--------------------3rd section: Home page 熱門課程--------------------->
         <div class="main">
             <div class="popular">
                 <h2>熱門課程</h2>
-                    <!--往左 icon-->
+                <!--往左 icon-->
                 <!-- <i class="fa-solid fa-angle-left"></i>     -->
-                <ul class="owl-carousel owl-theme">
-                    <li> 
-                        <img src="img/Home page pics/popular/class1.jpg" alt=""> 
-                            <div class="lesson1">
+                <div id="carousel_1" class="owl-carousel owl-theme">
+                    <div class="card">
+                        <img src="img/Home page pics/popular/class1.jpg" alt="">
+                        <div class="lesson1">
                             <h4>聖誕手工餅乾 (季節限定)</h4>
                             <a href="product_info_1.html">去瞧瞧</a>
-                            </div>
-                    </li>
-                    <li> 
-                        <img src="img/Home page pics/popular/class2.jpg" alt=""> 
-                            <div class="lesson1">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Home page pics/popular/class2.jpg" alt="">
+                        <div class="lesson1">
                             <h4>馬卡龍 </h4>
                             <a href="product_info_1.html">去瞧瞧</a>
-                            </div> 
-                    </li> 
-                    <li>
-                        <img src="img/Home page pics/popular/class3.jpg" alt="">  
-                            <div class="lesson1">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/Home page pics/popular/class3.jpg" alt="">
+                        <div class="lesson1">
                             <h4>野莓水果塔 </h4>
                             <a href="product_info_1.html">去瞧瞧</a>
+                        </div>
                     </div>
-                    </li> 
-                    <li>
+                    <div class="card">
                         <img src="img/Home page pics/popular/class4.jpg" alt="">
-                            <div class="lesson1">
+                        <div class="lesson1">
                             <h4>可麗露</h4>
                             <a href="product_info_1.html">去瞧瞧</a>
                         </div>
-                    </li> 
-                    <li> 
+                    </div>
+                    <div class="card">
                         <img src="img/Home page pics/popular/class5.jpg" alt="">
-                            <div class="lesson1">
+                        <div class="lesson1">
                             <h4>提拉米蘇 </h4>
                             <a href="product_info_1.html">去瞧瞧</a>
                         </div>
-                    </li>                   
-                </ul>                
+                    </div>
+                </div>
                 <!-- <i class="fa-solid fa-angle-right"></i> -->
                 <!--往右 icon-->
             </div>
 
-                <script>
-                    $(document).ready(function(){
-                        $(".owl-carousel").owlCarousel({
-                                center: true,
-                                loop:true,
-                                margin:8,
-                                responsiveClass:true,
-                                dots: true, // 僅啟用基本的 dots
-                                nav: true,
-                                dotsEach:true,
-                                autoWidth:true,
-                                // dotsData: false, // 不使用自定義數據
-                                // dotsContainer: false, // 不自定義容器
-                                responsive:{
-                                0: {
-                                    items: 1
-                                    
-                                },
-                                600: {
-                                    items: 2
-                                },
-                                830: {
-                                    items: 3
-                                },
-                                1000: {
-                                    items: 4
-                                }
+            <script>
+                $(document).ready(function () {
+                    $(".owl-carousel").owlCarousel({
+                        center: true,
+                        loop: true,
+                        margin: 8,
+                        responsiveClass: true,
+                        dots: true, // 僅啟用基本的 dots
+                        nav: true,
+                        dotsEach: true,
+                        autoWidth: true,
+                        // dotsData: false, // 不使用自定義數據
+                        // dotsContainer: false, // 不自定義容器
+                        responsive: {
+                            0: {
+                                items: 1
+
                             },
-                                autoplay:true,
-                                autoplayTimeout:3000,
-                                autoplayHoverPause:true,
-                                
-                        });
+                            600: {
+                                items: 2
+                            },
+                            830: {
+                                items: 3
+                            },
+                            1000: {
+                                items: 4
+                            }
+                        },
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: true,
+
                     });
-                </script>
+                });
+            </script>
 
 
-        <!--------------------3rd section: Home page 熱門課程 finish--------------------->
+            <!--------------------3rd section: Home page 熱門課程 finish--------------------->
 
-        
+
             <div class="grid-container">
                 <div class="item1">
                     <h2>烘培課程</h2>
-                        <p>歡迎烘焙新手一起踏入烘焙的美妙世界！ 
+                    <p>歡迎烘焙新手一起踏入烘焙的美妙世界！
                         </br>
                         從基礎理論紮實入門, 循序漸進地學習, 從零開始打造您的烘焙基礎。我們採小班教學, 每個步驟都不錯過！
-                       </br>
-                        </p>
-                        <a href="product.html">了解更多</a>
-                </div>            
+                        </br>
+                    </p>
+                    <a href="product.html">了解更多</a>
+                </div>
                 <div class="item2">
                     <img src="img/Home page pics/p1.jpg" alt="">
                 </div>
@@ -171,9 +234,9 @@
                 <div class="item5">
                     <img src="img/Home page pics/p4.jpg" alt="">
                 </div>
-            </div>      
+            </div>
 
-          <!-------------------- Class Feedback Section --------------------->
+            <!-------------------- Class Feedback Section --------------------->
             <div class="Feedback">
                 <h2>課程回饋</h2>
 
@@ -187,7 +250,7 @@
                                 <p>老師的講解與示範都很細緻, 讓大家可以實作各個重要的步驟。完成的蛋糕美又好吃, 又很有成就感。</p>
                                 <p class="name"> Amy Liang</p>
                             </div>
-                            
+
                         </li>
                         <li>
                             <div class="comment">
@@ -218,146 +281,148 @@
                         </li>
                     </ul>
                 </div>
-            </div>        
+            </div>
             <!--------------- Class Feedback Section (換成用div 寫法)  --------------------->
-                        <div class="feedback_container"> 
-                            <h2>課程回饋</h2> 
-                                <div class="swiper">
-                                    <div class="comment_container swiper-wrapper"> 
-                                        <div class="swiper-slide">
-                                            <div class="icon">
-                                                <i class="fa-brands fa-gratipay"></i>
-                                            </div>
-                                            <p>老師的講解與示範都很細緻認真，讓大家都可以實作各個重要的步驟。完成的蛋糕又美又好吃，除了很有成就感外，還大受家人好評。</p>
-                                            <div class="name">
-                                                <p> Amy Liang</p>
-                                            </div>
-                                        </div> 
-                                        <div class="swiper-slide">
-                                            <div class="icon">
-                                                <i class="fa-brands fa-gratipay"></i>
-                                            </div>
-                                            <p>過程中老師都會親自指導和調整學員拿抹刀的方式，並且觀看每位學員的狀況，個別回饋建議給大家，很適合初學者的基礎體驗課程。</p>
-                                            <p class="name"> Eva Hsieh</p>
-                                        </div> 
-                                        <div class="swiper-slide">
-                                            <div class="icon">
-                                                <i class="fa-brands fa-gratipay"></i>
-                                            </div>
-                                            <p>自己做蛋糕時沒注意到的細節透過這次的體驗了解到非常多！覺得收穫豐富、很滿意！等不及要嘗試做更多甜點了!</p>
-                                            
-                                            <p class="name"> Judy Lin</p>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="icon">
-                                                <i class="fa-brands fa-gratipay"></i>
-                                            </div>
-                                            <p>老師非常專業且耐心，每個步驟都講解得十分清楚，還分享了許多實用的小技巧，讓整個體驗非常愉快！即使是初學者也能輕鬆上手。</p>
-                                            <p class="name"> 烘培新手小白</p>
-                                        </div> 
-                                    </div> 
-                                  
-                                <!-- If we need pagination -->
-                                <div class="swiper-pagination"></div>
-
-                                <!-- If we need navigation buttons -->
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>    
-                                
-                                <!-- If we need scrollbar -->
-                                <!-- <div class="swiper-scrollbar"></div>  -->
+            <div class="feedback_container">
+                <h2>課程回饋</h2>
+                <div class="swiper" id="carousel_2">
+                    <div class="comment_container swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="icon">
+                                <i class="fa-brands fa-gratipay"></i>
+                            </div>
+                            <p>老師的講解與示範都很細緻認真，讓大家都可以實作各個重要的步驟。完成的蛋糕又美又好吃，除了很有成就感外，還大受家人好評。</p>
+                            <div class="name">
+                                <p> Amy Liang</p>
                             </div>
                         </div>
-                            <script>
-                                const swiper = new Swiper('.swiper', {
-                                    // Optional parameters
-                                    direction: 'horizontal',
-                                    loop: true,
-                                    autoHeight: false, // 根據內容自適應高度
+                        <div class="swiper-slide">
+                            <div class="icon">
+                                <i class="fa-brands fa-gratipay"></i>
+                            </div>
+                            <p>過程中老師都會親自指導和調整學員拿抹刀的方式，並且觀看每位學員的狀況，個別回饋建議給大家，很適合初學者的基礎體驗課程。</p>
+                            <p class="name"> Eva Hsieh</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="icon">
+                                <i class="fa-brands fa-gratipay"></i>
+                            </div>
+                            <p>自己做蛋糕時沒注意到的細節透過這次的體驗了解到非常多！覺得收穫豐富、很滿意！等不及要嘗試做更多甜點了!</p>
 
-                                    // If we need pagination
-                                    pagination: {
-                                        el: '.swiper-pagination',
-                                        clickable: true, // 小點可以點擊
-                                    },
+                            <p class="name"> Judy Lin</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="icon">
+                                <i class="fa-brands fa-gratipay"></i>
+                            </div>
+                            <p>老師非常專業且耐心，每個步驟都講解得十分清楚，還分享了許多實用的小技巧，讓整個體驗非常愉快！即使是初學者也能輕鬆上手。</p>
+                            <p class="name"> 烘培新手小白</p>
+                        </div>
+                    </div>
 
-                                    // Navigation arrows
-                                    navigation: {
-                                        nextEl: '.swiper-button-next',
-                                        prevEl: '.swiper-button-prev',
-                                    },
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
 
-                                    centeredSlides: true,
-                                    centeredSlidesBounds: true,
-                                    effect: 'flip',
-                                    flipEffect: {
-                                        slideShadows: false,
-                                    },
-                                });
-                            </script>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
 
-                         <!--------------- Class Feedback Section (換成用div 寫法) finish  --------------------->
-                 
-
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div>  -->
+                </div>
             </div>
-                    
+            <script>
+                // swiper 套件
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    direction: 'horizontal',
+                    loop: true,
+                    autoHeight: false, // 根據內容自適應高度
+
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true, // 小點可以點擊
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
+                    centeredSlides: true,
+                    centeredSlidesBounds: true,
+                    effect: 'flip',
+                    flipEffect: {
+                        slideShadows: false,
+                    },
+                });
+            </script>
+
+            <!--------------- Class Feedback Section (換成用div 寫法) finish  --------------------->
+
+
+
+
             <!--------------------- last section: 掌握最新課程資訊 -------------------->
             <div class="subscribe">
                 <h2>掌握最新課程資訊</h2>
-                <input class = Name type="text" placeholder="Your Name" />  
-                <input class = Email type="text" placeholder="Your Email" />  
+                <input class=Name type="text" placeholder="Your Name" />
+                <input class=Email type="text" placeholder="Your Email" />
                 <a href="">Subscribe</a>
             </div>
-        </div> 
+        </div>
 
-            <!-------------------- 右下角 upward icon --------------------->
-            <div class="top">
-                <div class="top_inner">
-                    <a href="#">
-                        <i class="fa-solid fa-circle-chevron-up"></i>
-                    </a>
+        <!-------------------- 右下角 upward icon --------------------->
+        <div class="top">
+            <div class="top_inner">
+                <a href="#">
+                    <i class="fa-solid fa-circle-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+
+        <!--------------------Footer--------------------->
+        <footer>
+            <div class="outer">
+                <div class="logo">
+                    <img src="Logo/Footer_logo.png" alt="">
+                </div>
+                <div class="container">
+                    <div class="media">
+                        <h4>社群媒體</h4>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-line"></i>
+                    </div>
+                    <div class="service">
+                        <h4>所有服務</h4>
+                        <a href="product.html">烘培課程</a>
+                        <a href="schedule.html">甜點課程</a>
+                        <a href="about.html">關於 Cozy Corner</a>
+                    </div>
+                    <div class="hours">
+                        <h4>營業時間</h4>
+                        <p>週二 ~ 周日</p>
+                        <p>11:00 ~ 21:00 </p>
+                        <p>每周一公休 </p>
+                    </div>
+                    <div class="contact">
+                        <h4>門市資訊</h4>
+                        <p>台北市大安區</p>
+                        <p>忠孝東路四段101巷 </p>
+                        <p>+886-2 -1234-5678 </p>
+                    </div>
                 </div>
             </div>
+            <div class="footer_note">
+                <p>本網站為緯育TibaMe【第94期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
+            </div>
+        </footer>
 
-            <!--------------------Footer--------------------->
-            <footer>
-                <div class="outer">
-                    <div class="logo">
-                        <img src="Logo/Footer_logo.png" alt="">
-                    </div>
-                    <div class="container">
-                        <div class="media">
-                            <h4>社群媒體</h4>
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-line"></i>                      
-                        </div>
-                        <div class="service">
-                            <h4>所有服務</h4>
-                            <a href="product.html">烘培課程</a> 
-                            <a href="schedule.html">甜點課程</a> 
-                            <a href="about.html">關於 Cozy Corner</a>
-                        </div>
-                        <div class="hours">
-                            <h4>營業時間</h4>
-                            <p>週二 ~ 周日</p>
-                            <p>11:00 ~ 21:00 </p>
-                            <p>每周一公休 </p>
-                        </div>
-                        <div class="contact">
-                            <h4>門市資訊</h4>
-                            <p>台北市大安區</p>
-                            <p>忠孝東路四段101巷 </p>
-                            <p>+886-2 -1234-5678 </p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="footer_note">
-                    <p>本網站為緯育TibaMe【第94期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
-                </div>
-            </footer>
-        </div>
 
     </div>
 </body>
+
 </html>

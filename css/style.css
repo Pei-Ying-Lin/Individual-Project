@@ -13,13 +13,15 @@ body{
 }
 
 /* ==========主視覺 cover photo================== */
-/* *{
+/*
+*{
     outline:  1px solid red; //這個方法可以看整個網頁排版
-} */
+}*/
 
+*
 * {
     box-sizing: border-box;
-}
+}*
 
 .topMain{
     max-width: 1440;
@@ -78,6 +80,7 @@ body{
     max-width: 1200px;   
     width: 100%;
     margin: 0 auto;
+    line-height: 1.5;
     /* border: 1px solid red; */
 }
 
@@ -220,15 +223,15 @@ body{
     padding: 28px;
 }
 
-.popular ul{
-    display: flex;
+#carousel_1{
+    /* display: flex; */
     overflow: hidden;    
     /* 要把超出畫面的藏起來  */
     position: relative;
  
 }
 
-.popular li{
+#carousel_1 .card{
     /* outline: 1px solid green; */
     margin-left: 5px;
     margin-right: 5px;
@@ -272,7 +275,7 @@ body{
     transform: scale(1.2);
  } */
 
- .popular li:hover .lesson1{
+ .popular .card:hover .lesson1{
     opacity: 0.95;
     transition: 0.3s; 
 }
@@ -415,6 +418,7 @@ body{
 
 .feedback_container{
     display:none;
+    overflow: hidden;
 }
 
 /* ============== Class Feedback Section (換成用div 寫法) ================== */
@@ -427,6 +431,7 @@ body{
     color: #534533;
     margin: 0 auto 28px auto;
     padding: 20px 0;
+    overflow: hidden;
 }
 
 .feedback_container h2{
@@ -477,7 +482,7 @@ body{
 } 
 
 /* ==== 調整slider ===== */
- .swiper {
+.swiper {
     width: 400px;
     height: 250px;
 } 
@@ -498,14 +503,15 @@ body{
 .feedback_container .swiper-button-next {
     right: -15px; /* 調整箭頭與滑塊的距離 */
 }
-.swiper-slide{
+#carousel_2 .swiper-slide{
     margin: 0;
 }
 
-/* swiper scroll bar color =======  (要在調一下) */
-.swiper-pagination-bullet-active{
-    background: #e9bb88;
+/* swiper scroll bar color =======  (在 swiper css 裡調) */
+:root {
+    /* --swiper-theme-color: #007aff; */
     
+
 }
 
 

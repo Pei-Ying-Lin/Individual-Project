@@ -23,6 +23,7 @@
 
 @media screen and (max-width: 830px) {
     
+
     .topMain img{
         padding-top: 52px;
     }
@@ -66,7 +67,7 @@
         width: 200px;
     }
     .Name{
-        margin-left: 100px;
+        /* margin-left: 100px; */
     }
     .subscribe a{
         width: 120px;
@@ -187,6 +188,12 @@
     }
 
 } 
+
+@media screen and (max-width: 600px){
+    .subscribe{
+        display: none;
+    }
+}
 
 @media screen and (max-width: 430px) {
     .topMain img{
