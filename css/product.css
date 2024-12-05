@@ -361,14 +361,23 @@ body{
         font-size: 18px;
     }
     .product1 ul {
-        justify-content: space-around;
+        /* justify-content: space-around; */
     }
-
+    .item{
+        height: 342px;
+    }
 
 }
 
 @media screen and (max-width: 760px){
     .topic{
-        flex-direction: column;
+        /* flex-direction: column; */
+    }
+
+    .product1 li{
+        width: 45.5%;
+    }
+    .item{
+        height: 378px;
     }
 }

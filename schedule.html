@@ -26,10 +26,14 @@
 <body>
 
     <div class="wrapper"> <!----------------包裝最外層----------------------->
-            <header>
-                <nav class="menubar"> <!-----------------主選單------------------------->
-                    <a href="index.html"> <img src="Logo/Logo_horizontal.svg" alt=""></a>
-                    <ul>
+        <header>
+
+            <div class="menubar"> <!-------------- Web: 主選單------------------------->
+
+                <a href="index.html"><img class="aaaa" src="Logo/Logo_horizontal.svg" alt=""></a>
+
+                <div class="webmenu">
+                    <ul class="webmenu_ul">
                         <li class="no-hover">
                             <div class="search-container">
                                 <input class="search" type="text" placeholder="Search" />
@@ -39,14 +43,75 @@
                                 </button>
                             </div>
                         </li>
-
-                        <li><a href="about.html">關於我們</a></li>
-                        <li><a href="product.html">甜點課程</a></li>
-                        <li><a href="schedule.html">預約課程</a></li>
+                        <li class="webmenu_li"><a href="about.html" class="about">關於我們</a></li>
+                        <li><a href="product.html" class='product'>甜點課程</a></li>
+                        <li><a href="schedule.html" class="schedule">預約課程</a></li>
                         <li><a href="login.html">登入</a></li>
                     </ul>
-                </nav>
-            </header>
+                </div>
+
+                <!-- small screen: hamburger menu -->
+                <div class="menu transition">
+                    <div class="bar bar1 transition"></div>
+                    <div class="bar bar2 transition"></div>
+                    <div class="bar bar3 transition"></div>
+                </div>
+                    <div class="menu_container">
+                        <div class="logo_small transition">
+                            <ul class="menu_ul">
+                                <li class="menu_li">
+                                    <a href="index.html">
+                                        <img class="bbbb" src="Logo/Logo_horizontal.svg" >
+                                    </a>
+                                </li>
+                                <li class="menu_li"><a href="about.html" class="transition">關於我們</a></li>
+                                <li class="menu_li"><a href="product.html" class="transition">甜點課程</a></li>
+                                <li class="menu_li"><a href="schedule.html" class="transition">預約課程 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                <script>
+                    // 點擊 hamburger menu
+
+                    $(document).ready(function () {
+                        const hamMenu = $('.menu');
+                        const menuContainer = $('.menu_container');
+
+                        hamMenu.on('click', function (event) {
+                            hamMenu.toggleClass('active');   //切換 menu 顯示狀態
+                            menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
+                            event.stopPropagation();   //防止事件冒泡
+                        });
+
+                        //點擊頁面其他區域關閉 menu
+                        $(document).on('click', function (e) {
+                            if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
+                                hamMenu.removeClass('active');   //關閉 menu
+                                menuContainer.removeClass('active');   //重置漢堡按鈕樣式
+                            }
+                        });
+                    });
+
+                </script>
+
+                <div class="login_small">
+                    <a href="login.html">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </div>
+
+                <!-- small screen: hamburger menu finished -->
+            </div>
+
+            <!-- user icon -->
+            <!-- <div class="login_small">
+                    <a href="login.html">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </div> -->
+
+        </header>
             <!----------------------------主選單結束--------------------------------->
 
             <!-------------------- 1st section: 其他人也看--------------------->
@@ -130,22 +195,99 @@
             </script>
 
             <!--------------------2nd section: Class Schedule --------------------->
-            <div class="calendar">
+            <!-- <div class="calendar">
                 <div class="schedule">
                     <h2> Class Schedule</h2>
-                    <img src="img/Calendar.jpg" alt="">
+                    <img src="img/Calendar.jpg" alt=""> -->
                     <!-- 先放 calendar 照片 -->
                 </div>
                     <!-- 點擊日曆要跳出的視窗 - 課程簡介 Sweet alert test--->
                 <div class="popup1">
-                    <!-- <script src="js/schedule_sweetalerts.js"></script> -->
-                    <script src="./js/schedule_sweetalerts.js"></script>
-                <!-- </div> -->
-                
-        
-                <!-- 日曆等 JS 套件: Datepicker -->
-                
+                       <script src="./js/schedule_sweetalerts.js"></script>
+                        <!-- </div> -->
+                </div>
             </div>
+
+                <!-- Calendar Grid-->
+
+                <div class="calendar_frame">
+                    <div class="calendar_top">
+                        <button type="button"> <i class="fa-solid fa-angle-left"></i></button>
+                        <h3>December 2024</h3>
+                        <button type="button"><i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+
+                    <div class="calendar_container">
+
+                        <div class="weekday">SUN</div>
+                        <div class="weekday">MON</div>
+                        <div class="weekday">TUE</div>
+                        <div class="weekday">WED</div>
+                        <div class="weekday">THUR</div>
+                        <div class="weekday">FRI</div>
+                        <div class="weekday">SAT</div>   
+                        
+                        <!-- first week -->
+                        <div class="day">1</div>
+                        <div class="day">2</div>
+                        <div class="day">3</div>
+                        <div class="day">4</div>
+                        <div class="day">5</div>
+                        <div class="day">6</div>
+                        <div class="day">7</div>
+                        
+                        <!-- second week -->
+                        <div class="day">8</div>
+                        <div class="day">9</div>
+                        <div class="day">10</div>
+                        <div class="day">
+                            <h5>11</h5>  
+                            <div class="class001"> 
+                                <button type="button" class="class001_btn">
+                                     11:00 野莓水果塔課程精彩內容 
+                                </button>
+                            </div> 
+                        </div>
+                        <div class="day">12</div>
+                        <div class="day">13</div>
+                        <div class="day">14</div>
+
+                        <!-- third week -->
+                        <div class="day">15</div>
+                        <div class="day">16</div>
+                        <div class="day">17</div>
+                        <div class="day">18</div>
+                        <div class="day">19</div>
+                        <div class="day">20</div>
+                        <div class="day">21</div>
+
+                        <!-- fourth week -->
+                        <div class="day">22</div>
+                        <div class="day">23</div>
+                        <div class="day">24</div>
+                        <div class="day">25</div>
+                        <div class="day">26</div>
+                        <div class="day">27</div>
+                        <div class="day">28</div>
+
+                        <!-- last week -->
+                        <div class="day">29</div>
+                        <div class="day">30</div>
+                        <div class="day">31</div>
+                        <div class="day">1</div>
+                        <div class="day">2</div>
+                        <div class="day">3</div>
+                        <div class="day">4</div>
+
+                    </div>
+                </div>
+
+                <!-- click 跳出視窗 -->
+                
+                
+
+
+            
         </div>
     </div>
     <div class="top">

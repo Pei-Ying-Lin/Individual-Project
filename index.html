@@ -72,29 +72,7 @@
                         </div>
                     </div>
 
-                <script>
-                    // 點擊 hamburger menu
-
-                    $(document).ready(function () {
-                        const hamMenu = $('.menu');
-                        const menuContainer = $('.menu_container');
-
-                        hamMenu.on('click', function (event) {
-                            hamMenu.toggleClass('active');   //切換 menu 顯示狀態
-                            menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
-                            event.stopPropagation();   //防止事件冒泡
-                        });
-
-                        //點擊頁面其他區域關閉 menu
-                        $(document).on('click', function (e) {
-                            if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
-                                hamMenu.removeClass('active');   //關閉 menu
-                                menuContainer.removeClass('active');   //重置漢堡按鈕樣式
-                            }
-                        });
-                    });
-
-                </script>
+                
 
                 <div class="login_small">
                     <a href="login.html">
@@ -172,42 +150,7 @@
                 <!--往右 icon-->
             </div>
 
-            <script>
-                $(document).ready(function () {
-                    $(".owl-carousel").owlCarousel({
-                        center: true,
-                        loop: true,
-                        margin: 8,
-                        responsiveClass: true,
-                        dots: true, // 僅啟用基本的 dots
-                        nav: true,
-                        dotsEach: true,
-                        autoWidth: true,
-                        // dotsData: false, // 不使用自定義數據
-                        // dotsContainer: false, // 不自定義容器
-                        responsive: {
-                            0: {
-                                items: 1
-
-                            },
-                            600: {
-                                items: 2
-                            },
-                            830: {
-                                items: 3
-                            },
-                            1000: {
-                                items: 4
-                            }
-                        },
-                        autoplay: true,
-                        autoplayTimeout: 3000,
-                        autoplayHoverPause: true,
-
-                    });
-                });
-            </script>
-
+            
 
             <!--------------------3rd section: Home page 熱門課程 finish--------------------->
 
@@ -331,34 +274,7 @@
                     <!-- <div class="swiper-scrollbar"></div>  -->
                 </div>
             </div>
-            <script>
-                // swiper 套件
-                const swiper = new Swiper('.swiper', {
-                    // Optional parameters
-                    direction: 'horizontal',
-                    loop: true,
-                    autoHeight: false, // 根據內容自適應高度
-
-                    // If we need pagination
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true, // 小點可以點擊
-                    },
-
-                    // Navigation arrows
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-
-                    centeredSlides: true,
-                    centeredSlidesBounds: true,
-                    effect: 'flip',
-                    flipEffect: {
-                        slideShadows: false,
-                    },
-                });
-            </script>
+            
 
             <!--------------- Class Feedback Section (換成用div 寫法) finish  --------------------->
 
@@ -421,6 +337,97 @@
             </div>
         </footer>
 
+        <!-- JS 區域 -->
+        <script>
+
+                // 點擊 hamburger menu
+
+                $(document).ready(function () {
+                    const hamMenu = $('.menu');
+                    const menuContainer = $('.menu_container');
+
+                    hamMenu.on('click', function (event) {
+                        hamMenu.toggleClass('active');   //切換 menu 顯示狀態
+                        menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
+                        event.stopPropagation();   //防止事件冒泡
+                    });
+
+                    //點擊頁面其他區域關閉 menu
+                    $(document).on('click', function (e) {
+                        if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
+                            hamMenu.removeClass('active');   //關閉 menu
+                            menuContainer.removeClass('active');   //重置漢堡按鈕樣式
+                        }
+                    });
+                });
+                
+                // 第一個輪播器
+
+                $(document).ready(function () {
+                    $(".owl-carousel").owlCarousel({
+                        center: true,
+                        loop: true,
+                        margin: 8,
+                        responsiveClass: true,
+                        dots: true, // 僅啟用基本的 dots
+                        nav: true,
+                        dotsEach: true,
+                        autoWidth: true,
+                        // dotsData: false, // 不使用自定義數據
+                        // dotsContainer: false, // 不自定義容器
+                        responsive: {
+                            0: {
+                                items: 1
+
+                            },
+                            600: {
+                                items: 2
+                            },
+                            830: {
+                                items: 3
+                            },
+                            1000: {
+                                items: 4
+                            }
+                        },
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: true,
+
+                    });
+                });
+                
+                 // 第二個輪播器
+
+                
+                // swiper 套件
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    direction: 'horizontal',
+                    loop: false,
+                    autoHeight: false, // 根據內容自適應高度
+
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true, // 小點可以點擊
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
+                    centeredSlides: true,
+                    centeredSlidesBounds: true,
+                    effect: 'flip',
+                    flipEffect: {
+                        slideShadows: false,
+                    },
+                });
+          
+        </script>
 
     </div>
 </body>

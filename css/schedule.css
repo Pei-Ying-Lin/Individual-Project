@@ -15,6 +15,7 @@ body{
 /* ============ 1st section: 其他人也看 ========================== */
 .out{
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -174,7 +175,7 @@ body{
 .popup1{
     background-color: #FDF6EF;
     /* box-shadow: 4px 4px 4px; */
-    border: 4px solid #F3D2B5;
+    /* border: 4px solid #F3D2B5; */
     color:#534533; 
     border-radius: 20px;
     margin: 0 auto;
@@ -253,10 +254,108 @@ body{
     color: #F4E8E2;
 }
 
+/* ==================  Calendar  ===================== */
 
+.calendar_frame{
+    max-width: 1100px;
+    width: 100%;
+    margin: 20px auto;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+.calendar_top{
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    
+    text-align: center;
+    justify-content: center;
+    line-height: 1.5;
+    background-color: #fff;
+    border: 4px solid #F3D2B5;
+    border-bottom: 1px solid transparent;
+    border-radius: 8px 8px 0 0;
+   
+}
 
+.calendar_top h3{
+    max-width: 320px;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 12px;
+    color: #534533ce;
+}
+.calendar_top button{
+    /* outline: 1px solid red; */
+    border-radius: 50%;
+    height: 50%;
+    line-height: 1.5;
+    margin: auto  20px;
+    background-color: #FBE9E5;
+    /* border: 1px solid #5345335e; */
+    color: #534533ce;
+    cursor: pointer;
+}
 
+.calendar_top i{
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+}
 
+.calendar_top h3{
+    letter-spacing: 2px;
+}
+
+.calendar_container{
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: auto;
+    /* grid-gap: 2px; */
+    background-color: #fff;
+    color: #534533;
+    border-radius: 0 0 8px 8px;
+    border: 4px solid #F3D2B5;
+}
+
+.weekday{
+    /* outline: 1px solid red; */
+    box-sizing: border-box;
+    border-bottom: 1px solid #53453371;
+    text-align: center;
+    padding: 8px;
+    letter-spacing: 8px;
+}
+
+.day{
+    border: 1px solid #53453371;
+    box-sizing: border-box;
+    padding: 8px;
+    height: 30vh;
+    /* width: 100%; */
+    min-width: 90px;
+    font-size: 20px;
+
+}
+
+.class001{}
+
+.class001_btn{
+    box-sizing: border-box;
+    /* font-size: 16px; */
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    max-width: calc(16ch + 0.5em); 
+    /* 限制寬度，6個字元加上留白 */
+    cursor: pointer;
+    background-color: #FBE9E5;
+    border-radius: 4px;
+    border: 1px solid  #FBE9E5;
+    line-height: 1.5;
+}
 
 
 

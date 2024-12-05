@@ -496,12 +496,12 @@ body{
 }
 /* 左箭頭位置 */
 .feedback_container .swiper-button-prev {
-    left: -15px; /* 調整箭頭與滑塊的距離 */
+    left: -8px; /* 調整箭頭與滑塊的距離 */
 }
 
 /* 右箭頭位置 */
 .feedback_container .swiper-button-next {
-    right: -15px; /* 調整箭頭與滑塊的距離 */
+    right: -8px; /* 調整箭頭與滑塊的距離 */
 }
 #carousel_2 .swiper-slide{
     margin: 0;

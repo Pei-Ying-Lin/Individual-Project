@@ -19,26 +19,90 @@
 <body>
     <div class="wrapper"> <!----------------包裝最外層----------------------->
         <header>
-            <nav class="menubar"> <!-----------------主選單------------------------->
-                <a href="index.html"> <img src="Logo/Logo_horizontal.svg" alt=""></a>
 
-                <ul>
-                    <li class="no-hover"> 
-                        <div class="search-container">
-                            <input class= "search" type="text" placeholder="Search" />                  
+            <div class="menubar"> <!-------------- Web: 主選單------------------------->
+
+                <a href="index.html"><img class="aaaa" src="Logo/Logo_horizontal.svg" alt=""></a>
+
+                <div class="webmenu">
+                    <ul class="webmenu_ul">
+                        <li class="no-hover">
+                            <div class="search-container">
+                                <input class="search" type="text" placeholder="Search" />
                                 <button class="search_btn" type="submit">
                                     <!-- 放大鏡 icon-->
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
-                        </div>
-                    </li> 
+                            </div>
+                        </li>
+                        <li class="webmenu_li"><a href="about.html" class="about">關於我們</a></li>
+                        <li><a href="product.html" class='product'>甜點課程</a></li>
+                        <li><a href="schedule.html" class="schedule">預約課程</a></li>
+                        <li><a href="login.html">登入</a></li>
+                    </ul>
+                </div>
 
-                    <li><a href="about.html">關於我們</a></li>
-                    <li><a href="product.html">甜點課程</a></li>
-                    <li><a href="schedule.html">預約課程</a></li>
-                    <li><a href="login.html">登入</a></li>
-                </ul>
-            </nav>
+                <!-- small screen: hamburger menu -->
+                <div class="menu transition">
+                    <div class="bar bar1 transition"></div>
+                    <div class="bar bar2 transition"></div>
+                    <div class="bar bar3 transition"></div>
+                </div>
+                    <div class="menu_container">
+                        <div class="logo_small transition">
+                            <ul class="menu_ul">
+                                <li class="menu_li">
+                                    <a href="index.html">
+                                        <img class="bbbb" src="Logo/Logo_horizontal.svg" >
+                                    </a>
+                                </li>
+                                <li class="menu_li"><a href="about.html" class="transition">關於我們</a></li>
+                                <li class="menu_li"><a href="product.html" class="transition">甜點課程</a></li>
+                                <li class="menu_li"><a href="schedule.html" class="transition">預約課程 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                <script>
+                    // 點擊 hamburger menu
+
+                    $(document).ready(function () {
+                        const hamMenu = $('.menu');
+                        const menuContainer = $('.menu_container');
+
+                        hamMenu.on('click', function (event) {
+                            hamMenu.toggleClass('active');   //切換 menu 顯示狀態
+                            menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
+                            event.stopPropagation();   //防止事件冒泡
+                        });
+
+                        //點擊頁面其他區域關閉 menu
+                        $(document).on('click', function (e) {
+                            if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
+                                hamMenu.removeClass('active');   //關閉 menu
+                                menuContainer.removeClass('active');   //重置漢堡按鈕樣式
+                            }
+                        });
+                    });
+
+                </script>
+
+                <div class="login_small">
+                    <a href="login.html">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </div>
+
+                <!-- small screen: hamburger menu finished -->
+            </div>
+
+            <!-- user icon -->
+            <!-- <div class="login_small">
+                    <a href="login.html">
+                        <i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </div> -->
+
         </header>
         <!----------------------------主選單結束--------------------------------->
         <!-- 整頁分成左右兩個section  -->

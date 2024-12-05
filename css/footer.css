@@ -43,6 +43,7 @@ footer{
     width: 100%;
     background-color: #F3D2B5;
     font-family: Playfair Display;
+    line-height: 1.5;
 }
 
 .outer{
@@ -88,7 +89,8 @@ footer{
 }
 .container >div{
     /* border: 1px solid black; */
-    padding: 20px 4px;
+    padding: 12px 4px;   /* 等等要加回來 */
+    
     box-sizing: border-box;
 }
 
@@ -96,7 +98,7 @@ footer{
 
 .media h4{
     font-size: 20px;
-    padding-bottom: 16px;
+    padding-bottom: 12px;
 }
 .media i.fa-facebook{
     color: 	#1877F2;
@@ -119,14 +121,14 @@ footer{
 
 .service h4{
     font-size: 20px;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
 }
 
 .service a{
     text-decoration: none;
     color: #534533;
     display: block;
-    padding-bottom: 8px;
+    /* padding-bottom: 8px; */
 
     border-bottom: 5px solid transparent;
     
@@ -136,31 +138,31 @@ footer{
 
 .hours h4{
     font-size: 20px;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
 }
 
 .hours p{
-    padding-bottom: 8px;
+    padding-bottom: 4px;
 }
 
 .contact{}
 
 .contact h4{
     font-size: 20px;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
 }
 
 .contact p{
-    padding-bottom: 8px;
+    padding-bottom: 4px;
 }
 
 .footer_note{
     /* border: 1px solid green; */
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin: 8px auto 0 auto; */
     text-align: center;
     background-color: #F3D2B5;
-    padding-bottom: 20px;
+    padding: 0 12px 12px 12px;
     box-sizing: border-box;
     color: gray;
     
