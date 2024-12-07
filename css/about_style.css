@@ -12,9 +12,9 @@ body{
 
  /* ========================== About Us section ========================== */
  /* 這個方法可以看整個網頁排版 */
- /* *{
+ /*{
     outline:  1px solid red; 
-}  */
+} */ 
 
 /* {
     box-sizing: border-box;
@@ -40,11 +40,12 @@ body{
     width: 60%;
 }
 
+
 .about_left h1{
     font-size: 52px;
     font-weight: bold;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 18%;
     /* justify-content: end; */
     font-style: italic;
     text-shadow:  8px 8px 8px #F3D2B5;
@@ -63,7 +64,7 @@ body{
     width: 42%;
     display: block;
     /* margin-top: 20px; */
-    margin: 20px 20%;
+    margin:  32px 20% 0px 20%;
 }
 
 .section{
@@ -77,8 +78,20 @@ body{
     padding: 40px 20px ;
 }
 /* 調整中間的照片 */
-.section .left img{
+.section .left .aboutpic_big{
+    box-sizing: border-box;
     display: block;
+    width: 100%;
+    /* width: 95%; */
+    border: 12px solid #F3D2B5;
+    border-radius: 20px;
+    /* box-shadow: 8px 8px 8px 8px #F3D2B5; */
+}
+
+
+.section .left .aboutpic_small{
+    box-sizing: border-box;
+    display: none;   /* 小照片 for RWD */
     width: 100%;
     /* width: 95%; */
     border: 12px solid #F3D2B5;
@@ -117,18 +130,14 @@ body{
 
  /* ========================== 2nd section: 服務內容 ========================== */
 
-.service1{
-    /* outline: 2px solid orchid; */
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
-   
-}
+.service1{}
 
 .service1 h2{
     font-size: 32px;
     font-weight: bold;
     text-align: center;
-    padding: 20px;
+    padding: 12px;
+    line-height: 1.5;
 }
 
 .content{
@@ -145,8 +154,8 @@ body{
     width: 60%;
     border-radius: 50%;
     display: block;
-    padding: 36px;
-   
+    padding: 16px;
+    margin: 0 auto;
 }
 
 .content p{
@@ -203,25 +212,24 @@ body{
 }
 
 .address{
-    border: 1px solid yellow;
+    /* border: 1px solid red; */
     /* padding-left: 30px; */
     box-sizing: border-box;
     text-align: center;
-    
+    line-height: 1.5;
 }
 
 .address h2{
     font-size: 32px;
     font-weight: bold;
     text-align: center;
-    padding: 30px;
+    padding: 12px;
+    line-height: 1.5    ;
 }
 
 .address_icon{
     display: inline-flex;
-    outline: 1px solid red;
-    /* margin-left: 16%; */
-    /* padding-left: 60x; */
+    /* outline: 1px solid red; */
     text-align: center;
     /* align-items: center; */
     box-sizing: border-box;
@@ -235,24 +243,23 @@ body{
 }
 
 .address_icon i {
+    /* outline: 1px solid blue; */
     display: block;
     font-size: 20px;
     color: rgb(201, 29, 29);
-    /* margin-right: 10px; */
-    /* margin-left: 60px; */
+    
     box-sizing: border-box;
-    /* outline: 1px solid blue; */
+    margin: auto;
 }
 
 .address p{
     /* outline: 1px solid green; */
     font-size:20px;
-    /* text-align: center; */
-   
+    box-sizing: border-box;
+    padding: 12px;
     
-    /* font-weight: bold; */
-    padding: 0 0 28px 8px;
 }
-.address> p{
-    /* padding-left: 20px; */
+
+.address .mrt{
+    padding-left: 28px;
 }

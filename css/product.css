@@ -63,8 +63,7 @@ body{
 .divider{
     /* outline: 1px solid orange; */
     max-width: 4px;
-    /* height: 90px; */
-    /* padding: 0 4px; */
+    box-sizing: border-box;
 }
 
 .divider:before{
@@ -75,25 +74,27 @@ body{
     height: 132px;
     float: left;
     margin-right: 10px;
-    
+    box-sizing: border-box;
 }
 
 /* ========== 主視覺 cover photo ================== */
 
 .cover{
    width: 100%;
-
    margin: 0 auto;
    border-radius: 20px;
    box-sizing: border-box;
    /* padding: 30px 0; */
-   
-
 }
 
-.cover img{
+.product_big{
     width: 100%; 
 }
+
+.product_small{
+    display: none;
+}
+
 
 /* main class 包覆整個網頁 1200px */
 .main{
@@ -116,10 +117,9 @@ body{
 }
 
 .right h2{
-        
+    line-height: 1.5;   
     font-size: 32px;
     font-weight: bold;
-    
     padding-bottom: 10px;
 }
 
@@ -148,7 +148,7 @@ body{
     /* border: 1px solid green; */
     box-sizing: border-box;
     padding-bottom: 20px;
-    /* line-height: 1.2; */
+    line-height: 1.5;
  
 }
 .product1{
@@ -200,6 +200,9 @@ body{
 /* 產品內容 */
 .info{
     /* outline: 1px solid red; */
+    line-height: 1.5;
+    box-sizing: border-box;
+    padding: 8px 24px 8px;
 }
 
 .subtitle{
@@ -207,32 +210,31 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 16px 8px 24px;
+    box-sizing: border-box;
+    
 }
 
 .subtitle h3{
     /* outline: 1px solid blue; */
     font-size: 20px;
     text-align: start;
-    height: 1.2em;
-    overflow: hidden;
-    /* : 24px; */
-    /* padding-top: 20px; */
-    /* padding: 20px 0 8px 8px; */
+       
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    max-width: calc(16ch + 1em); 
+    /* 限制寬度，16個字元加上留白 */
 }
 
 .subtitle i{
     /* outline: 1px solid brown; */
     display: block;
     font-size: 24px;
-    /* color: white; */
-    /* border: 1px solid red; */
-    padding-right: 8px;
+   
 }
 /*  愛心 icon 點擊後有顏色 */
 .heart{
     font-size: 24px;
-    /* stroke: #f1b9b0 ; */
     color: white;
     -webkit-text-stroke: 2px #f1b9b0; 
     cursor: pointer;
@@ -241,53 +243,66 @@ body{
     color: #f1b9b0; 
 }
 
-.heart:hover{
-    /* color: #f1b9b0;  */
-}
-
 .level{
+    /* outline: 1px solid green; */
     display: flex;
-    padding: 8px 24px 0;
+    margin: 4px auto;
     box-sizing: border-box;
+    
 }
 
-.level i{}
+.level i{
+    /* outline: 1px solid red; */
+    line-height: 1.5;
+  
+}
 
 .level p{
+    /* outline: 1px solid blue; */
+    
     padding-left: 12px;
 }
 
 .time{
     /* border: 1px solid brown; */
     display: flex;
-    padding: 12px 24px 0;
+    margin: 4px auto;
+    
     box-sizing: border-box;
 }
 
-.time i{}
+.time i{
+    /* outline: 1px solid red; */
+    line-height: 1.5;
+}
 
 .time p{
+    /* outline: 1px solid blue; */
     padding-left: 12px;
 }
   
 .price{
     /* border: 1px solid blue; */
     display: flex;
+    margin: 4px auto;
     justify-content: space-between;
-    /* padding: 12px 12px 8px 12px; */
+    box-sizing: border-box;
+   
 }
 
 .price p{
     /* outline: 1px solid red; */
-    width: 100px;
-    /* text-align: center; */
-    margin: auto;
+    /* width: 100px; */
+    text-align: center;
+    /* padding-left: 10px; */
+    /* padding-top: 4px; */
+    
 }
 
 .price a{
     /* outline: 4px solid green; */
     display:block;
-    min-width: calc-100px;
+    min-width: calc(100%-100px);
     /* min-width: 120px; */
     height: 28px;
     background-color: #A26769;
@@ -298,8 +313,9 @@ body{
     /* margin: 30px auto; */
     text-decoration: none;
     border-radius: 8px;
-    margin: auto; 
-    padding: 4px 8px;
+     
+    padding: 0px 8px;
+  
 }
 
 /* ========== hover 效果 ============== */
@@ -319,23 +335,21 @@ body{
     padding-bottom: 12px;
 }
 
-.more a{
-    display:block;
-    max-width: 120px;
+.load_more{
+    min-width: 120px;
     height: 32px;
     background-color: #A26769;
     color: white;
     text-align: center;
-    line-height: 32px;
+    
+    line-height: 28px;
     font-size: 16px;
-    /* margin: 30px auto; */
-    text-decoration: none;
     border-radius: 8px;
-    margin: 0px 20px; 
-
+    /* margin: 0px 20px;  */
+    cursor: pointer;
 }
 
-.more a:hover{
+.load_more:hover{
     background-color: #CCA1A0;
     color: #F4E8E2;
 }
@@ -360,24 +374,142 @@ body{
     .content1 p{
         font-size: 18px;
     }
-    .product1 ul {
-        /* justify-content: space-around; */
-    }
     .item{
-        height: 342px;
+        height: 312px;
+    }
+    .subtitle h3{
+        max-width: calc(12ch + 1em); 
+    /* 限制寬度，16個字元加上留白 */
     }
 
 }
 
-@media screen and (max-width: 760px){
-    .topic{
-        /* flex-direction: column; */
+@media screen and (max-width: 820px){
+    .item{
+        height: 300px;
     }
+    
+}
+
+
+@media screen and (max-width: 760px){
 
     .product1 li{
-        width: 45.5%;
+        width: 48.5%;
     }
     .item{
         height: 378px;
+    }
+    .content1 p {
+        font-size: 16px;
+    }
+    .title1 h2 {
+        font-size: 24px;
+    }
+    .title1 p {
+        font-size: 24px;
+    }
+    .dropdown {
+       text-align: center;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .topic{
+        flex-direction: column;
+    }
+    .title1 h2{
+        text-align: center;
+        font-size: 32px;
+    }
+    .title1 p {
+        text-align: center;
+        font-size: 32px;
+    }
+    .divider{
+        display: none;
+    }
+    .content1 p {
+        font-size: 20px;
+        text-align: center;
+    }
+    .title1 {
+        padding: 12px 0 0 0;
+               
+    }
+    .item {
+        height: 342px;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .topic{
+        flex-direction: column;
+    }
+    .title1 h2{
+        text-align: center;
+        font-size: 28px;
+    }
+    .title1 p {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .title1 {
+        padding: 12px 0 0 0;
+               
+    }
+    .content1 {
+        padding: 16px 16px 4px;
+    }
+    .content1 p {
+        font-size: 20px;
+        margin-top: 0;
+        padding: 0 20px;
+    }
+    .class1 {
+        padding-top: 24px;
+    }
+    .right h2 {
+        font-size: 28px;
+        padding-bottom: 0;
+    }
+
+    .right p {
+        text-align: left;
+        font-size: 20px;
+        padding: 8px 24px;
+    }
+
+    .dropdown{
+        text-align: center;
+        padding: 12px 48px 8px 48px;
+    }
+
+    .product1 li{
+        width: 100%;
+    }
+    .product1 ul{
+        padding-left: 5.5%;
+    }
+    .subtitle h3{
+        max-width: calc(16ch + .5em); 
+    /* 限制寬度，16個字元加上留白 */
+    }
+    .product_big{
+        
+        display: none;
+    }
+    
+    .product_small{
+        display: block;
+        width: 100%; 
+    }
+    .more{
+        text-align:center;
+        padding-left: 0;
+    }
+    .item {
+        height: 380px;
     }
 }

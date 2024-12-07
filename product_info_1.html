@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/nav_and_footer_rwd.css">
-    <link rel="stylesheet" href="css/product_info_rwd.css">
+    <link rel="stylesheet" href="css/swiper-bundle.css">
 
     <script src="js/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <title>Fruit Tart</title>
 </head>
@@ -63,30 +64,7 @@
                         </div>
                     </div>
 
-                <script>
-                    // 點擊 hamburger menu
-
-                    $(document).ready(function () {
-                        const hamMenu = $('.menu');
-                        const menuContainer = $('.menu_container');
-
-                        hamMenu.on('click', function (event) {
-                            hamMenu.toggleClass('active');   //切換 menu 顯示狀態
-                            menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
-                            event.stopPropagation();   //防止事件冒泡
-                        });
-
-                        //點擊頁面其他區域關閉 menu
-                        $(document).on('click', function (e) {
-                            if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
-                                hamMenu.removeClass('active');   //關閉 menu
-                                menuContainer.removeClass('active');   //重置漢堡按鈕樣式
-                            }
-                        });
-                    });
-
-                </script>
-
+                    <!-- user icon -->
                 <div class="login_small">
                     <a href="login.html">
                         <i class="fa-regular fa-circle-user"></i>
@@ -95,13 +73,6 @@
 
                 <!-- small screen: hamburger menu finished -->
             </div>
-
-            <!-- user icon -->
-            <!-- <div class="login_small">
-                    <a href="login.html">
-                        <i class="fa-regular fa-circle-user"></i>
-                    </a>
-                </div> -->
 
         </header>
         <!----------------------------主選單結束--------------------------------->
@@ -132,91 +103,113 @@
                     </div>
                 </div>
                 
-                <script>
-                    $(function(){
-                        $('.photo').click(function(){
-                            // console.log($(this).find('img').attr('src'));  
-                            //找到這張照片的內容
-                            let picSrc =$(this).find('img').attr('src');
-                            //console.log(picSrc)
-                            // 在放大圖片的 image attribute 寫入 picSrc 的 element
-                           $('#big').attr('src', picSrc);
-                            //被按得那一個圖片會有外框, 就要addClass
-                            $(this).addClass('active');
-                            $('.photo').not(this).removeClass('active');
-
-                        })
-                    });
-                </script>
                 <!--------------------1st section輪播區: 產品 photo ------------------------->
 
-
-
-                
-                <!-----------------2nd section: 活動資訊------------------------------->
-                <div class="event">
-                    <div class="even_out">
-                        <h3>活動資訊</h3>
-                        <div class="info">
-                            <ul>
-                                <li>
-                                    <div class="level">
-                                        <i class="fa-regular fa-star"></i>
-                                        <p>初級</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="time">
-                                        <i class="fa-regular fa-clock"></i>
-                                        <p>3 小時 30 分鐘</p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="schedule">
-                                        <i class="fa-regular fa-calendar"></i>
-                                        <p> 開始 1 天前完成預訂</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="group">
-                                        <i class="fa-solid fa-user-group"></i>
-                                        <p>2 人以上即可成團</p>
-                                    </div>
-                                </li>
-                            </ul>
+                <div class="productPic_container">
+                    <div class="swiper" id="carousel_3">
+                      
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/Product page/Fruit Tart/web6.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/Product page/Fruit Tart/web6-2.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/Product page/Fruit Tart/web6-3.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/Product page/Fruit Tart/web6-4.jpg" alt="">
+                            </div>
+                            
                         </div>
+                        
+                        <!-- If we need pagination/ 分頁器 -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons / 左右按鈕  -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar / 長條 scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div>  -->
                     </div>
                 </div>
-
-                <!-----------------3rd section: 活動詳情------------------------------->
-                <div class="activity">
-                    <div class="content">
-                        <h3>活動詳情</h3>
-                        <img src="img/Product page/Fruit Tart/web6-1.jpg" alt="">
-                        <div class="description">
-                            <h4>野莓水果塔</h4>
-                                <p>想學會打造像這樣完美的水果塔嗎？在我們的烘焙課程中，你將親手製作酥脆的塔殼，搭配低糖海綿蛋糕和濃郁卡士達，學會如何將鬆軟口感與奶香層次完美結合。我們還會教你如何挑選和擺放鮮嫩野莓，讓酸甜滋味交織成令人驚嘆的視覺與味覺享受。從基礎到完成，每一步都有專業指導，輕鬆做出媲美甜點店的高級水果塔！</p>
-                            <h4>課程內容</h4>
-                                <p> 課程中將介紹如何挑選水果並搭配組合、學習製作酥脆的塔皮和多層次的內餡及裝飾和擺盤的小技巧</p>
-                            
-                            <h4>課程作品</h4>
-                                <p>野莓水果塔數量: 4~6 個</p>
-                            <h4>注意事項</h4>
-                                <p>每堂課依上方提供完成作品(尺寸/數量), 歡迎自行攜帶相對應的 ：提袋（保冷袋）、盒子</p>
-                            <h4>課程取消辦法：</h4>
-                            <ul>
-                                <li>出發日前 7 日前 (不含出發日) 通知取消，全額退回款項。</li>
-                                <li>出發日前 6 日至前 4 日內 (不含出發日) 可更改日期, 但更改僅限一次，。</li>
-                                <li>出發日前 3 日至當日內不接受取消，並不予退回款項。</li>
-                                <li>於活動中如因非可究責主辦單位之因素中止參與活動，將不予退回款項。</li>
-                            </ul>
-
+               
+                <!----------------- 右邊 Mini 產品簡介 --------------------------->
+                <div class="product_info_container">
+                    <div class="right_small">
+                        <div class="name_small">
+                            <h3> 野莓水果塔 </h3>
+                            <p>多種鮮嫩野莓匯聚塔中, 酸甜交織, 每一口都是季節的滋味與層次的驚喜, 滿足味蕾的完美甜點</p>
+                                                    
                         </div>
                     </div>
-                </div>              
-            </div>
 
+                <!-----------------2nd section: 活動資訊------------------------------->
+                    <div class="event">
+                        <div class="even_out">
+                            <h3>活動資訊</h3>
+                            <div class="info">
+                                <ul>
+                                    <li>
+                                        <div class="level">
+                                            <i class="fa-regular fa-star"></i>
+                                            <p>初級</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="time">
+                                            <i class="fa-regular fa-clock"></i>
+                                            <p>3 小時 30 分鐘</p>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="schedule">
+                                            <i class="fa-regular fa-calendar"></i>
+                                            <p> 開始 1 天前完成預訂</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="group">
+                                            <i class="fa-solid fa-user-group"></i>
+                                            <p>2 人以上即可成團</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-----------------3rd section: 活動詳情------------------------------->
+                    <div class="activity">
+                        <div class="content">
+                            <h3>活動詳情</h3>
+                            <img src="img/Product page/Fruit Tart/web6-1.jpg" alt="">
+                            <div class="description">
+                                <h4>野莓水果塔</h4>
+                                    <p>想學會打造像這樣完美的水果塔嗎？在我們的烘焙課程中，你將親手製作酥脆的塔殼，搭配低糖海綿蛋糕和濃郁卡士達，學會如何將鬆軟口感與奶香層次完美結合。我們還會教你如何挑選和擺放鮮嫩野莓，讓酸甜滋味交織成令人驚嘆的視覺與味覺享受。從基礎到完成，每一步都有專業指導，輕鬆做出媲美甜點店的高級水果塔！</p>
+                                <h4>課程內容</h4>
+                                    <p> 課程中將介紹如何挑選水果並搭配組合、學習製作酥脆的塔皮和多層次的內餡及裝飾和擺盤的小技巧</p>
+                                
+                                <h4>課程作品</h4>
+                                    <p>野莓水果塔數量: 4~6 個</p>
+                                <h4>注意事項</h4>
+                                    <p>每堂課依上方提供完成作品(尺寸/數量), 歡迎自行攜帶相對應的 ：提袋（保冷袋）、盒子</p>
+                                <h4>課程取消辦法：</h4>
+                                <ul>
+                                    <li>出發日前 7 日前 (不含出發日) 通知取消，全額退回款項。</li>
+                                    <li>出發日前 6 日至前 4 日內 (不含出發日) 可更改日期, 但更改僅限一次，。</li>
+                                    <li>出發日前 3 日至當日內不接受取消，並不予退回款項。</li>
+                                    <li>於活動中如因非可究責主辦單位之因素中止參與活動，將不予退回款項。</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>              
+                </div>
+            </div>
                 <!-- 處理右邊 div: 產品簡介  -->
             <div class="right">
                 <div class="name">
@@ -274,6 +267,82 @@
                 <p>本網站為緯育 TibaMe【第94期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
             </div>
         </footer>
+
+        <!-- JS 區域 -->
+
+        <script>
+
+            // 點擊 hamburger menu
+            $(document).ready(function () {
+                const hamMenu = $('.menu');
+                const menuContainer = $('.menu_container');
+
+                hamMenu.on('click', function (event) {
+                    hamMenu.toggleClass('active');   //切換 menu 顯示狀態
+                    menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
+                    event.stopPropagation();   //防止事件冒泡
+                });
+
+                //點擊頁面其他區域關閉 menu
+                $(document).on('click', function (e) {
+                    if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
+                        hamMenu.removeClass('active');   //關閉 menu
+                        menuContainer.removeClass('active');   //重置漢堡按鈕樣式
+                    }
+                });
+            });
+
+            // 點擊換商品照片
+            $(function(){
+                $('.photo').click(function(){
+                    // console.log($(this).find('img').attr('src'));  
+                    //找到這張照片的內容
+                    let picSrc =$(this).find('img').attr('src');
+                    //console.log(picSrc)
+                    // 在放大圖片的 image attribute 寫入 picSrc 的 element
+                   $('#big').attr('src', picSrc);
+                    //被按得那一個圖片會有外框, 就要addClass
+                    $(this).addClass('active');
+                    $('.photo').not(this).removeClass('active');
+
+                })
+            });
+
+            // 商品 Swiper 輪播器
+
+                    const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    direction: 'horizontal',
+                    loop: true,
+                    autoHeight: false, // 根據內容自適應高度
+
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true, // 小點可以點擊
+                    },
+
+                    //Autoplay
+                    autoplay:{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
+                    slidesPerView: 1, 
+                    centeredSlides: false,
+                    // centeredSlidesBounds: true,
+                    
+                    
+                });
+
+
+        </script>
 
 </body>
 

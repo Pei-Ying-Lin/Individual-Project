@@ -62,30 +62,6 @@
                         </div>
                     </div>
 
-                <script>
-                    // 點擊 hamburger menu
-
-                    $(document).ready(function () {
-                        const hamMenu = $('.menu');
-                        const menuContainer = $('.menu_container');
-
-                        hamMenu.on('click', function (event) {
-                            hamMenu.toggleClass('active');   //切換 menu 顯示狀態
-                            menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
-                            event.stopPropagation();   //防止事件冒泡
-                        });
-
-                        //點擊頁面其他區域關閉 menu
-                        $(document).on('click', function (e) {
-                            if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
-                                hamMenu.removeClass('active');   //關閉 menu
-                                menuContainer.removeClass('active');   //重置漢堡按鈕樣式
-                            }
-                        });
-                    });
-
-                </script>
-
                 <div class="login_small">
                     <a href="login.html">
                         <i class="fa-regular fa-circle-user"></i>
@@ -117,7 +93,9 @@
             </div>
             <div class="section">
                 <div class="left">
-                    <img src="img/About page/classroom-2.jpg" alt="">
+                    <img src="img/About page/classroom-2.jpg" class="aboutpic_big">
+                    <img src="img/About page/classroom-3.jpg" class="aboutpic_small">
+
                     
                 </div>
                 <div class="right">
@@ -171,7 +149,7 @@
                         <i class="fa-solid fa-location-dot"></i> 
                         <p>地址: 台北市大安區忠孝東路四段101巷</p>
                     </div>
-                    <p>捷運: 忠孝敦化站 1 號出口, 步行 10 分鐘 </p>
+                    <p class="mrt">捷運: 忠孝敦化站 1 號出口, 步行 10 分鐘 </p>
                     <p>Tel: 02-1234-5678</p>
                 </div>
             </div>
@@ -222,8 +200,33 @@
                 <p>本網站為緯育 TibaMe【第94期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
             </div>
         </footer>
-    </div>
 
+         <!-- JS 區域 -->
+        <script>
+            // 點擊 hamburger menu
+
+            $(document).ready(function () {
+                const hamMenu = $('.menu');
+                const menuContainer = $('.menu_container');
+
+                hamMenu.on('click', function (event) {
+                    hamMenu.toggleClass('active');   //切換 menu 顯示狀態
+                    menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
+                    event.stopPropagation();   //防止事件冒泡
+                });
+
+                //點擊頁面其他區域關閉 menu
+                $(document).on('click', function (e) {
+                    if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
+                        hamMenu.removeClass('active');   //關閉 menu
+                        menuContainer.removeClass('active');   //重置漢堡按鈕樣式
+                    }
+                });
+            });
+
+        </script>
+
+    </div>
 
 </body>
 </html>

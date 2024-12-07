@@ -58,30 +58,7 @@
                         </div>
                     </div>
 
-                <script>
-                    // 點擊 hamburger menu
-
-                    $(document).ready(function () {
-                        const hamMenu = $('.menu');
-                        const menuContainer = $('.menu_container');
-
-                        hamMenu.on('click', function (event) {
-                            hamMenu.toggleClass('active');   //切換 menu 顯示狀態
-                            menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
-                            event.stopPropagation();   //防止事件冒泡
-                        });
-
-                        //點擊頁面其他區域關閉 menu
-                        $(document).on('click', function (e) {
-                            if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
-                                hamMenu.removeClass('active');   //關閉 menu
-                                menuContainer.removeClass('active');   //重置漢堡按鈕樣式
-                            }
-                        });
-                    });
-
-                </script>
-
+                <!-- user icon -->
                 <div class="login_small">
                     <a href="login.html">
                         <i class="fa-regular fa-circle-user"></i>
@@ -90,13 +67,6 @@
 
                 <!-- small screen: hamburger menu finished -->
             </div>
-
-            <!-- user icon -->
-            <!-- <div class="login_small">
-                    <a href="login.html">
-                        <i class="fa-regular fa-circle-user"></i>
-                    </a>
-                </div> -->
 
         </header>
         
@@ -117,7 +87,8 @@
         <!------------------------- Top Cover ---------------------------------->
         <!-- <div class="top"> -->
             <div class="cover">
-                <img src="img/Product page/product_cover.jpg" alt="">
+                <img src="img/Product page/product_cover.jpg" class="product_big">
+                <img src="img/Product page/product_cover_small.jpg" class="product_small">
                                
             </div>
         <!-- </div> -->
@@ -147,7 +118,7 @@
                 <div class="product1">
                     <ul>
                         <li>
-                            <div class="item" data-item="烘培">
+                            <div class="item" data-item="烘培 甜點課程">
                                     <div class="img_out">
                                         <a href="product_info_1.html">
                                             <img src="img/Product page/Fruit Tart/fruit_tart3.jpg" alt="">
@@ -168,7 +139,7 @@
                                         </div>
                                         <div class="price">
                                             <p>NT$ 2,400</p>
-                                            <div class="link">
+                                            <div>
                                                 <a  href="product_info_1.html">詳細資訊</a>
                                             </div>
                                         </div>
@@ -177,7 +148,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="item" data-item="烘培">
+                            <div class="item" data-item="烘培 甜點課程">
                                 <div class="img_out">
                                     <a href="product_info_1.html">
                                         <img src="img/Product page/Creme brulee/pexels-valeriya-18976997.jpg" alt="">
@@ -205,7 +176,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="item" data-item="烘培">
+                            <div class="item" data-item="烘培 甜點課程">
                                 <div class="img_out">
                                     <a href="product_info_1.html">
                                         <img src="img/Product page/Macarons/result_Macarons2.jpg" alt="">
@@ -290,7 +261,7 @@
                         </li>
                         
                         <li>
-                            <div class="item" data-item="烘培">
+                            <div class="item" data-item="烘培 甜點課程">
                                 <div class="img_out">
                                     <a href="product_info_1.html">
                                         <img src="img/Product page/Crepe cake/crepe_cake2.jpg" alt="">
@@ -318,7 +289,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="item" data-item="烘培">
+                            <div class="item" data-item="烘培 甜點課程">
                                 <div class="img_out">
                                     <a href="product_info_1.html">
                                         <img src="img/Product page/Tiramisu/Tiramisu2.jpg" alt="">
@@ -346,7 +317,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="item" data-item="烘培">
+                            <div class="item" data-item="烘培 季節限定">
                                 <div class="img_out">
                                     <a href="product_info_1.html">
                                         <img src="img/Product page/donuts.jpg" alt="">
@@ -374,7 +345,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="item" data-item="烘培">
+                            <div class="item" data-item="烘培 季節限定">
                                 <div class="img_out">
                                     <a href="product_info_1.html">
                                         <img src="img/Product page/cupcakes.jpg" alt="">
@@ -405,24 +376,11 @@
                     </ul>               
                 </div>
                 <div class="more">
-                    <a href=""> 看更多 </a>
+                    <button type="button" class="load_more"> 看更多 </button>
+                  
                 </div>
             </div>   
         </div>  
-
-        <script src="js/jquery-3.7.1.js"></script>
-        <script>
-            // 點擊愛心功能
-            $(document).ready(function () {
-                $('.heart').on('click', function () {
-                    $(this).toggleClass('active'); // 切換 active 樣式
-                });
-            });
-
-            //看更多
-            
-
-        </script>
 
         <!-------------------- 右下角 upward icon --------------------->
         <div class="top">
@@ -470,6 +428,42 @@
                 <p>本網站為緯育 TibaMe【第94期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
             </div>
         </footer>
+
+        
+        <script>
+            // 點擊 hamburger menu
+
+            $(document).ready(function () {
+                const hamMenu = $('.menu');
+                const menuContainer = $('.menu_container');
+
+                hamMenu.on('click', function (event) {
+                    hamMenu.toggleClass('active');   //切換 menu 顯示狀態
+                    menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
+                    event.stopPropagation();   //防止事件冒泡
+                });
+
+                //點擊頁面其他區域關閉 menu
+                $(document).on('click', function (e) {
+                    if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
+                        hamMenu.removeClass('active');   //關閉 menu
+                        menuContainer.removeClass('active');   //重置漢堡按鈕樣式
+                    }
+                });
+            });
+
+             // 點擊愛心功能
+             $(document).ready(function () {
+                $('.heart').on('click', function () {
+                    $(this).toggleClass('active'); // 切換 active 樣式
+                });
+            });
+
+            //看更多
+
+
+        </script>
+
     </div>
 
 </body>

@@ -77,7 +77,26 @@
    
 }
 
+@media screen and (max-width: 810px) {
+    /* 換 cover picture */
+    .big{
+        display: none;
+    }
+
+    .medium{
+        display: block;
+    }
+
+    .topMain .text h1 {
+        font-size: 40px;
+    }
+   
+}
+
+
+
 @media screen and (max-width: 780px) {
+  
     
     .grid-container{
         margin: 12px auto;
@@ -193,25 +212,29 @@
     .subscribe{
         display: none;
     }
+    .topMain .text h1 {
+        font-size: 36px;
+    }
 }
 
 @media screen and (max-width: 430px) {
+
+    .medium{
+        display: none;
+    }
     .topMain img{
         /* padding-top: 90px;
         height: 100%; */
         /* display: none; */
     }
-    .big{
-        display: none;
-    }
-
+  
    .small{
         display: block;
         /* height: 450px; */
     }
 
     .topMain .text{
-        top: 40%;
+        top: 29%;
         left: 50%;    
     }
     .topMain .text h1 {
@@ -234,6 +257,13 @@
     .item1 p{
         font-size: 16px;
     }
+
+    .item1 a {
+        width: 132px;
+        height: 32px;
+        line-height: 32px;
+    }
+
     .Feedback h2{
         font-size: 24px;
     }

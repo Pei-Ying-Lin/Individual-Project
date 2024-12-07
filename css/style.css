@@ -18,7 +18,7 @@ body{
     outline:  1px solid red; //這個方法可以看整個網頁排版
 }*/
 
-*
+
 * {
     box-sizing: border-box;
 }*
@@ -40,6 +40,10 @@ body{
 }
 
 .small{
+    display: none;
+}
+
+.medium{
     display: none;
 }
 

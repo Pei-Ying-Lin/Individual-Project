@@ -118,9 +118,7 @@
         /* padding: 20px 30px; */
         /* border-bottom: 1pt solid #252525; */
     }
-    .logo_small .menu_li a{
-        /* padding: 20px; */
-    }
+    .logo_small .menu_li a{}
     
     .menu .bar{
         position: absolute;
