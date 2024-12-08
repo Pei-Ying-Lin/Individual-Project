@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/nav_and_footer_rwd.css">
+    <link rel="icon" href="logo/favicon.png" type="image/png">
 
     <script src="js/jquery-3.7.1.js"></script>
     <title>Product</title>
@@ -118,7 +119,7 @@
                 <div class="product1">
                     <ul>
                         <li>
-                            <div class="item" data-item="烘培 甜點課程">
+                            <div class="item " data-item="烘培 甜點課程">
                                     <div class="img_out">
                                         <a href="product_info_1.html">
                                             <img src="img/Product page/Fruit Tart/fruit_tart3.jpg" alt="">
@@ -288,7 +289,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="hidden">
                             <div class="item" data-item="烘培 甜點課程">
                                 <div class="img_out">
                                     <a href="product_info_1.html">
@@ -316,7 +317,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="hidden">
                             <div class="item" data-item="烘培 季節限定">
                                 <div class="img_out">
                                     <a href="product_info_1.html">
@@ -344,7 +345,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li class="hidden">
                             <div class="item" data-item="烘培 季節限定">
                                 <div class="img_out">
                                     <a href="product_info_1.html">
@@ -459,7 +460,36 @@
                 });
             });
 
-            //看更多
+            // click 看更多
+            $(document).ready(function(){
+                $('.load_more').on('click', function(){
+                    $('.hidden').removeClass('hidden');    // 把隱藏的產品 show 出來 
+                    $(this).hide();
+                
+                });
+            });
+
+            // dropdown menu
+            $(document).ready(function () {
+                // 當選擇菜單更改時觸發
+                $('#category').on('change', function () {
+                    const selectedCategory = $(this).val(); // 獲取選定值
+                    if (selectedCategory === '全部課程') {
+                        // 顯示所有產品
+                        $('.item').parent().show();
+                    } else {
+                        // 隱藏不匹配的產品
+                        $('.item').parent().each(function () {
+                            const itemCategory = $(this).find('.item').data('item'); // 獲取產品的 data-item
+                            if (itemCategory.includes(selectedCategory)) {
+                                $(this).show(); // 顯示匹配的產品
+                            } else {
+                                $(this).hide(); // 隱藏不匹配的產品
+                            }
+                        });
+                    }
+                });
+            });
 
 
         </script>
