@@ -275,9 +275,7 @@ body{
 }
 
  /* ===== hover 效果 ======== */
- /* .popular img:hover{
-    transform: scale(1.2);
- } */
+ 
 
  .popular .card:hover .lesson1{
     opacity: 0.95;

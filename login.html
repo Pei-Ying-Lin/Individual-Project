@@ -16,7 +16,6 @@
 <body>
     <div class="wrapper"> <!----------------包裝最外層----------------------->
         <header>
-
             <div class="menubar"> <!-------------- Web: 主選單------------------------->
 
                 <a href="index.html"><img class="aaaa" src="Logo/Logo_horizontal.svg" alt=""></a>
@@ -60,30 +59,6 @@
                         </div>
                     </div>
 
-                <script>
-                    // 點擊 hamburger menu
-
-                    $(document).ready(function () {
-                        const hamMenu = $('.menu');
-                        const menuContainer = $('.menu_container');
-
-                        hamMenu.on('click', function (event) {
-                            hamMenu.toggleClass('active');   //切換 menu 顯示狀態
-                            menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
-                            event.stopPropagation();   //防止事件冒泡
-                        });
-
-                        //點擊頁面其他區域關閉 menu
-                        $(document).on('click', function (e) {
-                            if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
-                                hamMenu.removeClass('active');   //關閉 menu
-                                menuContainer.removeClass('active');   //重置漢堡按鈕樣式
-                            }
-                        });
-                    });
-
-                </script>
-
                 <div class="login_small">
                     <a href="login.html">
                         <i class="fa-regular fa-circle-user"></i>
@@ -93,22 +68,14 @@
                 <!-- small screen: hamburger menu finished -->
             </div>
 
-            <!-- user icon -->
-            <!-- <div class="login_small">
-                    <a href="login.html">
-                        <i class="fa-regular fa-circle-user"></i>
-                    </a>
-                </div> -->
-
         </header>
         <!----------------------------主選單結束--------------------------------->
 
         <div class="main">
             <div class="pic">
                 <img src="img/Login page/login1.jpg" >
-                
-
             </div>
+            
             <div class="login">
                 <h3>Welcome to Cozy Corner</h3>
                 <h2>會員登入</h2>
@@ -125,12 +92,9 @@
                     <a href="">忘記密碼 ?</a>
                 </div>
                 
-
             </div>
-
         </div>
 
-        
          <!------------------------------Footer----------------------------------->
          <footer>
             <div class="outer">
@@ -168,6 +132,30 @@
                 <p>本網站為緯育 TibaMe【第94期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
             </div>
         </footer>
+
+        <script>
+            // 點擊 hamburger menu
+
+            $(document).ready(function () {
+                const hamMenu = $('.menu');
+                const menuContainer = $('.menu_container');
+
+                hamMenu.on('click', function (event) {
+                    hamMenu.toggleClass('active');   //切換 menu 顯示狀態
+                    menuContainer.toggleClass('active');   //切換漢堡按鈕樣式
+                    event.stopPropagation();   //防止事件冒泡
+                });
+
+                //點擊頁面其他區域關閉 menu
+                $(document).on('click', function (e) {
+                    if (!hamMenu.is(e.target) && !hamMenu.has(e.target).length && !menuContainer.is(e.target)) {
+                        hamMenu.removeClass('active');   //關閉 menu
+                        menuContainer.removeClass('active');   //重置漢堡按鈕樣式
+                    }
+                });
+            });
+
+        </script>
     </div>
 
 
