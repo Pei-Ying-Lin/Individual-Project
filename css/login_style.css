@@ -3,11 +3,17 @@ body{
     background-color: #FBF3E8;
     line-height: 1.5;
     color: #534533;
+    height: 100%;
 }
 
 .wrapper{
     font-family: Playfair Display;
     margin: 0 auto;
+
+    /* 撐開高度 */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ========================== Login ========================== */
@@ -16,18 +22,17 @@ body{
     max-width: 1200px;
     width: 100%;
     
-    margin: 32px auto;
+    /* margin: 5% auto; */
+    margin: 40px auto;
     /* display: flex; */
-    /* 
-    display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 10px; */
     align-items: center;
     justify-content: center;
    
     box-sizing: border-box;
     color: #534533;
     /* border: 1px solid blue; */
+
+    flex: 1;
 }
 
 /* =================== 右邊照片 =========================== */
@@ -38,7 +43,7 @@ body{
     color: #534533;
     max-width: 440px;
     width: 88%;
-    height: 480px;
+    height: 500px;
     margin: 10px;
     line-height: 1.5;
     position: relative;
