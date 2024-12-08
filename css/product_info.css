@@ -435,6 +435,7 @@ body{
         padding: 32px 32px;
         /* 調整下方固定 bar 左右距離 */
         background-color: #FBF3E8;
+        z-index: 5;
     }
     .right {
         /* outline: 4px solid blue; */

@@ -72,28 +72,70 @@
         <!----------------------------主選單結束--------------------------------->
 
         <div class="main">
-            <div class="pic">
-                <img src="img/Login page/login1.jpg" >
+            <!-- <div class="pic">
+                <img src="img/Login page/login2.jpg" >
+            </div> -->
+
+            <div class="content">
+            <!-- 這裡是登入頁面 -->
+            <div id="login" class="box show">
+                <div class="field">
+                <div class="sign-in">
+                    <h2 class="login_title">Welcome to Cozy Corner</h2>
+                        <p>會員登入</p>
+                </div>
+                </div>
+                <div class="field">
+                <label>會員帳號</label>
+                <input type="text" class="user" placeholder="請輸入電子郵件或手機號碼" />
+                </div>
+                <div class="field">
+                <label>密碼</label>
+                <input type="text" class = "password" placeholder="請輸入密碼" />
+                </div>
+                <div class="field">
+                    <a href="index.html" class="btn-sign-in">LOGIN 登入</a>
+                    <!-- <button class="btn-sign-in">LOGIN 登入</button> -->
+                </div>
+                <div class="field">
+                <a href="#" id="account" class="trouble">新會員註冊</a>
+                </div>
+                <div class="field">
+                <a href="#" class="trouble">忘記密碼 ?</a>
+                </div> 
             </div>
-            
-            <div class="login">
-                <h3>Welcome to Cozy Corner</h3>
-                <h2>會員登入</h2>
-                <h4>會員帳號</h4>
-                <input class = user type="text" placeholder="請輸入電子郵件或手機號碼" />
-                <h4>密碼</h4>
-                <input class = password type="text" placeholder="請輸入密碼" />
-                <div class="button">
-                    <!-- <i class="fa-regular fa-user"></i> -->
-                    <a href="index.html"> LOGIN 登入 </a>
+
+            <!-- 這裡是註冊頁面 -->
+            <div id="register" class="box hide">
+                <div class="field">
+                    <div class="sign-in">
+                        <h2>Join Conzy Corner ~</h2>
+                            <p>會員註冊</p>
+                    </div>
                 </div>
-                <div class="register">
-                    <a href="">新會員註冊</a></br>
-                    <a href="">忘記密碼 ?</a>
+                <div class="field">
+                    <label>會員帳號</label>
+                    <input type="text" class="user" placeholder="請輸入電子郵件或手機號碼" />
                 </div>
-                
+                <div class="field">
+                    <label>密碼</label>
+                    <input type="text" class = "password" placeholder="請輸入10位 (含大小寫英文字母, 數字)" />
+                </div>
+                <div class="field">
+                <label>確認密碼</label>
+                <input type="text" class = "password" placeholder="請再輸入密碼" />
+                </div>
+                <div class="field">
+                    <a href="login.html" class="btn-sign-in">註冊</a>
+                    <!-- <button class="btn-sign-in">Register now</button> -->
+                </div>
+                <div class="field">
+                <a href="#" id="back" class="trouble">Back to login</a>
+                </div>
             </div>
         </div>
+    </div>
+
 
          <!------------------------------Footer----------------------------------->
          <footer>
@@ -155,6 +197,24 @@
                 });
             });
 
+                // login page
+                $(document).ready(function() {
+                $('#account').on('click', function() {
+                $('#login').addClass('hide');
+                $('#login').removeClass('show');
+                $('#register').addClass('show');
+                $('#register').removeClass('hide');
+                $('.content').addClass('high');
+                });
+                
+                $('#back').on('click', function() {
+                $('#login').addClass('show');
+                $('#login').removeClass('hide');
+                $('#register').addClass('hide');
+                $('#register').removeClass('show');
+                $('.content').removeClass('high');
+                });
+            });
         </script>
     </div>
 
