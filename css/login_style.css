@@ -124,7 +124,7 @@ body{
 
   .field > input:focus{
     outline: 1px solid gray;
-    background-color:#f9eddb ;
+    background-color:#FBF3E8 ;
   }
   
   .sign-in {

@@ -288,6 +288,7 @@ body{
     display: flex;
     margin: 4px auto;
     justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
    
 }
@@ -344,7 +345,7 @@ body{
     background-color: #A26769;
     color: white;
     text-align: center;
-    
+    border: none;
     line-height: 28px;
     font-size: 16px;
     border-radius: 8px;
@@ -422,6 +423,9 @@ body{
 @media screen and (max-width: 720px){
     .item {
         height: 352px;
+    }
+    .more {
+        padding-left: 42%;
     }
 }
 
@@ -509,14 +513,10 @@ body{
     .subtitle h3 {
         max-width: calc(12ch + 0.5em);
     }
-}
-
-@media screen and (max-width: 430px){
-    .item {
-        height: 264px;
+    .more {
+        padding-left: 40%;
     }
 }
-
 
 @media screen and (max-width: 430px){
     .topic{
@@ -608,5 +608,7 @@ body{
     .info {
         padding: 8px 20px 8px;
     }
-
+    .item {
+        height: 388px;
+    }
 }
